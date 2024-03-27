@@ -5,15 +5,15 @@ from froala_editor.fields import FroalaField
 
 # Create your models here.
 class Gallery(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=250)
-    content_text = models.TextField()
-    content_picture = models.ImageField()
-    content_audio = FroalaField()
-    content_video = FroalaField()
-    publication_date = models.DateTimeField(auto_now_add=True)
-    publication_update = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(default=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')  # TODO models.SET_NULL
+    title = models.CharField(max_length=250, verbose_name='Заголовок')
+    content_text = models.TextField(verbose_name='Статья')
+    content_picture = models.ImageField(verbose_name='Картинка')
+    content_audio = FroalaField(verbose_name='Аудио')
+    content_video = FroalaField(verbose_name='Видео')
+    publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
+    publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
+    is_published = models.BooleanField(default=False, verbose_name='Статус публикации')
 
     def __str__(self):
         return self.title
