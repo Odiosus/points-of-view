@@ -1,3 +1,4 @@
+from .models import Gallery
 from django.contrib import admin
 
-# Register your models here.
+admin.site.register(Gallery)
