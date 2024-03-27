@@ -144,3 +144,5 @@ GitHub.sublime-settings
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
+/povsite/.env
+/povsite/db.sqlite3
