@@ -5,12 +5,8 @@ from .models import Gallery
 from modeltranslation.admin import TranslationAdmin
 
 
-class GalleryAdmin(TranslationAdmin):
-    model = Gallery
-
-
 @admin.register(Gallery)
-class GalleryAdmin(admin.ModelAdmin):
+class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
         'user', 'title', 'is_published', 'content_text', 'get_html_photo', 'publication_date', 'publication_update')
     list_display_links = ('title',)
