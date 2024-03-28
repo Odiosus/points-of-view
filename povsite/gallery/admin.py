@@ -9,12 +9,6 @@ class GalleryAdmin(TranslationAdmin):
     model = Gallery
 
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    list_display_links = ('name',)
-    search_fields = ['name']
-
-
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
     list_display = (
