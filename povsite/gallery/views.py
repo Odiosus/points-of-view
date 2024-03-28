@@ -19,6 +19,10 @@ class GalleryDetail(DetailView):
     template_name = 'detail.html'
     context_object_name = 'unit'
 
+
+#==========================================
+#Viewsets
+
 class GalleryViewSet(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
