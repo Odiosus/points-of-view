@@ -7,10 +7,17 @@ from froala_editor.fields import FroalaField
 class Gallery(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')  # TODO models.SET_NULL
     title = models.CharField(max_length=250, verbose_name='Заголовок')
-    content_text = models.TextField(default=None, blank=True, null=True, verbose_name='Статья')
-    content_picture = models.ImageField(default=None, blank=True, null=True, verbose_name='Картинка')
+    content_text = FroalaField(default=None, blank=True, null=True, verbose_name='Статья')
+    content_picture = FroalaField(options={'toolbarInline': True, },
+                                  default=None,
+                                  blank=True, null=True,
+                                  verbose_name='Картинка')
     content_audio = FroalaField(default=None, blank=True, null=True, verbose_name='Аудио')
-    content_video = FroalaField(default=None, blank=True, null=True, verbose_name='Видео')
+    content_video = FroalaField(options={'toolbarInline': True, },
+                                default=None,
+                                blank=True,
+                                null=True,
+                                verbose_name='Видео')
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     is_published = models.BooleanField(default=False, verbose_name='Статус публикации')
