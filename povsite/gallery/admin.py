@@ -8,12 +8,12 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'title', 'is_published', 'content_text', 'get_html_photo', 'publication_date', 'publication_update')
+        'user', 'title', 'author', 'is_published', 'content_text', 'get_html_photo', 'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
-    list_filter = ('title', 'publication_date', 'publication_update')
-    search_fields = ['user', 'title', 'content_text']
+    list_filter = ('author','title', 'publication_date', 'publication_update')
+    search_fields = ['user', 'author', 'title', 'content_text']
     ordering = ['-publication_date']
-    fields = ('user', 'title', 'content_text', 'content_picture', 'get_html_photo', 'is_published')
+    fields = ('user',  'title', 'author', 'content_text', 'content_picture', 'get_html_photo', 'is_published')
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
 
