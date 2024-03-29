@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gallery.apps.GalleryConfig',
     'rest_framework',
-    'froala_editor',
 ]
 
 MIDDLEWARE = [
