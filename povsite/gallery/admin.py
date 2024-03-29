@@ -10,7 +10,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
         'user', 'title', 'author', 'is_published', 'content_text', 'get_html_photo', 'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
-    list_filter = ('author','title', 'publication_date', 'publication_update')
+    list_filter = ('user', 'author', 'publication_date', 'publication_update')
     search_fields = ['user', 'author', 'title', 'content_text']
     ordering = ['-publication_date']
     fields = ('user',  'title', 'author', 'content_text', 'content_picture', 'get_html_photo', 'is_published')

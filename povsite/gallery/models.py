@@ -32,6 +32,7 @@ class Author(models.Model):
     patronymic = models.CharField(max_length=100, null=True, blank=True, default=None,  verbose_name='Отчество')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Фото")
     brand_name = models.CharField(max_length=100, verbose_name='Бренд')
+    biography = models.TextField(default=None, blank=True, null=True, verbose_name='Биография')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
 
