@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
-from .models import Gallery
+from .models import Gallery, Author
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -22,3 +22,8 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             return mark_safe(f"<img src='{object.content_picture.url}' width=50>")
 
     get_html_photo.short_description = 'Миниатюра'
+
+
+@admin.register(Author)
+class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
+    list_display = ('name', 'surname', 'brand_name', 'email', 'phone')
