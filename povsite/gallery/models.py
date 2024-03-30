@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.db import models
-from froala_editor.fields import FroalaField
 
 
 class PublishedManager(models.Manager):
@@ -33,7 +32,7 @@ class Gallery(models.Model):
 
     class Meta:
         verbose_name = 'Галерея'
-        verbose_name_plural = 'Галерея'
+        verbose_name_plural = 'Галереи'
 
 
 class Author(models.Model):
