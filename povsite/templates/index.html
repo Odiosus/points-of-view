@@ -9,25 +9,23 @@
 </head>
 <body>
 
-    <form action="{% url 'set_language' %}" method="POST">
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ redirect_to }}">
+    <div class="locale">
         {% get_current_language as LANGUAGE_CODE %}
-        <select name="language" id="">
-            {% get_available_languages as LANGUAGES %}
-            {% get_language_info_list for LANGUAGES as languages %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <div style="display: inline-block">  <!-- Стиль добавил только для демонстрации во время теста-->
+                <form method="post" action="{% url 'set_language' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ language.code }}">
+                    <button type="submit">{{ language.code.upper }}</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
 
-            {% for language in languages %}
-                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
-                    {{ language.name_local.capitalize }} - {{ language.code }}
-                </option>
-            {% endfor %}
 
-        </select>
-        <input type="submit" value="set">
-    </form>
-
-    <div>
+    <div class="test">
         {% for unit in units %}
             <p> {% trans 'Автор:' %} {{ unit.user }} </p>
             <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>
@@ -37,10 +35,6 @@
             <p> {% trans 'Контент:' %} {{ unit.content }} </p>
             <p>
         {% endfor %}
-    </div>
-
-    <div>
-        <p>{{ LANGUAGE_CODE }}</p>
     </div>
 
 </body>
