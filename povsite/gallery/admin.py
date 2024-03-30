@@ -5,6 +5,7 @@ from .models import Gallery, Author
 from modeltranslation.admin import TranslationAdmin
 
 
+
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
@@ -13,7 +14,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_filter = ('author','title', 'publication_date', 'publication_update')
     search_fields = ['user', 'author', 'title', 'content_text']
     ordering = ['-publication_date']
-    fields = ('user',  'title', 'author', 'content_text', 'content_picture', 'get_html_photo', 'is_published')
+    fields = ('user', 'title', 'content_text', 'content_picture', 'content', 'get_html_photo', 'is_published')
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
 

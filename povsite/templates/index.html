@@ -34,6 +34,7 @@
             <p> Текст статьи: {{ unit.content_text }} </p>
             <p> Публикуется: {{ unit.is_published }} </p>
             <p> Картинка: <img src='{{ unit.content_picture.url }}' width="100"></p>
+            <p> Контент: {{ unit.content }} </p>
             <p>
         {% endfor %}
     </div>
