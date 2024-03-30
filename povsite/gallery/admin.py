@@ -20,6 +20,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     actions = ['set_published', 'set_draft']
     list_editable = ('is_published',)
+    list_per_page = 10
 
     def get_html_photo(self, object):
         if object.content_picture:
