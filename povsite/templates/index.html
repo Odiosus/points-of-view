@@ -29,12 +29,12 @@
 
     <div>
         {% for unit in units %}
-            <p> Автор: {{ unit.user }} </p>
-            <p> Заголовок: {{ unit.title }} </p>
-            <p> Текст статьи: {{ unit.content_text }} </p>
-            <p> Публикуется: {{ unit.is_published }} </p>
-            <p> Картинка: <img src='{{ unit.content_picture.url }}' width="100"></p>
-            <p> Контент: {{ unit.content }} </p>
+            <p> {% trans 'Автор:' %} {{ unit.user }} </p>
+            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>
+            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>
+            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>
+            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>
+            <p> {% trans 'Контент:' %} {{ unit.content }} </p>
             <p>
         {% endfor %}
     </div>
