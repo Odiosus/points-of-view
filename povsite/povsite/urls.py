@@ -9,5 +9,5 @@ urlpatterns = [
 ]
 
 
-admin.site.site_header = 'Лаборатория "Точки Зрения"'
+admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
 admin.site.site_title = 'Лаборатория "Точки Зрения"'

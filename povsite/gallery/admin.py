@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
 from .models import Gallery, Author
@@ -17,12 +17,23 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     fields = ('user', 'title', 'author', 'content_text', 'content_picture', 'get_html_photo', 'is_published')
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
+    actions = ['set_published', 'set_draft']
 
     def get_html_photo(self, object):
         if object.content_picture:
             return mark_safe(f"<img src='{object.content_picture.url}' width=50>")
 
     get_html_photo.short_description = 'Миниатюра'
+
+    @admin.action(description="Опубликовать выбранные записи")
+    def set_published(self, request, queryset):
+        count = queryset.update(is_published=Gallery.Status.PUBLISHED)
+        self.message_user(request, f"Изменено {count} записей.")
+
+    @admin.action(description="Снять с публикации выбранные записи")
+    def set_draft(self, request, queryset):
+        count = queryset.update(is_published=Gallery.Status.DRAFT)
+        self.message_user(request, f"{count} записей сняты с публикации!", messages.WARNING)
 
 
 @admin.register(Author)
