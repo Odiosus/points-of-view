@@ -71,14 +71,14 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'short_description_field', 'time_add')
+    list_display = ('theme', 'name', 'email', 'short_description_field', 'time_add')
     list_display_links = ('name', 'email')
-    list_filter = ('name', 'email', 'time_add')
+    list_filter = ('theme', 'name', 'email', 'time_add')
     search_fields = ['name', 'email', 'message']
     ordering = ['-time_add']
     save_on_top = True
-    fields = ('name', 'email', 'message', 'time_add')
-    readonly_fields = ('name', 'email', 'message', 'time_add',)
+    fields = ('theme', 'name', 'email', 'message', 'time_add')
+    readonly_fields = ('theme', 'name', 'email', 'message', 'time_add',)
     list_per_page = 10
 
     def short_description_field(self, obj):

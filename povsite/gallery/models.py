@@ -57,6 +57,16 @@ class Author(models.Model):
 
 
 class Feedback(models.Model):
+    THEME = [
+        ('no subject', 'без темы'),
+        ('paintings', 'картины'),
+        ('design', 'дизайн'),
+        ('music', 'музыка'),
+        ('video', 'видео'),
+        ('photo', 'фотография'),
+        ('other', 'другое'),
+    ]
+    theme = models.CharField(max_length=100, choices=THEME, default='no subject', verbose_name='Тема')
     name = models.CharField(max_length=100, verbose_name='Имя')
     email = models.EmailField(verbose_name='Email')
     message = models.TextField(verbose_name='Сообщение')
