@@ -8,7 +8,8 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'title', 'author', 'is_published', 'content_text', 'get_html_photo', 'content', 'publication_date',
+        'user', 'title', 'author', 'is_published', 'short_description_field', 'get_html_photo',
+        'content', 'publication_date',
         'publication_update')
     list_display_links = ('title',)
     list_filter = ('user', 'author', 'is_published', 'publication_date', 'publication_update')
@@ -19,12 +20,19 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     actions = ['set_published', 'set_draft']
     list_editable = ('is_published',)
+    list_per_page = 10
 
     def get_html_photo(self, object):
         if object.content_picture:
             return mark_safe(f"<img src='{object.content_picture.url}' width=50>")
 
     get_html_photo.short_description = 'Миниатюра'
+
+    def short_description_field(self, obj):
+        if obj.content_text:
+            return obj.content_text[:30] + '...' if len(obj.content_text) > 30 else obj.content_text
+
+    short_description_field.short_description = 'Краткое описание'
 
     @admin.action(description="Опубликовать выбранные записи")
     def set_published(self, request, queryset):
@@ -39,7 +47,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_photo', 'name', 'surname', 'brand_name', 'email', 'phone', 'biography')
+    list_display = ('get_html_photo', 'name', 'surname', 'brand_name', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
     search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone']
@@ -53,3 +61,9 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             return mark_safe(f"<img src='{object.photo.url}' width=50>")
 
     get_html_photo.short_description = 'Фото'
+
+    def short_description_field(self, obj):
+        if obj.biography:
+            return obj.biography[:30] + '...' if len(obj.biography) > 30 else obj.biography
+
+    short_description_field.short_description = 'Краткое описание'
