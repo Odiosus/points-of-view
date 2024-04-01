@@ -132,4 +132,20 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# SERVER_EMAIL = 'artyomkolesnikov1990@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_SUBJECT_PREFIX = '[ТОЧКИ ЗРЕНИЯ]'
+SERVER_EMAIL = "capitas.kolesnikov@yandex.ru"
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "capitas.kolesnikov"
+EMAIL_HOST_PASSWORD = "qsrhucnxsjkvcjvs"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = "capitas.kolesnikov@yandex.ru"
+
+ADMINS = [('Andrey Gunyavin', 'artyomkolesnikov1990@gmail.com'),]
+
 
