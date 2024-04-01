@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author
+from .models import Gallery, Author, Feedback
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -67,3 +67,22 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             return obj.biography[:30] + '...' if len(obj.biography) > 30 else obj.biography
 
     short_description_field.short_description = 'Краткое описание'
+
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'short_description_field', 'time_add')
+    list_display_links = ('name', 'email')
+    list_filter = ('name', 'email', 'time_add')
+    search_fields = ['name', 'email', 'message']
+    ordering = ['-time_add']
+    save_on_top = True
+    fields = ('name', 'email', 'message', 'time_add')
+    readonly_fields = ('name', 'email', 'message', 'time_add',)
+    list_per_page = 10
+
+    def short_description_field(self, obj):
+        if obj.message:
+            return obj.message[:30] + '...' if len(obj.message) > 30 else obj.message
+
+    short_description_field.short_description = 'Сообщение'
