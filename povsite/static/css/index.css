@@ -1,0 +1,39 @@
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 44px 71px;
+}
+
+.burger-menu {
+    width: 50px;
+    height: 32px;
+    margin-left: 71px;
+}
+
+.languages-container {
+    display: inline-block;
+}
+
+.languages {
+    border: none;
+    width: 25px;
+    height: 23px;
+    margin-left: 27px;
+
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    background: none;
+}
+
+.language.active {
+    text-decoration: underline;
+}

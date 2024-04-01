@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 
 {% load i18n %}
+{% load static %}
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Точки зрения</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'css/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <script defer src="{% static 'script.js' %}"></script>
 </head>
 <body>
 
-    <div class="locale">
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-            <div style="display: inline-block">  <!-- Стиль добавил только для демонстрации во время теста-->
-                <form method="post" action="{% url 'set_language' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="language" value="{{ language.code }}">
-                    <button type="submit">{{ language.code.upper }}</button>
-                </form>
-            </div>
-        {% endfor %}
-    </div>
+    <header>
+        <div class="locale">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <div class="languages-container">  <!-- Стиль добавил только для демонстрации во время теста-->
+                    <form method="post" action="{% url 'set_language' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="{{ language.code }}">
+                        <button class="languages" id="{{ language.code }}" type="submit">{{ language.code.upper }}</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+        <svg class="burger-menu" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="48" height="30" rx="9" fill="black"/>
+            <rect x="1" y="1" width="48" height="30" rx="9" stroke="black" stroke-width="2"/>
+            <path d="M35.9649 20.5718C35.9649 20.875 35.8724 21.1656 35.7079 21.38C35.5434 21.5943 35.3203 21.7147
+            35.0877 21.7147H15.7894C15.5568 21.7147 15.3337 21.5943 15.1692 21.38C15.0046 21.1656 14.9122 20.875
+            14.9122 20.5718C14.9122 20.2687 15.0046 19.9781 15.1692 19.7637C15.3337 19.5494 15.5568 19.429 15.7894
+            19.429H35.0877C35.3203 19.429 35.5434 19.5494 35.7079 19.7637C35.8724 19.9781 35.9649 20.2687 35.9649
+            20.5718ZM15.7894 12.5718H35.0877C35.3203 12.5718 35.5434 12.4514 35.7079 12.2371C35.8724 12.0228 35.9649
+            11.7321 35.9649 11.429C35.9649 11.1259 35.8724 10.8352 35.7079 10.6209C35.5434 10.4065 35.3203 10.2861
+            35.0877 10.2861H15.7894C15.5568 10.2861 15.3337 10.4065 15.1692 10.6209C15.0046 10.8352 14.9122 11.1259
+            14.9122 11.429C14.9122 11.7321 15.0046 12.0228 15.1692 12.2371C15.3337 12.4514 15.5568 12.5718 15.7894
+            12.5718Z" fill="white"/>
+        </svg>
+
+    </header>
+
+
+
+
 
 
     <div class="test">
@@ -36,6 +62,11 @@
             <p>
         {% endfor %}
     </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save" />
+    </form>
 
 </body>
 </html>
