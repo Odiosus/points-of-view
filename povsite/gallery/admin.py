@@ -80,7 +80,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("brand_name", "email", "phone",)
+            "fields": ("brand_name", ("email", "phone"),)
         }),
         ("Персональная информация", {
             "classes": ("collapse",),
