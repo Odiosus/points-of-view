@@ -15,12 +15,36 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_filter = ('user', 'author', 'is_published', 'publication_date', 'publication_update')
     search_fields = ['user', 'author', 'title', 'content_text']
     ordering = ['-publication_date']
-    fields = ('user', 'title', 'author', 'content_text', 'content_picture', 'get_html_photo', 'is_published')
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
     actions = ['set_published', 'set_draft']
     list_editable = ('is_published',)
     list_per_page = 10
+    fieldsets = (
+        ("Информация о пользователе", {
+            "fields": ("user",),
+        }),
+        ("Публикация", {
+            "fields": ("author",),
+        }),
+        (None, {
+            "fields": (("title",),)
+        }),
+        ("Написать статью", {
+            "classes": ("collapse",),
+            "fields": (("content_text",),)
+        }),
+        ("Добавить медиаконтент", {
+            "classes": ("collapse",),
+            "fields": (("content", "content_picture",),)
+        }),
+        (None, {
+            "fields": ("get_html_photo",)
+        }),
+        ("Публикуем?", {
+            "fields": ("is_published", ('publication_date', 'publication_update'),)
+        }),
+    )
 
     def get_html_photo(self, object):
         if object.content_picture:
@@ -52,9 +76,29 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_filter = ('surname', 'brand_name')
     search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone']
     ordering = ['-time_add']
-    fields = ('name', 'surname', 'patronymic', 'brand_name', 'email', 'phone', 'photo', 'get_html_photo', 'biography')
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
+    fieldsets = (
+        ("Информация о пользователе", {
+            "fields": ("user",)
+        }),
+        ("Информация об авторе", {
+            "fields": ("brand_name", "email", "phone",)
+        }),
+        ("Персональная информация", {
+            "fields": (("name", "surname", "patronymic",),)
+        }),
+        ("Биография", {
+            "classes": ("collapse",),
+            "fields": (("biography",),)
+        }),
+        (None, {
+            "fields": (("photo", "get_html_photo",),)
+        }),
+        (None, {
+            "fields": ("is_published", ('publication_date', 'publication_update'),)
+        }),
+    )
 
     def get_html_photo(self, object):
         if object.photo:
@@ -86,3 +130,8 @@ class FeedbackAdmin(admin.ModelAdmin):
             return obj.message[:30] + '...' if len(obj.message) > 30 else obj.message
 
     short_description_field.short_description = 'Сообщение'
+
+
+admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
+admin.site.site_title = 'Лаборатория "Точки Зрения"'
+# admin.site.index_title = 'Администрирование лаборатории "Точки Зрения"'

@@ -7,7 +7,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('gallery.urls'))
 ]
-
-
-admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
-admin.site.site_title = 'Лаборатория "Точки Зрения"'
