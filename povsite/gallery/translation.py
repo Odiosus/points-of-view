@@ -9,4 +9,4 @@ class GalleryTranslationOptions(TranslationOptions):
 
 @register(Author)
 class AuthorTranslationOptions(TranslationOptions):
-    fields = ('name', 'surname', 'patronymic', 'brand_name',)
+    fields = ('name', 'surname', 'brand_name', 'biography')

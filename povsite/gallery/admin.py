@@ -79,13 +79,11 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
     fieldsets = (
-        ("Информация о пользователе", {
-            "fields": ("user",)
-        }),
         ("Информация об авторе", {
             "fields": ("brand_name", "email", "phone",)
         }),
         ("Персональная информация", {
+            "classes": ("collapse",),
             "fields": (("name", "surname", "patronymic",),)
         }),
         ("Биография", {
@@ -96,7 +94,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": (("photo", "get_html_photo",),)
         }),
         (None, {
-            "fields": ("is_published", ('publication_date', 'publication_update'),)
+            "fields": (('time_add', 'time_update',),)
         }),
     )
 
