@@ -18,11 +18,14 @@ class Gallery(models.Model):
     content_text = models.TextField(default=None, blank=True, null=True, verbose_name='Статья')
     content_picture = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True,
                                         verbose_name="Картинка")
-    content = models.FileField(default=None, blank=True, null=True, verbose_name='Аудио/Видео')
+    content = models.FileField(upload_to="files/%Y/%m/%d/", default=None, blank=True, null=True,
+                               verbose_name='Аудио/Видео')
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        verbose_name='Статус публикации')
+    project = models.ForeignKey('CategoryProject', default=None, blank=True, null=True, on_delete=models.CASCADE,
+                                verbose_name='Проект')  # FIXME null=True, blank=True, default=None, + models.SET_NULL
 
     objects = models.Manager()
     published = PublishedManager()
@@ -49,7 +52,6 @@ class Author(models.Model):
 
     def __str__(self):
         return self.brand_name
-        # return f'{self.name}, {self.surname}, {self.brand_name}, {self.email}, {self.phone}'
 
     class Meta:
         verbose_name = 'Автор'
@@ -78,3 +80,20 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = 'Обратная связь'
         verbose_name_plural = 'Обратная связь'
+
+
+class CategoryProject(models.Model):
+    PROJECT = [
+        ('Art diving', 'Арт-дайвинг'),
+        ('Questions', 'Вопросы'),
+        ('Art cartel', 'Арт-картель'),
+    ]
+    project = models.CharField(max_length=100, choices=PROJECT, verbose_name='Проект')
+    description = models.TextField(verbose_name="Описание")
+
+    def __str__(self):
+        return self.project
+
+    class Meta:
+        verbose_name = 'Категория проекта'
+        verbose_name_plural = 'Категории проектов'
