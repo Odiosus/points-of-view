@@ -8,7 +8,7 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'project', 'short_description_field_title', 'author', 'is_published', 'short_description_field',
+        'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
     list_display_links = ('short_description_field_title',)
     list_filter = ('user', 'author', 'is_published', 'project', 'publication_date', 'publication_update')
@@ -44,19 +44,19 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def get_html_photo(self, object):
         if object.content_picture:
-            return mark_safe(f"<img src='{object.content_picture.url}' width=50>")
+            return mark_safe(f"<img src='{object.content_picture.url}' width=80>")
 
     get_html_photo.short_description = 'Миниатюра'
 
     def short_description_field(self, obj):
         if obj.content_text:
-            return obj.content_text[:30] + '...' if len(obj.content_text) > 30 else obj.content_text
+            return obj.content_text[:40] + '...' if len(obj.content_text) > 40 else obj.content_text
 
     short_description_field.short_description = 'Краткое описание'
 
     def short_description_field_title(self, obj):
         if obj.title:
-            return obj.title[:30] + '...' if len(obj.title) > 30 else obj.title
+            return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
 
     short_description_field_title.short_description = 'Заголовок'
 
@@ -73,7 +73,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_photo', 'name', 'surname', 'brand_name', 'email', 'phone', 'short_description_field')
+    list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
     search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone']
@@ -108,9 +108,9 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def short_description_field(self, obj):
         if obj.biography:
-            return obj.biography[:30] + '...' if len(obj.biography) > 30 else obj.biography
+            return obj.biography[:40] + '...' if len(obj.biography) > 40 else obj.biography
 
-    short_description_field.short_description = 'Краткое описание'
+    short_description_field.short_description = 'Биография'
 
 
 @admin.register(Feedback)
@@ -127,21 +127,21 @@ class FeedbackAdmin(admin.ModelAdmin):
 
     def short_description_field(self, obj):
         if obj.message:
-            return obj.message[:30] + '...' if len(obj.message) > 30 else obj.message
+            return obj.message[:40] + '...' if len(obj.message) > 40 else obj.message
 
     short_description_field.short_description = 'Сообщение'
 
 
 @admin.register(CategoryProject)
 class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('project', 'short_description_field')
-    list_display_links = ('project',)
-    list_filter = ('project',)
-    search_fields = ['project', 'description']
+    list_display = ('name', 'short_description_field')
+    list_display_links = ('name',)
+    list_filter = ('name',)
+    search_fields = ['name', 'description']
     save_on_top = True
     fieldsets = (
         ("Проект", {
-            "fields": ("project",)
+            "fields": ("name",)
         }),
         ("Описание проекта", {
             "classes": ("collapse",),

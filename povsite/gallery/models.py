@@ -24,7 +24,7 @@ class Gallery(models.Model):
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        verbose_name='Статус публикации')
-    project = models.ForeignKey('CategoryProject', default=None, blank=True, null=True, on_delete=models.CASCADE,
+    project = models.ForeignKey('CategoryProject', on_delete=models.CASCADE,
                                 verbose_name='Проект')  # FIXME null=True, blank=True, default=None, + models.SET_NULL
 
     objects = models.Manager()
@@ -83,16 +83,11 @@ class Feedback(models.Model):
 
 
 class CategoryProject(models.Model):
-    PROJECT = [
-        ('Art diving', 'Арт-дайвинг'),
-        ('Questions', 'Вопросы'),
-        ('Art cartel', 'Арт-картель'),
-    ]
-    project = models.CharField(max_length=100, choices=PROJECT, verbose_name='Проект')
+    name = models.CharField(max_length=100, verbose_name='Проект')
     description = models.TextField(verbose_name="Описание")
 
     def __str__(self):
-        return self.project
+        return self.name
 
     class Meta:
         verbose_name = 'Категория проекта'

@@ -14,5 +14,4 @@ class AuthorTranslationOptions(TranslationOptions):
 
 @register(CategoryProject)
 class CategoryProjectTranslationOptions(TranslationOptions):
-    fields = ('description',)
-
+    fields = ("name", 'description',)
