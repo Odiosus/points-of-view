@@ -1,6 +1,7 @@
 from django import forms
 from .models import Feedback
 from django.core.mail import mail_admins
+from django.utils.translation import gettext_lazy as _
 
 
 class FeedbackForm(forms.ModelForm):
@@ -11,6 +12,11 @@ class FeedbackForm(forms.ModelForm):
             'email',
             'message',
         ]
+
+        labels = {
+            'name': _('Имя'),
+            'message': _('Сообщение'),
+        }
 
     def save(self, commit=True):
         feedback = super().save()

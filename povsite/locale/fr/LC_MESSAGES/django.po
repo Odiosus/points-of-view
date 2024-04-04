@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 16:56+0200\n"
+"POT-Creation-Date: 2024-04-04 16:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\templates\admin\base_site.html:8
+#: .\gallery\forms.py:17
+msgid "Имя"
+msgstr "Nom"
+
+#: .\gallery\forms.py:18
+msgid "Сообщение"
+msgstr "Message"
+
+#: .\templates\admin\base_site.html:9
 msgid "Django site admin"
 msgstr ""
 
-#: .\templates\admin\base_site.html:11
+#: .\templates\admin\base_site.html:12
 msgid "Django administration"
 msgstr ""
 
-#: .\templates\index.html:32
+#: .\templates\index.html:56
 msgid "Автор:"
 msgstr "Auteur:"
 
-#: .\templates\index.html:33
+#: .\templates\index.html:57
 msgid "Заголовок:"
 msgstr "En-tête:"
 
-#: .\templates\index.html:34
+#: .\templates\index.html:58
 msgid "Текст статьи:"
 msgstr "Texte de l'article:"
 
-#: .\templates\index.html:35
+#: .\templates\index.html:59
 msgid "Публикуется:"
 msgstr "Publié:"
 
-#: .\templates\index.html:36
+#: .\templates\index.html:60
 msgid "Картинка:"
 msgstr "Image:"
 
-#: .\templates\index.html:37
+#: .\templates\index.html:61
 msgid "Контент:"
 msgstr "Contenu:"
+
+#: .\templates\index.html:68
+msgid "Сохранить"
+msgstr "Enregistrer"
