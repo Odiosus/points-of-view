@@ -2,11 +2,11 @@ from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
 from .models import Gallery, Author, Feedback, CategoryProject
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TranslationAdmin, TabbedTranslationAdmin
 
 
 @admin.register(Gallery)
-class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
+class GalleryAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
     list_display = (
         'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
@@ -72,7 +72,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
 
 @admin.register(Author)
-class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
+class AuthorAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
     list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
@@ -133,7 +133,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 
 @admin.register(CategoryProject)
-class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
+class CategoryProjectAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
     list_display = ('name', 'short_description_field')
     list_display_links = ('name',)
     list_filter = ('name',)

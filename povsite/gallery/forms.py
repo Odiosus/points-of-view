@@ -11,6 +11,7 @@ class FeedbackForm(forms.ModelForm):
             'name',
             'email',
             'message',
+            'theme',
         ]
 
         labels = {
