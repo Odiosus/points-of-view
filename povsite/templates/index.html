@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="{% url 'set_language' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ redirect_to }}">
+        {% get_current_language as LANGUAGE_CODE %}
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+            {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local.capitalize }} - {{ language.code }}
+                </option>
+            {% endfor %}
+
+        </select>
+        <input type="submit" value="set">
+    </form>
+
+    <div>
+        {% for unit in units %}
+            <p> Автор: {{ unit.user }} </p>
+            <p> Заголовок: {{ unit.title }} </p>
+            <p> Текст статьи: {{ unit.content_text }} </p>
+            <p> Публикуется: {{ unit.is_published }} </p>
+            <p> Картинка: <img src='{{ unit.content_picture.url }}' width="100"></p>
+            <p>
+        {% endfor %}
+    </div>
+
+    <div>
+        <p>{{ LANGUAGE_CODE }}</p>
+    </div>
+
+</body>
+</html>
