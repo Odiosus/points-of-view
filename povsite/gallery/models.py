@@ -18,11 +18,14 @@ class Gallery(models.Model):
     content_text = models.TextField(default=None, blank=True, null=True, verbose_name='Статья')
     content_picture = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True,
                                         verbose_name="Картинка")
-    content = models.FileField(default=None, blank=True, null=True, verbose_name='Аудио/Видео')
+    content = models.FileField(upload_to="files/%Y/%m/%d/", default=None, blank=True, null=True,
+                               verbose_name='Аудио/Видео')
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        verbose_name='Статус публикации')
+    project = models.ForeignKey('CategoryProject', on_delete=models.CASCADE,
+                                verbose_name='Проект')  # FIXME null=True, blank=True, default=None, + models.SET_NULL
 
     objects = models.Manager()
     published = PublishedManager()
@@ -49,7 +52,6 @@ class Author(models.Model):
 
     def __str__(self):
         return self.brand_name
-        # return f'{self.name}, {self.surname}, {self.brand_name}, {self.email}, {self.phone}'
 
     class Meta:
         verbose_name = 'Автор'
@@ -57,6 +59,16 @@ class Author(models.Model):
 
 
 class Feedback(models.Model):
+    THEME = [
+        ('no subject', 'без темы'),
+        ('paintings', 'картины'),
+        ('design', 'дизайн'),
+        ('music', 'музыка'),
+        ('video', 'видео'),
+        ('photo', 'фотография'),
+        ('other', 'другое'),
+    ]
+    theme = models.CharField(max_length=100, choices=THEME, default='no subject', verbose_name='Тема')
     name = models.CharField(max_length=100, verbose_name='Имя')
     email = models.EmailField(verbose_name='Email')
     message = models.TextField(verbose_name='Сообщение')
@@ -68,3 +80,15 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = 'Обратная связь'
         verbose_name_plural = 'Обратная связь'
+
+
+class CategoryProject(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Проект')
+    description = models.TextField(verbose_name="Описание")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Категория проекта'
+        verbose_name_plural = 'Категории проектов'
