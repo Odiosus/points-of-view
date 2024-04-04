@@ -24,7 +24,7 @@ class Gallery(models.Model):
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        verbose_name='Статус публикации')
-    project = models.ForeignKey('CategoryProject', on_delete=models.CASCADE,
+    project = models.ForeignKey('CategoryProject', default=None, on_delete=models.CASCADE,
                                 verbose_name='Проект')  # FIXME null=True, blank=True, default=None, + models.SET_NULL
 
     objects = models.Manager()

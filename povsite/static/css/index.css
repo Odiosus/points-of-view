@@ -6,6 +6,7 @@ body {
 header {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 44px 71px;
 }
 
@@ -29,11 +30,15 @@ header {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-    line-height: 23px;
     color: #000000;
     background: none;
 }
 
-.language.active {
+.languages:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.languages.active {
     text-decoration: underline;
 }
