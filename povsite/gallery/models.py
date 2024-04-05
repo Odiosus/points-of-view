@@ -17,7 +17,7 @@ class Gallery(models.Model):
     title = models.CharField(max_length=250, verbose_name='Заголовок')
     content_text = models.TextField(default=None, blank=True, null=True, verbose_name='Статья')
     content_picture = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True,
-                                        verbose_name="Картинка")
+                                        verbose_name="Изображение")
     content = models.FileField(upload_to="files/%Y/%m/%d/", default=None, blank=True, null=True,
                                verbose_name='Аудио/Видео')
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')

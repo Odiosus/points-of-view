@@ -11,8 +11,8 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
         'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
     list_display_links = ('short_description_field_title',)
-    list_filter = ('user', 'author', 'is_published', 'project', 'publication_date', 'publication_update')
-    search_fields = ['user', 'author', 'title', 'content_text']
+    list_filter = ('user', 'author', 'is_published', 'project__name', 'publication_date', 'publication_update')
+    search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
@@ -24,21 +24,22 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("user",),
         }),
         ("Публикация", {
-            "fields": (("author", 'project'), "title",),
+            "fields": ("author", 'project', "title",),
         }),
         ("Написать статью", {
             "classes": ("collapse",),
             "fields": (("content_text",),)
         }),
         ("Добавить медиаконтент", {
-            "classes": ("collapse",),
-            "fields": (("content", "content_picture",),)
+            "classes": ["collapse"],
+            "description": "Здесь можно добавить аудио/видео или изображение",
+            "fields": (("content",),)
         }),
         (None, {
-            "fields": ("get_html_photo",)
+            "fields": ("content_picture", "get_html_photo",)
         }),
         ("Публикуем?", {
-            "fields": ("is_published", ('publication_date', 'publication_update'),)
+            "fields": ("is_published", 'publication_date', 'publication_update',)
         }),
     )
 
