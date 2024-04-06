@@ -124,7 +124,7 @@ class FeedbackAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email', 'message']
     ordering = ['-time_add']
     save_on_top = True
-    fields = ('theme__name', 'name', 'email', 'message', 'time_add')
+    fields = ('theme', 'name', 'email', 'message', 'time_add')
     readonly_fields = ('theme', 'name', 'email', 'message', 'time_add',)
     list_per_page = 10
 
