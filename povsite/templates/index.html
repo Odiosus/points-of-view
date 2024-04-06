@@ -72,10 +72,6 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-<!--                {{ form.name.label_tag }} {{ form.name }}-->
-<!--        {{ form.email.label_tag }} {{ form.email }}-->
-<!--        {{ form.message.label_tag }} {{ form.message }}-->
-<!--        {{ form.theme.label_tag }} {{ form.theme }}-->
         <input type="submit" value="{% trans 'Сохранить' %}" />
     </form>
 

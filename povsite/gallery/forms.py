@@ -11,12 +11,7 @@ class FeedbackMultipleChoiceForm(forms.ModelForm):
     # theme = forms.ModelMultipleChoiceField(
     #     queryset=Themes.objects.values_list('pk', flat=True), label='Тема', widget=forms.CheckboxSelectMultiple,
     # )
-    # name = forms.CharField(label='Имя', max_length=100, min_length=2, error_messages={
-    #     'max_length': 'Слишком много символов',
-    #     'min_length': 'Слишком мало символов',
-    # })
-    # email = forms.EmailField(label='Email')
-    # message = forms.CharField(label='Сообщение', widget=forms.Textarea())
+
 
     class Meta:
         model = Feedback
@@ -32,11 +27,8 @@ class FeedbackMultipleChoiceForm(forms.ModelForm):
             'message': _('Сообщение'),
             'theme': _('Тема'),
         }
-    #
-    # theme = forms.ModelMultipleChoiceField(
-    #     queryset=Themes.objects.values_list('id', flat=True), label='Тема', widget=forms.CheckboxSelectMultiple,
-    # )
-    # pprint(theme)
+
+
     def save(self, commit=True):
         feedback = super().save()
         pprint(feedback)

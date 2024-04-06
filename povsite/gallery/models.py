@@ -60,7 +60,7 @@ class Author(models.Model):
 
 class Feedback(models.Model):
 
-    theme = models.ManyToManyField(to='Themes', default='no subject', verbose_name='Тематика')
+    theme = models.ForeignKey(to='Themes', default='no subject', verbose_name='Тематика', on_delete=models.CASCADE)
     name = models.CharField(max_length=100, verbose_name='Имя')
     email = models.EmailField(verbose_name='Email')
     message = models.TextField(verbose_name='Сообщение')

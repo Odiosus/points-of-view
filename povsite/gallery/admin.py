@@ -115,7 +115,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('theme__name', 'name', 'email', 'short_description_field', 'time_add')  # TODO add 'theme'
+    list_display = ('theme', 'name', 'email', 'short_description_field', 'time_add')
     list_display_links = ('name', 'email')
     list_filter = ('theme', 'name', 'email', 'time_add')
     search_fields = ['name', 'email', 'message']

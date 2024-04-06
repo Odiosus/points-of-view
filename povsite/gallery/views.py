@@ -24,21 +24,7 @@ class GalleryList(ListView):
         if request.method == 'POST':
             form = FeedbackMultipleChoiceForm(request.POST)
             if form.is_valid():
-                # feed = Feedback(
-                #     name=form.cleaned_data['name'],
-                #     theme=Themes.objects.get(pk=form.cleaned_data['theme']),
-                #     email=form.cleaned_data['email'],
-                #     message=form.cleaned_data['message'],
-                # )
                 form.save()
-                pprint(request.POST)
-                pprint(Themes.objects.values('pk'))
-                pprint(Themes.objects.values_list('pk', flat=True))
-
-            else:
-                pprint(request.POST)
-                pprint(Themes.objects.values('pk'))
-                pprint(Themes.objects.values_list('pk', flat=True))
         return redirect('/')
 
 class GalleryDetail(DetailView):
