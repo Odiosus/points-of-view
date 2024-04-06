@@ -1,0 +1,44 @@
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 44px 71px;
+}
+
+.burger-menu {
+    width: 50px;
+    height: 32px;
+    margin-left: 71px;
+}
+
+.languages-container {
+    display: inline-block;
+}
+
+.languages {
+    border: none;
+    width: 25px;
+    height: 23px;
+    margin-left: 27px;
+
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+    background: none;
+}
+
+.languages:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.languages.active {
+    text-decoration: underline;
+}

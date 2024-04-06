@@ -146,3 +146,4 @@ GitHub.sublime-settings
 /.idea/vcs.xml
 /povsite/.env
 /povsite/db.sqlite3
+/povsite/db-dump.json

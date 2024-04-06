@@ -51,7 +51,7 @@ class Author(models.Model):
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
 
     def __str__(self):
-        return self.brand_name
+        return f'{self.surname}: "{self.brand_name}"'
 
     class Meta:
         verbose_name = 'Автор'
@@ -74,15 +74,15 @@ class Feedback(models.Model):
 
 
 class CategoryProject(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Проект')
+    name = models.CharField(max_length=100, verbose_name='Название проекта')
     description = models.TextField(verbose_name="Описание")
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = 'Категория проекта'
-        verbose_name_plural = 'Категории проектов'
+        verbose_name = 'Проект'
+        verbose_name_plural = 'Проекты'
 
 
 class Themes(models.Model):

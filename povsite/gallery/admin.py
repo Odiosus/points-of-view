@@ -77,10 +77,12 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
-    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone']
+    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
     ordering = ['-time_add']
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
+    save_as = True
+    list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
             "fields": ("brand_name", ("email", "phone"),)
@@ -109,7 +111,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def short_description_field(self, obj):
         if obj.biography:
-            return obj.biography[:40] + '...' if len(obj.biography) > 40 else obj.biography
+            return obj.biography[:100] + '...' if len(obj.biography) > 100 else obj.biography
 
     short_description_field.short_description = 'Биография'
 
