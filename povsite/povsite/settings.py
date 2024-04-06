@@ -132,9 +132,9 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # SERVER_EMAIL = 'artyomkolesnikov1990@gmail.com'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_SUBJECT_PREFIX = '[ТОЧКИ ЗРЕНИЯ]'
 SERVER_EMAIL = "capitas.kolesnikov@yandex.ru"
 

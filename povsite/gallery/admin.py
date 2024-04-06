@@ -1,12 +1,12 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author, Feedback, CategoryProject
-from modeltranslation.admin import TranslationAdmin, TabbedTranslationAdmin
+from .models import *
+from modeltranslation.admin import TranslationAdmin
 
 
 @admin.register(Gallery)
-class GalleryAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
+class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
         'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
@@ -72,7 +72,7 @@ class GalleryAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
 
 
 @admin.register(Author)
-class AuthorAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
+class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
@@ -115,7 +115,7 @@ class AuthorAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('theme', 'name', 'email', 'short_description_field', 'time_add')
+    list_display = ('theme__name', 'name', 'email', 'short_description_field', 'time_add')  # TODO add 'theme'
     list_display_links = ('name', 'email')
     list_filter = ('theme', 'name', 'email', 'time_add')
     search_fields = ['name', 'email', 'message']
@@ -133,7 +133,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 
 @admin.register(CategoryProject)
-class CategoryProjectAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
+class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('name', 'short_description_field')
     list_display_links = ('name',)
     list_filter = ('name',)
@@ -155,6 +155,10 @@ class CategoryProjectAdmin(TabbedTranslationAdmin, admin.ModelAdmin):
 
     short_description_field.short_description = 'Краткое описание'
 
+
+@admin.register(Themes)
+class ThemesAdmin(TranslationAdmin, admin.ModelAdmin):
+    list_display = ('name',)
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
 admin.site.site_title = 'Лаборатория "Точки Зрения"'

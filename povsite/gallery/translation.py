@@ -16,3 +16,7 @@ class AuthorTranslationOptions(TranslationOptions):
 class CategoryProjectTranslationOptions(TranslationOptions):
     fields = ("name", 'description',)
 
+
+@register(Themes)
+class GalleryTranslationOptions(TranslationOptions):
+    fields = ('name',)

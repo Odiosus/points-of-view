@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 16:00+0300\n"
+"POT-Creation-Date: 2024-04-04 20:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\gallery\forms.py:17
+#: .\gallery\forms.py:18
 msgid "Имя"
 msgstr "Nom"
 
-#: .\gallery\forms.py:18
+#: .\gallery\forms.py:19
 msgid "Сообщение"
 msgstr "Message"
+
+#: .\gallery\forms.py:20
+msgid "Тема"
+msgstr "Thème"
 
 #: .\templates\admin\base_site.html:9
 msgid "Django site admin"
@@ -33,6 +37,10 @@ msgstr ""
 #: .\templates\admin\base_site.html:12
 msgid "Django administration"
 msgstr ""
+
+#: .\templates\index.html:9
+msgid "Точки зрения:"
+msgstr "Points de vue"
 
 #: .\templates\index.html:56
 msgid "Автор:"
