@@ -14,7 +14,7 @@ class Gallery(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')  # TODO models.SET_NULL
     author = models.ForeignKey('Author', null=True, default=None, on_delete=models.CASCADE, verbose_name='Автор')
-    title = models.CharField(max_length=250, verbose_name='Заголовок')
+    title = models.CharField(max_length=80, verbose_name='Заголовок')
     content_text = models.TextField(default=None, blank=True, null=True, verbose_name='Статья')
     content_picture = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True,
                                         verbose_name="Изображение")

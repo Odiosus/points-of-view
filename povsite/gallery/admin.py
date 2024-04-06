@@ -8,9 +8,9 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
+        'user', 'is_published', 'project', 'title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
-    list_display_links = ('short_description_field_title',)
+    list_display_links = ('title',)
     list_filter = ('user', 'author', 'is_published', 'project__name', 'publication_date', 'publication_update')
     search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
@@ -32,7 +32,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
         }),
         ("Добавить медиаконтент", {
             "classes": ["collapse"],
-            "description": "Здесь можно добавить аудио/видео или изображение",
+            "description": "Здесь можно добавить аудио/видео контент",
             "fields": (("content",),)
         }),
         (None, {
@@ -45,7 +45,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def get_html_photo(self, object):
         if object.content_picture:
-            return mark_safe(f"<img src='{object.content_picture.url}' width=80>")
+            return mark_safe(f"<img src='{object.content_picture.url}' height=50 width=70>")
 
     get_html_photo.short_description = 'Миниатюра'
 
@@ -55,11 +55,11 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     short_description_field.short_description = 'Краткое описание'
 
-    def short_description_field_title(self, obj):
-        if obj.title:
-            return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
-
-    short_description_field_title.short_description = 'Заголовок'
+    # def short_description_field_title(self, obj):
+    #     if obj.title:
+    #         return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
+    #
+    # short_description_field_title.short_description = 'Заголовок'
 
     @admin.action(description="Опубликовать выбранные записи")
     def set_published(self, request, queryset):
