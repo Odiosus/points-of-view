@@ -59,16 +59,7 @@ class Author(models.Model):
 
 
 class Feedback(models.Model):
-    THEME = [
-        ('no subject', 'без темы'),
-        ('paintings', 'картины'),
-        ('design', 'дизайн'),
-        ('music', 'музыка'),
-        ('video', 'видео'),
-        ('photo', 'фотография'),
-        ('other', 'другое'),
-    ]
-    theme = models.CharField(max_length=100, choices=THEME, default='no subject', verbose_name='Тема')
+    theme = models.ForeignKey('Themes', on_delete=models.CASCADE, default='no subject', verbose_name='Тема')
     name = models.CharField(max_length=100, verbose_name='Имя')
     email = models.EmailField(verbose_name='Email')
     message = models.TextField(verbose_name='Сообщение')
@@ -92,3 +83,14 @@ class CategoryProject(models.Model):
     class Meta:
         verbose_name = 'Категория проекта'
         verbose_name_plural = 'Категории проектов'
+
+
+class Themes(models.Model):
+    name = models.CharField(max_length=30, verbose_name='Тема обращения')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Тема обращения обратной связи'
+        verbose_name_plural = 'Темы обращений обратной связи'

@@ -1,4 +1,4 @@
-from .models import Gallery, Author, CategoryProject
+from .models import Gallery, Author, CategoryProject, Themes
 from modeltranslation.translator import register, TranslationOptions
 
 
@@ -15,3 +15,8 @@ class AuthorTranslationOptions(TranslationOptions):
 @register(CategoryProject)
 class CategoryProjectTranslationOptions(TranslationOptions):
     fields = ("name", 'description',)
+
+
+@register(Themes)
+class ThemesTranslationOptions(TranslationOptions):
+    fields = ('name',)

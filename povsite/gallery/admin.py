@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author, Feedback, CategoryProject
+from .models import Gallery, Author, Feedback, CategoryProject, Themes
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -118,11 +118,11 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = ('theme', 'name', 'email', 'short_description_field', 'time_add')
     list_display_links = ('name', 'email')
-    list_filter = ('theme', 'name', 'email', 'time_add')
+    list_filter = ('theme__name', 'name', 'time_add')
     search_fields = ['name', 'email', 'message']
     ordering = ['-time_add']
     save_on_top = True
-    fields = ('theme', 'name', 'email', 'message', 'time_add')
+    fields = ('theme__name', 'name', 'email', 'message', 'time_add')
     readonly_fields = ('theme', 'name', 'email', 'message', 'time_add',)
     list_per_page = 10
 
@@ -155,6 +155,16 @@ class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
             return obj.description[:100] + '...' if len(obj.description) > 100 else obj.description
 
     short_description_field.short_description = 'Краткое описание'
+
+
+@admin.register(Themes)
+class ThemesAdmin(TranslationAdmin, admin.ModelAdmin):
+    list_display = ('name',)
+    list_display_links = ('name',)
+    list_filter = ('name',)
+    search_fields = ['name']
+    save_on_top = True
+    fields = ('name',)
 
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
