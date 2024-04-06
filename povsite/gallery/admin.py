@@ -11,7 +11,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
         'user', 'is_published', 'project', 'title', 'author', 'short_description_field',
         'get_html_photo', 'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
-    list_filter = ('user', 'author', 'is_published', 'project__name', 'publication_date', 'publication_update')
+    list_filter = ('user', 'is_published', 'project__name', 'author', 'publication_date', 'publication_update')
     search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
