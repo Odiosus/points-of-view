@@ -1,11 +1,15 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from .views import GalleryList, GalleryViewSet, GalleryDetail
+from .views import *
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'gallery', GalleryViewSet)
+router.register(r'author', AuthorViewSet)
+router.register(r'feedback', FeedbackViewSet)
+router.register(r'categoryproject', CategoryProjectViewSet)
+router.register(r'themes', ThemesViewSet)
 
 
 

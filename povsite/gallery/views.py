@@ -1,8 +1,6 @@
-from pprint import pprint
-
 from django.shortcuts import render, redirect
-from .models import Gallery, Themes, Feedback
-from .serializers import GallerySerializer
+from .models import *
+from .serializers import *
 from rest_framework import viewsets
 from django.views.generic import ListView, DetailView
 from .forms import FeedbackMultipleChoiceForm
@@ -33,6 +31,7 @@ class GalleryDetail(DetailView):
     context_object_name = 'unit'
 
 
+
 #==========================================
 #Viewsets
 
@@ -40,3 +39,22 @@ class GalleryViewSet(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
 
+
+class AuthorViewSet(viewsets.ModelViewSet):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+
+
+class FeedbackViewSet(viewsets.ModelViewSet):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
+
+
+class CategoryProjectViewSet(viewsets.ModelViewSet):
+    queryset = CategoryProject.objects.all()
+    serializer_class = CategoryProjectSerializer
+
+
+class ThemesViewSet(viewsets.ModelViewSet):
+    queryset = Themes.objects.all()
+    serializer_class = ThemesSerializer
