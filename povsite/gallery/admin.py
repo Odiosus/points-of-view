@@ -85,7 +85,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("brand_name", ("email", "phone"),)
+            "fields": ("brand_name", "email", "phone",)
         }),
         ("Персональная информация", {
             "classes": ("collapse",),
@@ -96,10 +96,10 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": (("biography",),)
         }),
         (None, {
-            "fields": (("photo", "get_html_photo",),)
+            "fields": ("photo", "get_html_photo",),
         }),
         (None, {
-            "fields": (('time_add', 'time_update',),)
+            "fields": ('time_add', 'time_update',)
         }),
     )
 
