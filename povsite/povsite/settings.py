@@ -146,6 +146,6 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = "capitas.kolesnikov@yandex.ru"
 
-ADMINS = [('Andrey Gunyavin', 'artyomkolesnikov1990@gmail.com'),]
+ADMINS = [('Andrey Gunyavin', 'artyomkolesnikov1990@gmail.com'),] # TODO change email
 
 
