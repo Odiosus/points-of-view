@@ -41,16 +41,13 @@ class GalleryList(ListView):
                 pprint(Themes.objects.values_list('pk', flat=True))
         return redirect('/')
 
+
 class GalleryDetail(DetailView):
     model = Gallery
     template_name = 'detail.html'
     context_object_name = 'unit'
 
 
-#==========================================
-#Viewsets
-
 class GalleryViewSet(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
-
