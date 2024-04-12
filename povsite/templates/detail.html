@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+{% load i18n %}
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +11,14 @@
 <body>
 
     <div>
-        {{ unit.title }}
-        <p>
-        <img src='{{ unit.content_picture.url }}' width="100">
-        <p>
-        {{ unit.content_text }}
+        {% for gallery in galleries %}
+            <p> {% trans 'Автор:' %} {{ gallery.user }} </p>
+            <p> {% trans 'Заголовок:' %} {{ gallery.title }} </p>
+            <p> {% trans 'Текст статьи:' %}  {{ gallery.content_text }} </p>
+            <p> {% trans 'Публикуется:' %} {{ gallery.is_published }} </p>
+            <p> {% trans 'Картинка:' %} <img src='{{ gallery.content_picture.url }}' width="100"></p>
+            <p> {% trans 'Контент:' %} {{ gallery.content }} </p>
+        {% endfor %}
     </div>
 
 </body>

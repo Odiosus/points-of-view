@@ -6,11 +6,10 @@ from django.views.generic import ListView, DetailView
 from .forms import FeedbackMultipleChoiceForm
 
 
-class GalleryList(ListView):
-    model = Gallery
-    ordering = '-publication_date'
+class CategoryProjectList(ListView):
+    model = CategoryProject
     template_name = 'index.html'
-    context_object_name = 'units'
+    context_object_name = 'projects'
     form = FeedbackMultipleChoiceForm
 
     def get_context_data(self, **kwargs):
@@ -25,10 +24,15 @@ class GalleryList(ListView):
                 form.save()
         return redirect('/')
 
-class GalleryDetail(DetailView):
-    model = Gallery
+class CategoryProjectDetail(DetailView):
+    model = CategoryProject
     template_name = 'detail.html'
     context_object_name = 'unit'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['galleries'] = Gallery.objects.filter(project=context['object'])
+        return context
 
 
 

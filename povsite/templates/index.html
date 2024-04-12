@@ -52,13 +52,15 @@
 
 
     <div class="test">
-        {% for unit in units %}
-            <p> {% trans 'Автор:' %} {{ unit.user }} </p>
-            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>
-            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>
-            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>
-            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>
-            <p> {% trans 'Контент:' %} {{ unit.content }} </p>
+        {% for project in projects %}
+            <a href="{{ project.id }}">{{ project.name }}</a>
+            <p>{{ project.description }}</p>
+<!--            <p> {% trans 'Автор:' %} {{ unit.user }} </p>-->
+<!--            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>-->
+<!--            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>-->
+<!--            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>-->
+<!--            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>-->
+<!--            <p> {% trans 'Контент:' %} {{ unit.content }} </p>-->
             <p>
         {% endfor %}
     </div>
