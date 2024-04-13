@@ -1,46 +1,20 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
+import React, { Component, Fragment } from "react";
+
+import "../styles/App.css";
+import Header from "./Header"
+import Main from "./Main";
+import Footer from "./Footer";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      loaded: false,
-      placeholder: "Loading"
-    };
-  }
-
-  componentDidMount() {
-    fetch("api/lead")
-      .then(response => {
-        if (response.status > 400) {
-          return this.setState(() => {
-            return { placeholder: "Something went wrong!" };
-          });
-        }
-        return response.json();
-      })
-      .then(data => {
-        this.setState(() => {
-          return {
-            data,
-            loaded: true
-          };
-        });
-      });
-  }
-
-  render() {
-    return (
-      <ul>
-        {}
-      </ul>
-    );
-  }
+    render() {
+        return (
+            <Fragment>
+                <Header />
+                <Main />
+                <Footer />
+            </Fragment>
+        );
+    }
 }
 
 export default App;
-
-const container = document.getElementById("app");
-render(<App />, container);
