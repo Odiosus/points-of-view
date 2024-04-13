@@ -20,16 +20,8 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        esModule: true,
-                    },
-                    },
-                    'css-loader',
-                ],
-            }
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
     stats: {
