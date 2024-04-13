@@ -9,7 +9,6 @@ module.exports = {
         path: path.join(__dirname, "/dist"),
         filename: "bundle.js"
     },
-
     module: {
         rules: [
             {
@@ -33,8 +32,11 @@ module.exports = {
             }
         ]
     },
+    stats: {
+        children: true
+    },
     plugins: [
-        new HtmlWebpackPlugin({template: './src/index.html'}),
+        new HtmlWebpackPlugin({template: './dist/index.html'}),
         new MiniCssExtractPlugin(),
     ]
     }
