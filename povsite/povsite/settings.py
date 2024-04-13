@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gallery.apps.GalleryConfig',
+    'frontend', # enable the frontend app
 ]
 
 MIDDLEWARE = [
