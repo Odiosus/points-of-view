@@ -15,9 +15,9 @@ html[data-theme="light"],
     --body-quiet-color: #666;
     --body-loud-color: #000;
 
-    --header-color: #c495c4;
+    --header-color: #fcf0fc;
     --header-branding-color: var(--accent);
-    --header-bg: #799fcc;
+    --header-bg: #e9e9e8;
     --header-link-color: var(--primary-fg);
 
     --breadcrumbs-fg: #c4dce8;
@@ -39,7 +39,7 @@ html[data-theme="light"],
 
     --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
     --selected-bg: #e4e4e4; /* E.g. selected table cells */
-    --selected-row: #c495c4;
+    --selected-row: #fcf0fc;
 
     --button-fg: #fff;
     --button-bg: var(--secondary);
@@ -595,7 +595,7 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 0.8125rem;
     text-align: left;
-    background: var(--header-bg);
+    background: #799fcc;
     color: var(--header-link-color);
 }
 
@@ -786,8 +786,8 @@ a.deletelink:focus, a.deletelink:hover {
     display: block;
     float: left;
     padding: 3px 12px;
-    background: #799fcc;
-    color: #799fcc;
+    background: #c495c4;
+    color: #e9e9e8;
     font-weight: 400;
     font-size: 0.6875rem;
     text-transform: uppercase;
@@ -928,8 +928,8 @@ a.deletelink:focus, a.deletelink:hover {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #799fcc;
-    color: #799fcc;
+    background: #e9e9e8;
+    color: #c495c4;
 }
 
 #header a:link, #header a:visited, #logout-form button {
@@ -960,7 +960,7 @@ a.deletelink:focus, a.deletelink:hover {
 }
 
 #site-name a:link, #site-name a:visited {
-    color: #799fcc;
+    color: #c15191;
 }
 
 #branding h2 {
