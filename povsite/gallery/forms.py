@@ -12,7 +12,7 @@ asend_mail = sync_to_async(mail_admins)
 async def send_mail_admin(feedback):
     asyncio.create_task(
         asend_mail(
-            subject=f' С вами поделились идеей!',
+            subject=f' С вами поделились идеей на тему {feedback.theme}!',
             message=
             f'Отправитель: {feedback.name}\n'
             f'Время отправления: {feedback.time_add}\n'

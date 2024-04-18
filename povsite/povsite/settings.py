@@ -22,6 +22,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'modeltranslation',
+    'django_tests',
 
     'django.contrib.admin',
     'django.contrib.auth',
