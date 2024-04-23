@@ -1,0 +1,206 @@
+/* 3 */
+position: absolute;
+width: 1440px;
+height: 900px;
+left: 1px;
+top: 1254px;
+
+/* Rectangle 143 */
+position: absolute;
+width: 388px;
+height: 374px;
+left: 162px;
+top: 274px;
+
+background: url(Снимок экрана 2024-04-06 в 02.39.34);
+
+/* Frame 47853 */
+position: absolute;
+width: 645px;
+height: 630px;
+left: 624px;
+top: 150px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* h1 */
+position: static;
+width: 165px;
+height: 63px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 60px 0px;
+
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 50px;
+font-weight: 900;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Frame 47852 */
+position: static;
+width: 645px;
+height: 507px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 60px 0px;
+
+/* Мы даём зазвучать произведениям, местам и человеческим душам */
+position: static;
+width: 645px;
+height: 67px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 80px 0px;
+
+/* Secondary/Light Blue */
+
+color: rgb(121, 159, 204);
+font-family: Geologica;
+font-size: 34px;
+font-weight: 600;
+line-height: 34px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47851 */
+position: static;
+width: 612px;
+height: 360px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 80px 0px;
+
+/* Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. */
+position: static;
+width: 612px;
+height: 103px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 25px 0px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников. */
+position: static;
+width: 612px;
+height: 104px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 25px 0px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+
+/* «Точки зрения» – это проект, который помогает художникам найти аудиторию, зрителям – произведения, институциям – посетителей. */
+position: static;
+width: 612px;
+height: 103px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 25px 0px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+

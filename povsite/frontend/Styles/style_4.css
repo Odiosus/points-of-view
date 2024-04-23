@@ -1,0 +1,211 @@
+/* 4 */
+position: absolute;
+width: 1440px;
+height: 998px;
+left: 0;
+top: 2154px;
+
+/* h2 */
+position: absolute;
+width: 269px;
+height: 63px;
+left: 586px;
+top: 100px;
+
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 50px;
+font-weight: 900;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Frame 47669 */
+position: absolute;
+width: 1300px;
+height: 650px;
+left: 70px;
+top: 248px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+/* card Art-diving */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Арт-дайвинг_галерея Асламазян (1));
+
+/* арт-дайвинг */
+position: absolute;
+width: 265px;
+height: 56px;
+left: 43px;
+right: 104px;
+top: 551px;
+bottom: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+/* Арт—дайвинг */
+position: static;
+width: 245px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Grey */
+
+color: rgb(233, 233, 232);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 900;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* card Questions */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Ayumi Adachi);
+
+/* вопросы */
+position: absolute;
+width: 234px;
+height: 128px;
+left: 43px;
+right: 135px;
+top: 479px;
+bottom: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+/* Наивные вопросы художнику */
+position: static;
+width: 214px;
+height: 108px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Grey */
+
+color: rgb(233, 233, 232);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 900;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* card Art cartel */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(арт-картель_ЦСИ Ульяновск_арт-резиденция Мельница);
+
+/* арт картель */
+position: absolute;
+width: 229px;
+height: 56px;
+left: 43px;
+right: 140px;
+top: 551px;
+bottom: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+/* Арт—картель */
+position: static;
+width: 235px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Grey */
+color: rgb(233, 233, 232);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 900;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+

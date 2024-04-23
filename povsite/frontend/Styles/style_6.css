@@ -1,0 +1,1256 @@
+/* 6 команда */
+position: absolute;
+width: 1440px;
+height: 1048px;
+left: 0;
+top: 4106px;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* команда */
+position: absolute;
+width: 1332px;
+height: 650px;
+left: 70px;
+top: 270px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px;
+
+/* Гунявин */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Андрей);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+background: rgb(255, 255, 255);
+
+/* фио */
+position: absolute;
+width: 188px;
+height: 43px;
+left: 32px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* имя */
+position: static;
+width: 188px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* АНдрей гунявин */
+position: static;
+width: 168px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 188px;
+height: 38px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Куратор лаборатории */
+position: static;
+width: 153px;
+height: 18px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Манукян */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Артур Манукян);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 559px;
+bottom: 8px;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 350px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 176px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* Артур Манукян */
+position: static;
+width: 156px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 350px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+align-self: stretch;
+flex-grow: 1;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Музыкант, звуко-режиссер: музыка к арт-дайвингу на выставке «Россия нулевых: случайных кадр» */
+position: static;
+width: 330px;
+height: 54px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Гунина */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Ellipse 00);
+
+/* оверлей Гунина */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+background: rgb(255, 255, 255);
+
+/* с описанием */
+position: absolute;
+width: 152px;
+height: 42px;
+left: 32px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* имя */
+position: static;
+width: 152px;
+height: 42px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* АННА ГУНИНА */
+position: static;
+width: 132px;
+height: 22px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 265px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Дизайн: айдентика лаборатории, разработка дизайна сайта-визитки */
+position: static;
+width: 245px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Смирнов */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(МИХАИЛ Ч_Б 3);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 583px;
+bottom: -16px;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 202px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 202px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* МИХАИЛ сМИРНОВ */
+position: static;
+width: 182px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 381px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Digital artist: создание муз. подложки для  арт-дайвинга в галерее сестер Асламазян */
+position: static;
+width: 361px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Степов */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Алексей ТЗ i 1);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 350px;
+height: 100px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 186px;
+height: 42px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* Алексей степов */
+position: static;
+width: 166px;
+height: 22px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 350px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+align-self: stretch;
+flex-grow: 1;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Sound engineer: звуковые эффекты для картины «Отсутствующие основания» */
+position: static;
+width: 330px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Володина */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Дарья Володина);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 196px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 196px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* ДАрья володина */
+position: static;
+width: 176px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 381px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Оператор и фотограф «Наивных вопросов художнику» */
+position: static;
+width: 361px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Henry */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Henry);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 167px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 167px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* Henry Avedian */
+position: static;
+width: 147px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 167px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+align-self: stretch;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Актер озвучивания */
+position: static;
+width: 147px;
+height: 18px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Lucille */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Lucille);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 182px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 182px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* Lucille Collard */
+position: static;
+width: 162px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 182px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+align-self: stretch;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* Актриса озвучивания */
+position: static;
+width: 162px;
+height: 18px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Saifullina */
+position: static;
+width: 412px;
+height: 650px;
+/* Inside Auto Layout */
+flex: none;
+order: 8;
+flex-grow: 0;
+margin: 0px 32px;
+
+border-radius: 30px;
+
+background: url(Роза ТЗ Ч_Б 1);
+
+/* оверлей Степов */
+position: absolute;
+width: 412px;
+height: 83px;
+left: 0;
+right: 0;
+top: 567px;
+bottom: 0;
+
+border-radius: 0px 0px 30px 30px;
+
+background: rgb(255, 255, 255);
+
+/* фио + описание */
+position: absolute;
+width: 194px;
+height: 43px;
+left: 31px;
+top: 20px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Степов */
+position: static;
+width: 194px;
+height: 43px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1px 0px;
+
+/* Роза Сайфулина */
+position: static;
+width: 174px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 500;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* описание */
+position: static;
+width: 344px;
+height: 56px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+align-self: stretch;
+flex-grow: 0;
+margin: 1px 0px;
+
+visibility: hidden;
+
+/* видеомонтаж «Наивных вопросов художников», оцифровка картин галереи Асламазян для арт-дайвинга */
+position: static;
+width: 324px;
+height: 54px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Button Send/CaretRight */
+position: absolute;
+width: 58px;
+height: 58px;
+left: 1370px;
+right: 12px;
+top: 575px;
+bottom: 415px;
+
+/* Vector */
+position: absolute;
+width: 20.81px;
+height: 38.9px;
+left: 20.42px;
+top: 9.55px;
+
+background: rgb(0, 0, 0);
+
+/* h2 */
+position: absolute;
+width: 412px;
+height: 63px;
+left: 514px;
+top: 100px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 50px;
+font-weight: 900;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+

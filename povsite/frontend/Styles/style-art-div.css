@@ -1,0 +1,844 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400&display=swap" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400&display=swap)</style>
+
+font-family: 'Geologica';
+
+/* MAIN Page prototype full */
+position: absolute;
+width: 1440px;
+height: 7918px;
+left: 11873px;
+top: 2250px;
+
+/* Main screen 1-2 */
+position: absolute;
+width: 1440px;
+height: 1254px;
+left: 0;
+top: 0;
+
+/* Component 4 */
+position: absolute;
+width: 1300px;
+height: 50px;
+left: 70px;
+right: 70px;
+top: 40px;
+bottom: 1164px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+
+/* logo 2 */
+position: static;
+width: 120px;
+height: 50px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 898px;
+
+/* Слой 2 */
+position: absolute;
+width: 120px;
+height: 50.01px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -0.02%;
+
+/* Слой 6 */
+position: absolute;
+width: 120px;
+height: 50.01px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Vector */
+position: absolute;
+width: 8.27px;
+height: 8.3px;
+left: 89.07%;
+right: 4.04%;
+top: 66.98%;
+bottom: 16.42%;
+
+/* Vector */
+position: absolute;
+width: 8.27px;
+height: 8.3px;
+left: 20.54%;
+right: 72.57%;
+top: 67.81%;
+bottom: 15.6%;
+
+/* Vector */
+position: absolute;
+width: 18.71px;
+height: 18.56px;
+left: 84.41%;
+right: 0%;
+top: 61.58%;
+bottom: 1.3%;
+
+/* Vector */
+position: absolute;
+width: 18.66px;
+height: 18.5px;
+left: 67.24%;
+right: 17.21%;
+top: 61.7%;
+bottom: 1.3%;
+
+/* Vector */
+position: absolute;
+width: 18.9px;
+height: 18.5px;
+left: 49.32%;
+right: 34.93%;
+top: 61.7%;
+bottom: 1.3%;
+
+/* Vector */
+position: absolute;
+width: 15.66px;
+height: 18.5px;
+left: 33.96%;
+right: 52.99%;
+top: 61.7%;
+bottom: 1.3%;
+
+/* Vector */
+position: absolute;
+width: 18.19px;
+height: 18.48px;
+left: 16.92%;
+right: 67.92%;
+top: 61.69%;
+bottom: 1.36%;
+
+/* Vector */
+position: absolute;
+width: 17.29px;
+height: 19.78px;
+left: 0.44%;
+right: 85.15%;
+top: 60.45%;
+bottom: 0%;
+
+/* Vector */
+position: absolute;
+width: 18.66px;
+height: 18.5px;
+left: 69.86%;
+right: 14.59%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 19.09px;
+height: 18.5px;
+left: 52.5%;
+right: 31.59%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 18.31px;
+height: 18.5px;
+left: 34.95%;
+right: 49.79%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 17.4px;
+height: 18.5px;
+left: 0%;
+right: 85.5%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 21.02px;
+height: 21.14px;
+left: 15.44%;
+right: 67.04%;
+top: 0%;
+bottom: 57.73%;
+
+/* Frame 47662 */
+position: static;
+width: 282px;
+height: 50px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px 898px;
+
+/* language */
+position: static;
+width: 156px;
+height: 32px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 86px;
+
+/* ru */
+position: static;
+width: 34px;
+height: 32px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 28px;
+
+/* RU */
+position: static;
+width: 34px;
+height: 30px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 2px 0px;
+
+color: rgb(0, 0, 0);
+font-family: Geologica;
+font-size: 24px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+
+/* Line 15 */
+position: static;
+width: 34px;
+height: 0;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 2px 0px;
+
+/* EU */
+position: static;
+width: 34px;
+height: 30px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 28px;
+
+/* EN */
+position: static;
+width: 33px;
+height: 30px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 2px 0px;
+
+color: rgb(0, 0, 0);
+font-family: Geologica;
+font-size: 24px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+
+/* Line 15 */
+position: static;
+width: 34px;
+height: 0;
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 2px 0px;
+
+/* FR */
+position: static;
+width: 34px;
+height: 30px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 28px;
+
+/* FR */
+position: static;
+width: 34px;
+height: 30px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 2px 0px;
+
+color: rgb(0, 0, 0);
+font-family: Geologica;
+font-size: 24px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+
+/* Line 15 */
+position: static;
+width: 34px;
+height: 0;
+/* Inside Auto Layout */
+flex: none;
+order: undefined;
+flex-grow: 0;
+margin: 2px 0px;
+
+/* Frame 47689 */
+position: static;
+width: 40px;
+height: 40px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 86px;
+
+/* Vector */
+position: static;
+width: 36px;
+height: 18px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+
+/* Subtitle */
+position: absolute;
+width: 631px;
+height: 43px;
+left: 405px;
+top: 490px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+/* Арт-лаборатория, открывающая искусство по-новому */
+position: static;
+width: 611px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+color: rgb(53, 53, 51);
+font-family: Geologica;
+font-size: 22px;
+font-weight: 600;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* logo 1 */
+position: absolute;
+width: 633px;
+height: 250px;
+left: 403px;
+right: 404px;
+top: 190px;
+bottom: 814px;
+
+/* Слой 2 */
+position: absolute;
+width: 633px;
+height: 250.05px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -0.02%;
+
+/* Слой 6 */
+position: absolute;
+width: 633px;
+height: 250.05px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Vector */
+position: absolute;
+width: 43.6px;
+height: 41.51px;
+left: 89.07%;
+right: 4.04%;
+top: 66.97%;
+bottom: 16.42%;
+
+/* Vector */
+position: absolute;
+width: 43.6px;
+height: 41.51px;
+left: 20.55%;
+right: 72.57%;
+top: 67.8%;
+bottom: 15.6%;
+
+/* Vector */
+position: absolute;
+width: 98.69px;
+height: 92.81px;
+left: 84.41%;
+right: 0%;
+top: 61.58%;
+bottom: 1.31%;
+
+/* Vector */
+position: absolute;
+width: 98.43px;
+height: 92.52px;
+left: 67.24%;
+right: 17.21%;
+top: 61.69%;
+bottom: 1.31%;
+
+/* Vector */
+position: absolute;
+width: 99.69px;
+height: 92.52px;
+left: 49.32%;
+right: 34.94%;
+top: 61.69%;
+bottom: 1.31%;
+
+/* Vector */
+position: absolute;
+width: 82.62px;
+height: 92.52px;
+left: 33.96%;
+right: 52.99%;
+top: 61.69%;
+bottom: 1.31%;
+
+/* Vector */
+position: absolute;
+width: 95.97px;
+height: 92.38px;
+left: 16.93%;
+right: 67.91%;
+top: 61.69%;
+bottom: 1.36%;
+
+/* Vector */
+position: absolute;
+width: 91.18px;
+height: 98.91px;
+left: 0.45%;
+right: 85.15%;
+top: 60.44%;
+bottom: 0%;
+
+/* Vector */
+position: absolute;
+width: 98.43px;
+height: 92.48px;
+left: 69.86%;
+right: 14.59%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 100.7px;
+height: 92.48px;
+left: 52.5%;
+right: 31.59%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 100.7px;
+height: 92.48px;
+left: 52.5%;
+right: 31.59%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 91.79px;
+height: 92.48px;
+left: 0%;
+right: 85.5%;
+top: 2.56%;
+bottom: 60.46%;
+
+/* Vector */
+position: absolute;
+width: 110.87px;
+height: 105.69px;
+left: 15.44%;
+right: 67.05%;
+top: 0%;
+bottom: 57.73%;
+
+/* Rectangle 139 */
+position: absolute;
+width: 450px;
+height: 450px;
+left: 809px;
+top: 623px;
+
+/* Rectangle 141 */
+position: absolute;
+width: 1078px;
+height: 450px;
+left: 179px;
+top: 623px;
+
+/* Background main screen */
+position: absolute;
+width: 1440px;
+height: 1254px;
+left: 0;
+top: 0;
+
+/* Vector */
+position: absolute;
+width: 893px;
+height: 449.78px;
+left: 261px;
+top: 646.69px;
+
+/* Vector */
+position: absolute;
+width: 630px;
+height: 524.4px;
+left: 400px;
+top: 122.29px;
+
+/* Vector */
+position: absolute;
+width: 775.22px;
+height: 1306.85px;
+left: 718.22px;
+top: -29.02px;
+transform: rotate(180.00deg);
+
+/* Vector */
+position: absolute;
+width: 631.74px;
+height: 1209.44px;
+left: 860px;
+top: 90.16px;
+
+/* Vector */
+position: absolute;
+width: 1322.25px;
+height: 751.64px;
+left: 219px;
+top: -255.98px;
+
+/* 3 */
+position: absolute;
+width: 1440px;
+height: 900px;
+left: 1px;
+top: 1254px;
+
+/* Rectangle 143 */
+position: absolute;
+width: 388px;
+height: 374px;
+left: 162px;
+top: 274px;
+
+/* Frame 47853 */
+position: absolute;
+width: 645px;
+height: 630px;
+left: 624px;
+top: 150px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* h1 */
+position: static;
+width: 165px;
+height: 63px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 60px 0px;
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 50px;
+font-weight: 900;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Frame 47852 */
+position: static;
+width: 645px;
+height: 507px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 60px 0px;
+
+/* Мы даём зазвучать произведениям, местам и человеческим душам */
+position: static;
+width: 645px;
+height: 67px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 80px 0px;
+
+color: rgb(121, 159, 204);
+font-family: Geologica;
+font-size: 34px;
+font-weight: 600;
+line-height: 34px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47851 */
+position: static;
+width: 612px;
+height: 360px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 80px 0px;
+
+/* Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. */
+position: static;
+width: 612px;
+height: 103px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 25px 0px;
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников. */
+position: static;
+width: 612px;
+height: 104px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 25px 0px;
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+
+/* «Точки зрения» – это проект, который помогает художникам найти аудиторию, зрителям – произведения, институциям – посетителей. */
+position: static;
+width: 612px;
+height: 103px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 25px 0px;
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 26px;
+font-weight: 250;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: left;
+
