@@ -10,7 +10,13 @@ class App extends Component {
         return (
             <Fragment>
                 <Header />
-                <Main />
+                <Menu />
+                <Block_1 />
+                <Block_2 />
+                <Block_3 />
+                <Block_4 />
+                <Block_5 />
+
                 <Footer />
             </Fragment>
         );
