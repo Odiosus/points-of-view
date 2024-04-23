@@ -22,6 +22,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'modeltranslation',
+    'grappelli',
 
     'django.contrib.admin',
     'django.contrib.auth',

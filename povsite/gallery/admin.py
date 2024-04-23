@@ -16,6 +16,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
+    save_as = True
     actions = ['set_published', 'set_draft']
     list_editable = ('is_published',)
     list_per_page = 10
@@ -27,11 +28,11 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("author", 'project', "title",),
         }),
         ("Написать статью", {
-            "classes": ("collapse",),
+            "classes": ("grp-collapse grp-closed",),
             "fields": (("content_text",),)
         }),
         ("Добавить медиаконтент", {
-            "classes": ["collapse"],
+            "classes": ["grp-collapse grp-closed"],
             "description": "Здесь можно добавить аудио/видео контент",
             "fields": (("content",),)
         }),
@@ -88,11 +89,11 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("brand_name", "email", "phone",)
         }),
         ("Персональная информация", {
-            "classes": ("collapse",),
+            "classes": ("grp-collapse grp-closed",),
             "fields": (("name", "surname", "patronymic",),)
         }),
         ("Биография", {
-            "classes": ("collapse",),
+            "classes": ("grp-collapse grp-closed",),
             "fields": (("biography",),)
         }),
         (None, {
@@ -123,7 +124,6 @@ class FeedbackAdmin(admin.ModelAdmin):
     list_filter = ('theme__name', 'name', 'time_add')
     search_fields = ['name', 'email', 'message']
     ordering = ['-time_add']
-    save_on_top = True
     fields = ('theme', 'name', 'email', 'message', 'time_add')
     readonly_fields = ('theme', 'name', 'email', 'message', 'time_add',)
     list_per_page = 10
