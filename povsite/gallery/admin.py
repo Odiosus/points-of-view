@@ -8,7 +8,7 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'is_published', 'project', 'get_html_photo', 'title', 'author', 'short_description_field',
+        'is_published', 'project', 'get_html_photo', 'title', 'author', 'short_description_field',
         'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
     list_filter = ('user', 'is_published', 'project', 'author', 'publication_date', 'publication_update')
@@ -147,14 +147,14 @@ class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("name",)
         }),
         ("Описание проекта", {
-            "classes": ("collapse",),
+            "classes": ("grp-collapse grp-closed",),
             "fields": (("description",),)
         }),
     )
 
     def short_description_field(self, obj):
         if obj.description:
-            return obj.description[:100] + '...' if len(obj.description) > 100 else obj.description
+            return obj.description[:350] + '...' if len(obj.description) > 350 else obj.description
 
     short_description_field.short_description = 'Краткое описание'
 
