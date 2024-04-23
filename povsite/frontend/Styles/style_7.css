@@ -1,0 +1,244 @@
+/* 7 Есть идея? */
+position: absolute;
+width: 1440px;
+height: 900px;
+left: 0;
+top: 5154px;
+
+background: rgb(255, 255, 255);
+
+/* ЕСТЬ ИДЕи? */
+position: absolute;
+width: 948px;
+height: 147px;
+left: 246px;
+top: 215px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 150px;
+font-weight: 250;
+line-height: 188px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+
+/* Button Tell us */
+position: absolute;
+width: 700px;
+height: 218px;
+left: 383px;
+top: 545px;
+
+box-sizing: border-box;
+/* Secondary/Pink */
+border: 4px solid rgb(193, 81, 145);
+border-radius: 240px;
+
+/* Frame 47610 */
+position: absolute;
+width: 568px;
+height: 91px;
+left: 67px;
+top: 63px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+/* РАССКАЖИ НАМ */
+position: static;
+width: 593px;
+height: 90px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Secondary/Pink */
+color: rgb(193, 81, 145);
+font-family: Geologica;
+font-size: 72px;
+font-weight: 250;
+line-height: 90px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+
+/* Group 26 */
+position: absolute;
+width: 429.12px;
+height: 490.25px;
+left: 951.66px;
+right: 59.22px;
+top: 111.39px;
+bottom: 298.35px;
+transform: rotate(89.73deg);
+
+visibility: hidden;
+
+/* Rectangle 132 */
+position: absolute;
+width: 221.47px;
+height: 221.47px;
+left: 858.54px;
+top: 319.49px;
+transform: rotate(89.73deg);
+
+border-radius: 101.5px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.5) 32.639%,rgba(100, 100, 100, 0.5) 92.708%);
+
+/* Rectangle 136 */
+position: absolute;
+width: 100.09px;
+height: 100.09px;
+left: 652.56px;
+top: 357.83px;
+transform: rotate(89.73deg);
+
+border-radius: 101.5px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.3) 32.639%,rgba(100, 100, 100, 0.3) 92.708%);
+
+/* Rectangle 134 */
+position: absolute;
+width: 160.1px;
+height: 160.1px;
+left: 853.39px;
+top: 180.59px;
+transform: rotate(89.73deg);
+
+border-radius: 101.5px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.3) 32.639%,rgba(100, 100, 100, 0.3) 92.708%);
+
+/* Rectangle 135 */
+position: absolute;
+width: 160.1px;
+height: 160.1px;
+left: 952.37px;
+top: 259.29px;
+transform: rotate(89.73deg);
+
+border-radius: 101.5px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.3) 32.639%,rgba(100, 100, 100, 0.3) 92.708%);
+
+/* Rectangle 133 */
+position: absolute;
+width: 160.1px;
+height: 160.1px;
+left: 622px;
+top: 216.05px;
+transform: rotate(89.73deg);
+
+border-radius: 101.5px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.3) 32.639%,rgba(100, 100, 100, 0.3) 92.708%);
+
+/* Rectangle 131 */
+position: absolute;
+width: 317.53px;
+height: 317.53px;
+left: 857.63px;
+top: 111.84px;
+transform: rotate(89.73deg);
+
+border-radius: 161px;
+
+background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.5) 32.639%,rgba(100, 100, 100, 0.5) 92.708%);
+
+/* pointsofview.ru */
+position: absolute;
+width: 255px;
+height: 38px;
+left: 592px;
+top: 812px;
+
+visibility: hidden;
+
+color: rgb(17, 17, 17);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 400;
+line-height: 38px;
+letter-spacing: 0%;
+text-align: center;
+
+/* Background 7 block */
+position: absolute;
+width: 1440px;
+height: 900px;
+left: 0;
+top: 0;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 893px;
+height: 322.81px;
+left: 261px;
+top: 464.13px;
+
+filter: blur(300px);
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 973px;
+height: 404.2px;
+left: 226px;
+top: 113.5px;
+
+filter: blur(200px);
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 871.37px;
+height: 936.24px;
+left: 823.12px;
+top: -19.13px;
+transform: rotate(180.00deg);
+
+filter: blur(400px);
+/* Background Blue extra light */
+background: rgb(228, 236, 247);
+
+/* Vector */
+position: absolute;
+width: 632px;
+height: 671.02px;
+left: 860px;
+top: 261.84px;
+
+filter: blur(400px);
+/* Background Blue extra light */
+background: rgb(228, 236, 247);
+
+/* Vector */
+position: absolute;
+width: 585.44px;
+height: 539.64px;
+left: 900px;
+top: -2.99px;
+
+filter: blur(500px);
+background: rgb(193, 81, 145);
+
+
+

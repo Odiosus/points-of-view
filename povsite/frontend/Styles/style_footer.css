@@ -1,0 +1,487 @@
+/* Footer */
+position: absolute;
+width: 1440px;
+height: 761px;
+left: 0;
+right: 0;
+top: 7157px;
+bottom: 0;
+
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Frame 47785 */
+position: absolute;
+width: 412px;
+height: 111px;
+left: 958px;
+top: 368px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px 23px 32px 23px;
+
+box-sizing: border-box;
+/* Secondary/Pink */
+border: 5px solid rgb(193, 81, 145);
+border-radius: 54px;
+
+/* +7(916) 955-29-26 */
+position: static;
+width: 336px;
+height: 52px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 32px 23px 32px 23px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 38px;
+font-weight: 300;
+line-height: 52px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47787 */
+position: absolute;
+width: 190px;
+height: 127px;
+left: 958px;
+top: 113px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* h2 */
+position: static;
+width: 190px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 55px 0px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+
+/* h2 */
+position: static;
+width: 130px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 55px 0px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47786 */
+position: absolute;
+width: 142px;
+height: 125px;
+left: 1228px;
+top: 113px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* h2 */
+position: static;
+width: 131px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 53px 0px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+
+/* h2 */
+position: static;
+width: 142px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 53px 0px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+
+/* лого белый */
+position: absolute;
+width: 490px;
+height: 494px;
+left: 70px;
+top: 113px;
+
+/* Слой 3 */
+position: absolute;
+width: 476px;
+height: 494px;
+left: 0%;
+right: 2.86%;
+top: 0%;
+bottom: 0%;
+
+/* Group 29 */
+position: absolute;
+width: 199.21px;
+height: 81.64px;
+left: 127.91px;
+right: 148.88px;
+top: 272.12px;
+bottom: 140.25px;
+
+/* Vector */
+position: absolute;
+width: 33.55px;
+height: 35.58px;
+left: 159.37px;
+top: 272.12px;
+
+/* Secondary/Pink */
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 29.31px;
+left: 127.91px;
+top: 274.21px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 29.31px;
+left: 197.11px;
+top: 274.21px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 31.45px;
+height: 29.31px;
+left: 232.76px;
+top: 274.21px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 31.45px;
+height: 29.31px;
+left: 266.31px;
+top: 274.21px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 14.68px;
+height: 12.56px;
+left: 167.75px;
+top: 328.64px;
+
+/* Secondary/Pink */
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 31.4px;
+left: 127.91px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 31.4px;
+left: 161.46px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 25.16px;
+height: 31.4px;
+left: 195.01px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 31.4px;
+left: 226.47px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 14.68px;
+height: 14.65px;
+left: 304.05px;
+top: 326.54px;
+
+/* Secondary/Pink */
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 29.36px;
+height: 31.4px;
+left: 262.11px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 31.45px;
+height: 31.4px;
+left: 295.67px;
+top: 322.36px;
+
+background: rgb(255, 255, 255);
+
+/* Слой 6 */
+position: absolute;
+width: 476px;
+height: 494px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 365.44px;
+top: 255.49px;
+
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 127.85px;
+top: 383.58px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 0.06px;
+top: 383.09px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 34.18px;
+height: 34.13px;
+left: 160.32px;
+top: 273.52px;
+
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 0.03px;
+top: 255.69px;
+
+background: rgb(193, 81, 145);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 0;
+top: 127.94px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 128.16px;
+top: 127.8px;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 127.99px;
+top: 0;
+
+background: rgb(255, 255, 255);
+
+/* Vector */
+position: absolute;
+width: 110.56px;
+height: 110.42px;
+left: 0.03px;
+top: 0.17px;
+
+background: rgb(255, 255, 255);
+
+/* © 2024 All Right Reserved. */
+position: absolute;
+width: 252px;
+height: 23px;
+left: 70px;
+top: 690px;
+
+/* Primary/Grey */
+color: rgb(233, 233, 232);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* andrey.gunyavin@gmail.com */
+position: absolute;
+width: 729px;
+height: 54px;
+left: 641px;
+top: 666px;
+
+color: rgb(255, 255, 255);
+font-family: Geologica;
+font-size: 43px;
+font-weight: 900;
+line-height: 54px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Rectangle 150 */
+position: absolute;
+width: 1442px;
+height: 761px;
+left: 0;
+top: 0;
+
+box-shadow: inset -74.27px 74.27px 74.27px 0px rgba(255, 255, 255, 0.1),inset 74.27px -74.27px 74.27px 0px rgba(194, 194, 194, 0.1);
+backdrop-filter: blur(215.37px);
+background: rgba(255, 255, 255, 0.1);
+
+/* Rectangle 150 */
+position: absolute;
+width: 1442px;
+height: 761px;
+left: 0;
+top: 0;
+
+box-shadow: inset -74.27px 74.27px 74.27px 0px rgba(255, 255, 255, 0.2),inset 74.27px -74.27px 74.27px 0px rgba(22, 22, 21, 0.2);
+backdrop-filter: blur(148.53px);
+background: rgba(29, 29, 27, 0.2);
+
+/* Rectangle 150 Glassy */
+position: absolute;
+width: 1440px;
+height: 761px;
+left: 2px;
+top: 0;
+
+box-shadow: inset -74.27px 74.27px 74.27px 0px rgba(255, 255, 255, 0.08),inset 74.27px -74.27px 74.27px 0px rgba(22, 22, 21, 0.08);
+backdrop-filter: blur(138.14px);
+visibility: hidden;
+background: rgba(29, 29, 27, 0.08);
+

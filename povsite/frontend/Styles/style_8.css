@@ -1,0 +1,792 @@
+/* 8 контакты */
+position: absolute;
+width: 1440px;
+height: 1103px;
+left: 0;
+top: 6054px;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* Frame 47628 */
+position: absolute;
+width: 1300px;
+height: 55px;
+left: 70px;
+top: 916px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+/* Frame 47626 */
+position: static;
+width: 383px;
+height: 55px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px 10px 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 660px;
+
+/* andrey.gunyavin@gmail.com */
+position: static;
+width: 382px;
+height: 35px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px 10px 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+
+/* Text Color/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 28px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47627 */
+position: static;
+width: 249px;
+height: 55px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px 10px 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 660px;
+
+/* +7(916) 955-29-26 */
+position: static;
+width: 249px;
+height: 35px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px 10px 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 28px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0%;
+text-align: left;
+
+/* pointsofview.ru */
+position: absolute;
+width: 223px;
+height: 33px;
+left: 74px;
+top: 915px;
+
+visibility: hidden;
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 28px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Vector */
+position: absolute;
+width: 42px;
+height: 40.71px;
+left: 605px;
+top: 112px;
+
+/* Secondary/Pink */
+background: rgb(193, 81, 145);
+
+/* h2 */
+position: absolute;
+width: 299px;
+height: 63px;
+left: 570px;
+top: 100px;
+
+/* Primary/Black */
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 50px;
+font-weight: 900;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* facebook/Default/L/Primary */
+position: absolute;
+width: 1440px;
+height: 130px;
+left: 0;
+right: 0;
+top: 768px;
+bottom: 205px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 2px 0px 2px;
+
+/* Frame 47663 */
+position: static;
+width: 1438px;
+height: 60px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 74px 0px 74px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 30px;
+
+/* Frame 47696 */
+position: static;
+width: 254px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* FACEBOOK */
+position: absolute;
+width: 254px;
+height: 36px;
+left: 0;
+top: 0;
+
+/* Primary/Black */
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 250;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Arrow_prog */
+position: static;
+width: 60px;
+height: 60px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* Line 3 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 45.9px;
+top: 47.4px;
+transform: rotate(-90.00deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 2 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 12.6px;
+top: 11.35px;
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 1 */
+position: absolute;
+width: 44.75px;
+height: 0;
+left: 12.89px;
+top: 41.09px;
+transform: rotate(-41.47deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Rectangle 6 */
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* facebook/Default/L/Primary */
+position: absolute;
+width: 1440px;
+height: 130px;
+left: 0;
+right: 0;
+top: 638px;
+bottom: 335px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 2px 0px 2px;
+
+box-sizing: border-box;
+/* Primary/Black */
+border-top: 3px solid rgb(29, 29, 27);
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* Frame 47663 */
+position: static;
+width: 1438px;
+height: 60px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 74px 0px 74px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 30px;
+
+/* Frame 47696 */
+position: static;
+width: 254px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* FACEBOOK */
+position: absolute;
+width: 254px;
+height: 36px;
+left: 0;
+top: 0;
+
+/* Primary/Black */
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 250;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Arrow_prog */
+position: static;
+width: 60px;
+height: 60px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* Line 3 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 45.9px;
+top: 47.4px;
+transform: rotate(-90.00deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 2 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 12.6px;
+top: 11.35px;
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 1 */
+position: absolute;
+width: 44.75px;
+height: 0;
+left: 12.89px;
+top: 41.09px;
+transform: rotate(-41.47deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Rectangle 6 */
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* facebook/Default/L/Primary */
+position: absolute;
+width: 1440px;
+height: 130px;
+left: 0;
+right: 0;
+top: 508px;
+bottom: 465px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 2px 0px 2px;
+
+box-sizing: border-box;
+/* Primary/Black */
+border-top: 3px solid rgb(29, 29, 27);
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* Frame 47663 */
+position: static;
+width: 1438px;
+height: 60px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 74px 0px 74px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 30px;
+
+/* Frame 47696 */
+position: static;
+width: 254px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* FACEBOOK */
+position: absolute;
+width: 254px;
+height: 36px;
+left: 0;
+top: 0;
+
+/* Primary/Black */
+/* Primary/Black */
+
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 250;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Arrow_prog */
+position: static;
+width: 60px;
+height: 60px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* Line 3 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 45.9px;
+top: 47.4px;
+transform: rotate(-90.00deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 2 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 12.6px;
+top: 11.35px;
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 1 */
+position: absolute;
+width: 44.75px;
+height: 0;
+left: 12.89px;
+top: 41.09px;
+transform: rotate(-41.47deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Rectangle 6 */
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* facebook/Default/L/Primary */
+position: absolute;
+width: 1440px;
+height: 130px;
+left: 0;
+right: 0;
+top: 378px;
+bottom: 595px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 2px 0px 2px;
+
+box-sizing: border-box;
+/* Primary/Black */
+border-top: 3px solid rgb(29, 29, 27);
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* Frame 47663 */
+position: static;
+width: 1438px;
+height: 60px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 74px 0px 74px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 30px;
+
+/* Frame 47696 */
+position: static;
+width: 254px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* FACEBOOK */
+position: absolute;
+width: 254px;
+height: 36px;
+left: 0;
+top: 0;
+
+/* Primary/Black */
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 250;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Arrow_prog */
+position: static;
+width: 60px;
+height: 60px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* Line 3 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 45.9px;
+top: 47.4px;
+transform: rotate(-90.00deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 2 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 12.6px;
+top: 11.35px;
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 1 */
+position: absolute;
+width: 44.75px;
+height: 0;
+left: 12.89px;
+top: 41.09px;
+transform: rotate(-41.47deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Rectangle 6 */
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* facebook/Default/L/Primary */
+position: absolute;
+width: 1440px;
+height: 130px;
+left: 0;
+right: 0;
+top: 248px;
+bottom: 725px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 2px 0px 2px;
+
+box-sizing: border-box;
+/* Primary/Black */
+border-top: 3px solid rgb(29, 29, 27);
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+
+/* Frame 47663 */
+position: static;
+width: 1438px;
+height: 60px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px 74px 0px 74px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 30px;
+
+/* Frame 47696 */
+position: static;
+width: 254px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* FACEBOOK */
+position: absolute;
+width: 254px;
+height: 36px;
+left: 0;
+top: 0;
+
+/* Primary/Black */
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 250;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Arrow_prog */
+position: static;
+width: 60px;
+height: 60px;
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 980px;
+
+/* Line 3 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 45.9px;
+top: 47.4px;
+transform: rotate(-90.00deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 2 */
+position: absolute;
+width: 34.8px;
+height: 0;
+left: 12.6px;
+top: 11.35px;
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Line 1 */
+position: absolute;
+width: 44.75px;
+height: 0;
+left: 12.89px;
+top: 41.09px;
+transform: rotate(-41.47deg);
+
+/* Primary/Black */
+border: 3px solid rgb(29, 29, 27);
+/* Primary/Black */
+background: rgb(29, 29, 27);
+
+/* Rectangle 6 */
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Absolutely white */
+background: rgb(255, 255, 255);
+

@@ -1,0 +1,520 @@
+/* 1.1 menu */
+position: relative;
+width: 704px;
+height: 660px;
+
+background: rgb(255, 255, 255);
+
+/* X */
+position: absolute;
+width: 40px;
+height: 40px;
+left: 594px;
+right: 70px;
+top: 45px;
+bottom: 575px;
+
+/* Vector */
+position: absolute;
+width: 24.38px;
+height: 24.38px;
+left: 19.6%;
+right: 19.47%;
+top: 19.6%;
+bottom: 19.47%;
+
+background: rgb(0, 0, 0);
+
+/* Frame 47629 */
+position: absolute;
+width: 300px;
+height: 52px;
+left: 127px;
+right: 277px;
+top: 561px;
+bottom: 47px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+/* Свяжитесь с нами */
+position: static;
+width: 178px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 10px 0px;
+
+/* Secondary/Dark Grey */
+color: rgb(172, 172, 172);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* andrey.gunyavin@gmail.com */
+position: static;
+width: 246px;
+height: 19px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 10px 0px;
+
+/* Text Color/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47619 */
+position: absolute;
+width: 189px;
+height: 296px;
+left: 111px;
+right: 404px;
+top: 97px;
+bottom: 267px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 4px 16px 4px 16px;
+
+/* Social */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 4px 16px 4px 16px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Secondary/Dark Grey */
+color: rgb(172, 172, 172);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47675 */
+position: static;
+width: 157px;
+height: 235px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Facebook */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Instagram */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* YouTube */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* WhatsApp */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Telegram */
+position: static;
+width: 157px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+margin: 30px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47612 */
+position: absolute;
+width: 301px;
+height: 327px;
+left: 333px;
+right: 70px;
+top: 93px;
+bottom: 240px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 4px 16px 4px 16px;
+
+
+/* Frame 47673 */
+position: static;
+width: 269px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 20px 0px;
+
+/* Menu */
+position: static;
+width: 55px;
+height: 23px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+
+/* Secondary/Dark Grey */
+color: rgb(172, 172, 172);
+font-family: Geologica;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: left;
+
+/* Frame 47671 */
+position: static;
+width: 269px;
+height: 276px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 20px 0px;
+
+/* О нас */
+position: static;
+width: 96px;
+height: 36px;
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 24px 0px;
+
+/* О нас */
+position: absolute;
+width: 96px;
+height: 36px;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Проекты */
+position: static;
+width: 147px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 24px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Лаборатория */
+position: static;
+width: 225px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 24px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Команда */
+position: static;
+width: 159px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 24px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
+/* Контакты */
+position: static;
+width: 165px;
+height: 36px;
+/* Автолейаут */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+margin: 24px 0px;
+
+/* Primary/Black */
+color: rgb(29, 29, 27);
+font-family: Geologica;
+font-size: 30px;
+font-weight: 300;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+
