@@ -6,8 +6,8 @@ from django.views.generic import ListView, DetailView
 from .forms import FeedbackMultipleChoiceForm
 
 
-class CategoryProjectList(ListView):
-    model = CategoryProject
+class ProjectList(ListView):
+    model = Project
     template_name = 'index.html'
     context_object_name = 'projects'
     form = FeedbackMultipleChoiceForm
@@ -24,8 +24,8 @@ class CategoryProjectList(ListView):
                 form.save()
         return redirect('/')
 
-class CategoryProjectDetail(DetailView):
-    model = CategoryProject
+class ProjectDetail(DetailView):
+    model = Project
     template_name = 'detail.html'
     context_object_name = 'unit'
 
@@ -55,8 +55,8 @@ class FeedbackViewSet(viewsets.ModelViewSet):
 
 
 class CategoryProjectViewSet(viewsets.ModelViewSet):
-    queryset = CategoryProject.objects.all()
-    serializer_class = CategoryProjectSerializer
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
 
 
 class ThemesViewSet(viewsets.ModelViewSet):
