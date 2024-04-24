@@ -51,7 +51,7 @@ class FeedbackSerializer(serializers.HyperlinkedModelSerializer):
 
 class CategoryProjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = CategoryProject
+        model = Project
         fields = [
             'name',
             'description',

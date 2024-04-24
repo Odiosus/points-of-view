@@ -12,7 +12,7 @@ class AuthorTranslationOptions(TranslationOptions):
     fields = ('name', 'surname', 'brand_name', 'biography',)
 
 
-@register(CategoryProject)
+@register(Project)
 class CategoryProjectTranslationOptions(TranslationOptions):
     fields = ("name", 'description',)
 

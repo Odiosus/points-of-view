@@ -1,18 +1,18 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import *
+from .models import Gallery, Author, Feedback, Project, Themes
 from modeltranslation.admin import TranslationAdmin
 
 
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'is_published', 'project', 'short_description_field_title', 'author', 'short_description_field',
-        'get_html_photo', 'content', 'publication_date', 'publication_update')
-    list_display_links = ('short_description_field_title',)
-    list_filter = ('user', 'author', 'is_published', 'project', 'publication_date', 'publication_update')
-    search_fields = ['user', 'author', 'title', 'content_text']
+        'user', 'is_published', 'project', 'get_html_photo', 'title', 'author', 'short_description_field',
+        'content', 'publication_date', 'publication_update')
+    list_display_links = ('title',)
+    list_filter = ('user', 'is_published', 'project', 'author', 'publication_date', 'publication_update')
+    search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
@@ -24,27 +24,28 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("user",),
         }),
         ("Публикация", {
-            "fields": (("author", 'project'), "title",),
+            "fields": ("author", 'project', "title",),
         }),
         ("Написать статью", {
             "classes": ("collapse",),
             "fields": (("content_text",),)
         }),
         ("Добавить медиаконтент", {
-            "classes": ("collapse",),
-            "fields": (("content", "content_picture",),)
+            "classes": ["collapse"],
+            "description": "Здесь можно добавить аудио/видео контент",
+            "fields": (("content",),)
         }),
         (None, {
-            "fields": ("get_html_photo",)
+            "fields": ("content_picture", "get_html_photo",)
         }),
         ("Публикуем?", {
-            "fields": ("is_published", ('publication_date', 'publication_update'),)
+            "fields": ("is_published", 'publication_date', 'publication_update',)
         }),
     )
 
     def get_html_photo(self, object):
         if object.content_picture:
-            return mark_safe(f"<img src='{object.content_picture.url}' width=80>")
+            return mark_safe(f"<img src='{object.content_picture.url}' height=50 width=70>")
 
     get_html_photo.short_description = 'Миниатюра'
 
@@ -54,11 +55,11 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     short_description_field.short_description = 'Краткое описание'
 
-    def short_description_field_title(self, obj):
-        if obj.title:
-            return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
-
-    short_description_field_title.short_description = 'Заголовок'
+    # def short_description_field_title(self, obj):
+    #     if obj.title:
+    #         return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
+    #
+    # short_description_field_title.short_description = 'Заголовок'
 
     @admin.action(description="Опубликовать выбранные записи")
     def set_published(self, request, queryset):
@@ -76,13 +77,15 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
     list_display_links = ('name', 'surname', 'brand_name')
     list_filter = ('surname', 'brand_name')
-    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone']
+    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
     ordering = ['-time_add']
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
+    save_as = True
+    list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("brand_name", ("email", "phone"),)
+            "fields": ("brand_name", "email", "phone",)
         }),
         ("Персональная информация", {
             "classes": ("collapse",),
@@ -93,10 +96,10 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": (("biography",),)
         }),
         (None, {
-            "fields": (("photo", "get_html_photo",),)
+            "fields": ("photo", "get_html_photo",),
         }),
         (None, {
-            "fields": (('time_add', 'time_update',),)
+            "fields": ('time_add', 'time_update',)
         }),
     )
 
@@ -108,7 +111,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def short_description_field(self, obj):
         if obj.biography:
-            return obj.biography[:40] + '...' if len(obj.biography) > 40 else obj.biography
+            return obj.biography[:100] + '...' if len(obj.biography) > 100 else obj.biography
 
     short_description_field.short_description = 'Биография'
 
@@ -117,7 +120,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = ('theme', 'name', 'email', 'short_description_field', 'time_add')
     list_display_links = ('name', 'email')
-    list_filter = ('theme', 'name', 'email', 'time_add')
+    list_filter = ('theme__name', 'name', 'time_add')
     search_fields = ['name', 'email', 'message']
     ordering = ['-time_add']
     save_on_top = True
@@ -132,8 +135,8 @@ class FeedbackAdmin(admin.ModelAdmin):
     short_description_field.short_description = 'Сообщение'
 
 
-@admin.register(CategoryProject)
-class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
+@admin.register(Project)
+class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('name', 'short_description_field')
     list_display_links = ('name',)
     list_filter = ('name',)
@@ -141,11 +144,11 @@ class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     fieldsets = (
         ("Проект", {
-            "fields": ("name",)
+            "fields": ("name", 'slug', 'tagline', 'image_project',)
         }),
-        ("Описание проекта", {
+        ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
-            "fields": (("description",),)
+            "fields": (('title_block_description', 'block_description_one'),)
         }),
     )
 
@@ -159,6 +162,12 @@ class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
 @admin.register(Themes)
 class ThemesAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('name',)
+    list_display_links = ('name',)
+    list_filter = ('name',)
+    search_fields = ['name']
+    save_on_top = True
+    fields = ('name',)
+
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
 admin.site.site_title = 'Лаборатория "Точки Зрения"'
