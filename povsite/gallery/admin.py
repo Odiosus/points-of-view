@@ -8,10 +8,10 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'is_published', 'project', 'get_html_photo', 'title', 'author', 'short_description_field',
+        'user', 'is_published', 'get_html_photo', 'title', 'author', 'short_description_field',
         'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
-    list_filter = ('user', 'is_published', 'project', 'author', 'publication_date', 'publication_update')
+    list_filter = ('user', 'is_published', 'author', 'publication_date', 'publication_update')
     search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
@@ -24,7 +24,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("user",),
         }),
         ("Публикация", {
-            "fields": ("author", 'project', "title",),
+            "fields": ("author", "title",),
         }),
         ("Написать статью", {
             "classes": ("collapse",),
@@ -137,26 +137,43 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('name', 'short_description_field')
+    list_display = ('name', 'get_html_image_project', 'short_title_block_description_field')
     list_display_links = ('name',)
     list_filter = ('name',)
-    search_fields = ['name', 'description']
+    search_fields = ['name']
     save_on_top = True
+    save_as = True
+    ordering = ['-time_add']
+    readonly_fields = ('slug', 'time_add', 'time_update', 'short_title_block_description_field')
+    list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ("name", 'slug', 'tagline', 'image_project',)
+            "fields": ("name", 'slug', 'description', 'image_project',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
-            "fields": (('title_block_description', 'block_description_one'),)
+            "fields": ('title_block_description', 'block_description_one', 'image_block_one', ),
+        }),
+        ("Описание проекта — Блок 2", {
+            "classes": ("collapse",),
+            "fields": ('block_description_two', 'image_block_two',),
+        }),
+        ("Реализация", {
+            "fields": ("implementation",)
         }),
     )
 
-    def short_description_field(self, obj):
-        if obj.description:
-            return obj.description[:100] + '...' if len(obj.description) > 100 else obj.description
+    def short_title_block_description_field(self, obj):
+        if obj.title_block_description:
+            return obj.title_block_description[:100] + '...' if len(obj.title_block_description) > 100 else obj.title_block_description
 
-    short_description_field.short_description = 'Краткое описание'
+    short_title_block_description_field.short_description = 'Краткое описание'
+
+    def get_html_image_project(self, object):
+        if object.image_project:
+            return mark_safe(f"<img src='{object.image_project.url}' width=50>")
+
+    get_html_image_project.short_description = 'Изображение'
 
 
 @admin.register(Themes)
