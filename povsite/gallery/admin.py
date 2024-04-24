@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author, Feedback, CategoryProject, Themes
+from .models import Gallery, Author, Feedback, Project, Themes
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -135,8 +135,8 @@ class FeedbackAdmin(admin.ModelAdmin):
     short_description_field.short_description = 'Сообщение'
 
 
-@admin.register(CategoryProject)
-class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
+@admin.register(Project)
+class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('name', 'short_description_field')
     list_display_links = ('name',)
     list_filter = ('name',)
@@ -144,11 +144,11 @@ class CategoryProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     fieldsets = (
         ("Проект", {
-            "fields": ("name",)
+            "fields": ("name", 'slug', 'tagline', 'image_project',)
         }),
-        ("Описание проекта", {
+        ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
-            "fields": (("description",),)
+            "fields": (('title_block_description', 'block_description_one'),)
         }),
     )
 
