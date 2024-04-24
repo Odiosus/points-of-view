@@ -145,8 +145,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     save_as = True
     ordering = ['-time_add']
-    readonly_fields = (
-        'time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
+    readonly_fields = ('time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
     list_per_page = 10
     fieldsets = (
         ("Проект", {

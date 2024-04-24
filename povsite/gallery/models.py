@@ -57,7 +57,7 @@ class Author(models.Model):
     phone = models.CharField(max_length=20, verbose_name='Телефон')
     name = models.CharField(max_length=100, verbose_name='Имя')
     surname = models.CharField(max_length=100, verbose_name='Фамилия')
-    patronymic = models.CharField(max_length=100, null=True, blank=True, default=None, verbose_name='Отчество')
+    # patronymic = models.CharField(max_length=100, null=True, blank=True, default=None, verbose_name='Отчество')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Фото")
     brand_name = models.CharField(max_length=100, verbose_name='Бренд')
     biography = models.TextField(default=None, blank=True, null=True, verbose_name='Биография')
@@ -89,7 +89,7 @@ class Feedback(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=50, verbose_name='Название проекта')
-    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="Slug", validators=[
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
         MaxLengthValidator(100, message="Максимум 100 символов"),
     ])
