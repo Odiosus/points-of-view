@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author, Feedback, Project, Themes
+from .models import Gallery, Author, Feedback, Project, Themes, LandingPage, WhatBlock
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -144,7 +144,8 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     save_on_top = True
     save_as = True
     ordering = ['-time_add']
-    readonly_fields = ('slug', 'time_add', 'time_update', 'short_title_block_description_field')
+    readonly_fields = (
+        'slug', 'time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
     list_per_page = 10
     fieldsets = (
         ("Проект", {
@@ -152,7 +153,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
-            "fields": ('title_block_description', 'block_description_one', 'image_block_one', ),
+            "fields": ('title_block_description', 'block_description_one', 'image_block_one',),
         }),
         ("Описание проекта — Блок 2", {
             "classes": ("collapse",),
@@ -165,7 +166,8 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
 
     def short_title_block_description_field(self, obj):
         if obj.title_block_description:
-            return obj.title_block_description[:100] + '...' if len(obj.title_block_description) > 100 else obj.title_block_description
+            return obj.title_block_description[:100] + '...' if len(
+                obj.title_block_description) > 100 else obj.title_block_description
 
     short_title_block_description_field.short_description = 'Краткое описание'
 
@@ -184,6 +186,84 @@ class ThemesAdmin(TranslationAdmin, admin.ModelAdmin):
     search_fields = ['name']
     save_on_top = True
     fields = ('name',)
+
+
+@admin.register(LandingPage)
+class LandingPageAdmin(TranslationAdmin, admin.ModelAdmin):
+    list_display = ('logo_text', 'get_html_logo_header',)
+    list_display_links = ('logo_text',)
+    list_filter = ('logo_text',)
+    search_fields = ['logo_text']
+    save_on_top = True
+    readonly_fields = ('get_html_logo_header', 'get_html_logo_footer')
+    fieldsets = (
+        ("Хедер", {
+            "classes": ("collapse",),
+            "fields": ("logo_text", 'logo_header',)
+        }),
+        ("О нас", {
+            "classes": ("collapse",),
+            "fields": ('about_us', 'about_us_title', 'about_us_text',),
+        }),
+        ("Проекты", {
+            "fields": ("projects",)
+        }),
+        ("Команда", {
+            "fields": ("team",)
+        }),
+        ("Футер", {
+            "classes": ("collapse",),
+            "fields": ('logo_footer',),
+        }),
+    )
+
+    def get_html_logo_header(self, object):
+        if object.logo_header:
+            return mark_safe(f"<img src='{object.logo_header.url}' width=50>")
+
+    get_html_logo_header.short_description = 'Лого Хедера'
+
+    def get_html_logo_footer(self, object):
+        if object.logo_footer:
+            return mark_safe(f"<img src='{object.logo_footer.url}' width=50>")
+
+    get_html_logo_footer.short_description = 'Лого Футера'
+
+
+@admin.register(WhatBlock)
+class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
+    list_display = ('get_html_image', 'title', 'short_text_field')
+    list_display_links = ('title',)
+    list_filter = ('title',)
+    search_fields = ['title', ]
+    save_on_top = True
+    save_as = True
+    readonly_fields = ('get_html_image',)
+    list_per_page = 10
+    fieldsets = (
+        ("Имя блока: Что мы умеем?", {
+            "fields": ("name",)
+        }),
+        ("Скилл", {
+            "classes": ("collapse",),
+            "fields": ("title", 'text',)
+        }),
+        ("Изображение скилла", {
+            "fields": ("image",)
+        }),
+    )
+
+    def short_text_field(self, obj):
+        if obj.text:
+            return obj.text[:100] + '...' if len(obj.text) > 100 else obj.text
+
+    short_text_field.short_description = 'Краткое описание'
+
+    def get_html_image(self, object):
+        if object.image:
+            return mark_safe(f"<img src='{object.image.url}' width=50>")
+
+    get_html_image.short_description = 'Символ скилла'
 
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'

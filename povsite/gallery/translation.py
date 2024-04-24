@@ -36,3 +36,14 @@ class ProjectTranslationOptions(TranslationOptions):
 @register(Themes)
 class GalleryTranslationOptions(TranslationOptions):
     fields = ('name',)
+
+
+@register(LandingPage)
+class LandingPageTranslationOptions(TranslationOptions):
+    fields = (
+        'logo_text', 'logo_header', 'about_us', 'about_us_title', 'about_us_text', 'projects', 'team', 'logo_footer',)
+
+
+@register(WhatBlock)
+class WhatBlockTranslationOptions(TranslationOptions):
+    fields = ('name', 'title', 'text',)
