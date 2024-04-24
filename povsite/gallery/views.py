@@ -15,6 +15,7 @@ class ProjectList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = self.form
+        context['authors'] = Author.objects.all()
         return context
 
     def post(self, request):
@@ -27,7 +28,7 @@ class ProjectList(ListView):
 class ProjectDetail(DetailView):
     model = Project
     template_name = 'detail.html'
-    context_object_name = 'unit'
+    context_object_name = 'project'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

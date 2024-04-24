@@ -96,10 +96,10 @@ class Project(models.Model):
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
     title_block_description = models.CharField(max_length=100, verbose_name='Заголовок блока описания')
-    block_description_one = models.CharField(max_length=255, verbose_name='Описание блока No1')
+    block_description_one = models.TextField(max_length=500, verbose_name='Описание блока No1')
     image_block_one = models.ImageField(upload_to="photos_project/block1/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No1")
-    block_description_two = models.CharField(max_length=255, verbose_name='Описание блока No2')
+    block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
     implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,

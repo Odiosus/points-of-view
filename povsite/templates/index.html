@@ -51,11 +51,12 @@
 
 
 
-
-    <div class="test">
+    <h2>Проекты</h2>
+    <div class="projects">
         {% for project in projects %}
             <a href="{{ project.id }}">{{ project.name }}</a>
-            <p>{{ project.description }}</p>
+            <p>{{ project.block_description_one }}</p>
+            <img src='{{ project.image_project.url }}' width="100">
 <!--            <p> {% trans 'Автор:' %} {{ unit.user }} </p>-->
 <!--            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>-->
 <!--            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>-->
@@ -64,6 +65,15 @@
 <!--            <p> {% trans 'Контент:' %} {{ unit.content }} </p>-->
             <p>
         {% endfor %}
+    </div>
+    <h2>Команда</h2>
+    <div class="authors">
+        {% for author in authors %}
+<!--            <p>{{ author.name }} {{ author.surname }}</p>-->
+            <p>{{ author.biography }}</p>
+            <img src='{{ author.photo.url }}' width="100">
+        {% endfor %}
+
     </div>
 
     <br>

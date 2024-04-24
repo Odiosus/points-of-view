@@ -26,11 +26,10 @@ class AuthorTranslationOptions(TranslationOptions):
 class ProjectTranslationOptions(TranslationOptions):
     fields = (
         'name',
-        'tagline',
+        'description',
         'title_block_description',
         'block_description_one',
         'block_description_two',
-        'implementation',
     )
 
 
