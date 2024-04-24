@@ -17,14 +17,10 @@ def translit_to_eng(s: str) -> str:
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(is_published=Gallery.Status.PUBLISHED)
+        return super().get_queryset().filter(is_published=Project.Status.PUBLISHED)
 
 
 class Gallery(models.Model):
-    class Status(models.IntegerChoices):
-        DRAFT = 0, 'Черновик'
-        PUBLISHED = 1, 'Опубликовано'
-
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     author = models.ForeignKey('Author', null=True, default=None, on_delete=models.CASCADE, verbose_name='Автор')
     title = models.CharField(max_length=80, verbose_name='Заголовок')
@@ -35,14 +31,7 @@ class Gallery(models.Model):
                                verbose_name='Аудио/Видео')
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
-    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
-                                       default=Status.DRAFT,
-                                       verbose_name='Статус публикации')
-    # project = models.ForeignKey('Project', on_delete=models.CASCADE,
-    #                             verbose_name='Проект')
 
-    objects = models.Manager()
-    published = PublishedManager()
 
     def __str__(self):
         return self.title
@@ -88,6 +77,10 @@ class Feedback(models.Model):
 
 
 class Project(models.Model):
+    class Status(models.IntegerChoices):
+        DRAFT = 0, 'Черновик'
+        PUBLISHED = 1, 'Опубликовано'
+
     name = models.CharField(max_length=50, verbose_name='Название проекта')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
@@ -107,6 +100,14 @@ class Project(models.Model):
                                        verbose_name='Реализация')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
+    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
+                                       default=Status.DRAFT,
+                                       verbose_name='Статус публикации')
+    # project = models.ForeignKey('Project', on_delete=models.CASCADE,
+    #                             verbose_name='Проект')
+
+    objects = models.Manager()
+    published = PublishedManager()
 
     def __str__(self):
         return self.name

@@ -8,16 +8,14 @@ from modeltranslation.admin import TranslationAdmin
 @admin.register(Gallery)
 class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = (
-        'user', 'is_published', 'get_html_photo', 'title', 'author', 'short_description_field',
+        'user', 'get_html_photo', 'title', 'author', 'short_description_field',
         'content', 'publication_date', 'publication_update')
     list_display_links = ('title',)
-    list_filter = ('user', 'is_published', 'author', 'publication_date', 'publication_update')
+    list_filter = ('user', 'author', 'publication_date', 'publication_update')
     search_fields = ['title', 'content_text']
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
-    actions = ['set_published', 'set_draft']
-    list_editable = ('is_published',)
     list_per_page = 10
     fieldsets = (
         ("Информация о пользователе", {
@@ -39,7 +37,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("content_picture", "get_html_photo",)
         }),
         ("Публикуем?", {
-            "fields": ("is_published", 'publication_date', 'publication_update',)
+            "fields": ('publication_date', 'publication_update',)
         }),
     )
 
@@ -61,15 +59,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     #
     # short_description_field_title.short_description = 'Заголовок'
 
-    @admin.action(description="Опубликовать выбранные записи")
-    def set_published(self, request, queryset):
-        count = queryset.update(is_published=Gallery.Status.PUBLISHED)
-        self.message_user(request, f"Изменено {count} записей.")
 
-    @admin.action(description="Снять с публикации выбранные записи")
-    def set_draft(self, request, queryset):
-        count = queryset.update(is_published=Gallery.Status.DRAFT)
-        self.message_user(request, f"{count} записей сняты с публикации!", messages.WARNING)
 
 
 @admin.register(Author)
@@ -137,14 +127,16 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('name', 'get_html_image_project', 'short_title_block_description_field')
+    list_display = ('name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
-    list_filter = ('name',)
+    list_filter = ('name', 'is_published', 'time_add', 'time_update')
     search_fields = ['name']
     save_on_top = True
     save_as = True
     ordering = ['-time_add']
+    actions = ['set_published', 'set_draft']
+    list_editable = ('is_published',)
     readonly_fields = ('time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
     list_per_page = 10
     fieldsets = (
@@ -162,6 +154,9 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
         ("Реализация", {
             "fields": ("implementation",)
         }),
+        ("Публикуем?", {
+            "fields": ("is_published", 'time_add', 'time_update',)
+        }),
     )
 
     def short_title_block_description_field(self, obj):
@@ -176,6 +171,16 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
             return mark_safe(f"<img src='{object.image_project.url}' width=50>")
 
     get_html_image_project.short_description = 'Изображение'
+
+    @admin.action(description="Опубликовать выбранные проекты")
+    def set_published(self, request, queryset):
+        count = queryset.update(is_published=Project.Status.PUBLISHED)
+        self.message_user(request, f"Опубликовано {count} записей.")
+
+    @admin.action(description="Снять с публикации выбранные проекты")
+    def set_draft(self, request, queryset):
+        count = queryset.update(is_published=Project.Status.DRAFT)
+        self.message_user(request, f"{count} проекта сняты с публикации!", messages.WARNING)
 
 
 @admin.register(Themes)

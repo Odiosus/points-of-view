@@ -42,7 +42,7 @@ class ProjectDetail(DetailView):
         return context
 
     def get_object(self, queryset=None):
-        return get_object_or_404(Project, slug=self.kwargs[self.slug_url_kwarg])
+        return get_object_or_404(Project.published, slug=self.kwargs[self.slug_url_kwarg])
 
 
 class GalleryViewSet(viewsets.ModelViewSet):
