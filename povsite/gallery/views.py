@@ -44,15 +44,6 @@ class ProjectDetail(DetailView):
     def get_object(self, queryset=None):
         return get_object_or_404(Project, slug=self.kwargs[self.slug_url_kwarg])
 
-# class ProjectDetail(DetailView):
-#     model = Project
-#     slug_url_kwarg = 'project_slug'
-#     template_name = 'detail.html'
-#     context_object_name = 'unit'
-#
-#     def get_object(self, queryset=None):
-#         return get_object_or_404(Project, slug=self.kwargs[self.slug_url_kwarg])
-
 
 class GalleryViewSet(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()
