@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
+from django.urls import reverse
 
 
 class PublishedManager(models.Manager):
@@ -26,8 +27,8 @@ class Gallery(models.Model):
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
-    project = models.ForeignKey('Project', on_delete=models.CASCADE,
-                                verbose_name='Проект')
+    # project = models.ForeignKey('Project', on_delete=models.CASCADE,
+    #                             verbose_name='Проект')
 
     objects = models.Manager()
     published = PublishedManager()
@@ -91,7 +92,7 @@ class Project(models.Model):
         MinLengthValidator(5, message="Минимум 5 символов"),
         MaxLengthValidator(100, message="Максимум 100 символов"),
     ])
-    tagline = models.CharField(max_length=50, verbose_name='Слоган')
+    description = models.CharField(max_length=50, verbose_name='Слоган')
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
     title_block_description = models.CharField(max_length=100, verbose_name='Заголовок блока описания')
@@ -103,6 +104,9 @@ class Project(models.Model):
                                         null=True, verbose_name="Изображение блока No2")
     implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
                                        verbose_name='Реализация')
+    time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
+    time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
+
 
     def __str__(self):
         return self.name
@@ -110,6 +114,9 @@ class Project(models.Model):
     class Meta:
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекты'
+
+    def get_absolute_url(self):
+        return reverse('projects', kwargs={'project_slug': self.slug})
 
 
 class Themes(models.Model):

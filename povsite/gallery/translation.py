@@ -14,7 +14,7 @@ class AuthorTranslationOptions(TranslationOptions):
 
 @register(Project)
 class CategoryProjectTranslationOptions(TranslationOptions):
-    fields = ("name", 'description',)
+    fields = ("name", 'description', 'title_block_description', 'block_description_one', 'block_description_two', )
 
 
 @register(Themes)
