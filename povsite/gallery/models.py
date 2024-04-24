@@ -5,16 +5,6 @@ from django.urls import reverse
 from django.template.defaultfilters import slugify
 
 
-def translit_to_eng(s: str) -> str:
-    d = {'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
-         'е': 'e', 'ё': 'yo', 'ж': 'zh', 'з': 'z', 'и': 'i', 'к': 'k',
-         'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r',
-         'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch',
-         'ш': 'sh', 'щ': 'shch', 'ь': '', 'ы': 'y', 'ъ': '', 'э': 'r', 'ю': 'yu', 'я': 'ya'}
-
-    return "".join(map(lambda x: d[x] if d.get(x, False) else x, s.lower()))
-
-
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(is_published=Project.Status.PUBLISHED)
@@ -81,11 +71,12 @@ class Project(models.Model):
         DRAFT = 0, 'Черновик'
         PUBLISHED = 1, 'Опубликовано'
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     name = models.CharField(max_length=50, verbose_name='Название проекта')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
         MaxLengthValidator(100, message="Максимум 100 символов"),
-    ])
+    ], help_text="это поле заполняется автоматически")
     description = models.CharField(max_length=50, verbose_name='Слоган')
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
@@ -97,14 +88,13 @@ class Project(models.Model):
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
     implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                                       verbose_name='Реализация')
+                                       verbose_name='Проекты')
+    what_block = models.ForeignKey('WhatBlock', on_delete=models.CASCADE, verbose_name='Что мы умеем?')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
-    # project = models.ForeignKey('Project', on_delete=models.CASCADE,
-    #                             verbose_name='Проект')
 
     objects = models.Manager()
     published = PublishedManager()

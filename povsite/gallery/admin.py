@@ -127,7 +127,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
+    list_display = ('user', 'name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     list_filter = ('name', 'is_published', 'time_add', 'time_update')
@@ -141,7 +141,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ("name", 'slug', 'description', 'image_project',)
+            "fields": ('user', "name", 'slug', 'description', 'image_project',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
