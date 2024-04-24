@@ -60,8 +60,6 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     # short_description_field_title.short_description = 'Заголовок'
 
 
-
-
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
@@ -127,7 +125,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('user', 'name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
+    list_display = ('name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     list_filter = ('name', 'is_published', 'time_add', 'time_update')

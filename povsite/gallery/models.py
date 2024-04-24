@@ -36,7 +36,6 @@ class Author(models.Model):
     phone = models.CharField(max_length=20, verbose_name='Телефон')
     name = models.CharField(max_length=100, verbose_name='Имя')
     surname = models.CharField(max_length=100, verbose_name='Фамилия')
-    # patronymic = models.CharField(max_length=100, null=True, blank=True, default=None, verbose_name='Отчество')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Фото")
     brand_name = models.CharField(max_length=100, verbose_name='Бренд')
     biography = models.TextField(default=None, blank=True, null=True, verbose_name='Биография')
@@ -71,7 +70,6 @@ class Project(models.Model):
         DRAFT = 0, 'Черновик'
         PUBLISHED = 1, 'Опубликовано'
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     name = models.CharField(max_length=50, verbose_name='Название проекта')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
@@ -89,7 +87,7 @@ class Project(models.Model):
                                         null=True, verbose_name="Изображение блока No2")
     implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
                                        verbose_name='Проекты')
-    what_block = models.ForeignKey('WhatBlock', on_delete=models.CASCADE, verbose_name='Что мы умеем?')
+    what_block = models.ForeignKey('WhatBlock', on_delete=models.CASCADE, null=True, default=None, blank=True, verbose_name='Что мы умеем?')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
