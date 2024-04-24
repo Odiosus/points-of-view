@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Точки зрения</title>
-    <link rel="favicon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -27,7 +33,7 @@
             <!--<svg class="logo" viewBox="0 0 633 250">
                 <use href="img/sprite.svg#logo" />
             </svg>-->
-            <svg width="633.000000" height="251.000000" viewBox="0 0 633 251" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="logo" width="633.000000" height="251.000000" viewBox="0 0 633 251" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>
                         Created with Pixso.
                 </desc>
@@ -46,18 +52,23 @@
                 <path id="Vector" d="M173.65 190.28C173.65 201.74 163.89 211.04 151.85 211.04C139.81 211.04 130.05 201.74 130.05 190.28C130.05 178.82 139.81 169.53 151.85 169.53C163.89 169.53 173.65 178.82 173.65 190.28Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
                 <path id="Vector" d="M607.42 188.22C607.42 199.68 597.66 208.97 585.62 208.97C573.58 208.97 563.81 199.68 563.81 188.22C563.81 176.76 573.58 167.46 585.62 167.46C597.66 167.46 607.42 176.76 607.42 188.22Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
             </svg>
-            <div>
+            <div class="art-lab">
                 <h2>Арт-лаборатория, открывающая искусство по-новому</h2>
             </div>
-            <div class="video">
-                <use href="video/video" />
+            <div id="shape" style="position: relative;">
+                <!-- Здесь будет код для создания фигуры -->
+                <script href="video.js"></script>
             </div>
-        </div>
+            <video id="video" src="video/Soft_point_05.mp4" autoplay muted loop controls>
+                <!-- Здесь будет код для видео -->
+                <script href="video.js"></script>
+            </video>
+        </div>    
         <div class="about">
             <h1>О НАС</h1>
-            <p>text</p>
+            <p>Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников.</p>
             <div class="animation_1">
-                <use href="animation/balls_animation" />
+                <img src="animation/Soft_point_05.gif" alt="gif">
             </div>
         </div>
         <div class="projects">
@@ -88,7 +99,7 @@
         </div>
         <div class="idea">
             <div class="animation_3">
-                <use href="animation/idea_animation" />
+                <img src="animation/Comp_1.gif" alt="gif">
             </div>
             <h1>ЕСТЬ ИДЕИ?</h1>
             <button class="connect" href="connect">СВЯЖИТЕСЬ С НАМИ</button>
@@ -104,7 +115,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="contacts">
             <svg width="499.000000" height="66.000000" viewBox="0 0 499 66" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>
