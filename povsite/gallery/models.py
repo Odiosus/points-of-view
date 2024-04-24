@@ -96,17 +96,16 @@ class Project(models.Model):
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
     title_block_description = models.CharField(max_length=100, verbose_name='Заголовок блока описания')
-    block_description_one = models.CharField(max_length=255, verbose_name='Описание блока No1')
+    block_description_one = models.TextField(max_length=500, verbose_name='Описание блока No1')
     image_block_one = models.ImageField(upload_to="photos_project/block1/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No1")
-    block_description_two = models.CharField(max_length=255, verbose_name='Описание блока No2')
+    block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
     implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
                                        verbose_name='Реализация')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
-
 
     def __str__(self):
         return self.name
@@ -128,3 +127,40 @@ class Themes(models.Model):
     class Meta:
         verbose_name = 'Тема обращения обратной связи'
         verbose_name_plural = 'Темы обращений обратной связи'
+
+
+class LandingPage(models.Model):
+    logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
+    logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
+                                    verbose_name="Логотип хедера")
+    about_us = models.CharField(max_length=10, verbose_name="О нас")
+    about_us_title = models.CharField(max_length=50, verbose_name="Заголовок раздела")
+    about_us_text = models.TextField(max_length=500, verbose_name="Текст раздела")
+    projects = models.ForeignKey(Project, on_delete=models.CASCADE, default=None, blank=True, null=True,
+                                 verbose_name="Проекты")
+    team = models.ForeignKey(Author, on_delete=models.CASCADE, default=None, blank=True, null=True,
+                             verbose_name="Команда")
+    logo_footer = models.ImageField(upload_to="logo_footer/", default=None, blank=True, null=True,
+                                    verbose_name="Логотип футера")
+
+    def __str__(self):
+        return self.logo_text
+
+    class Meta:
+        verbose_name = 'Основная страница'
+        verbose_name_plural = 'Основная страница'
+
+
+class WhatBlock(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Что мы умеем?")
+    image = models.ImageField(upload_to="photos_what_block/", default=None, blank=True, null=True,
+                              verbose_name="Изображение скилла")
+    title = models.CharField(max_length=50, verbose_name="Название скилла")
+    text = models.CharField(max_length=255, verbose_name="Описание скилла")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Что мы умеем?'
+        verbose_name_plural = 'Что мы умеем?'
