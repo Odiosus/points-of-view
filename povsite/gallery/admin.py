@@ -138,6 +138,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('name', 'get_html_image_project', 'short_title_block_description_field')
+    prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     list_filter = ('name',)
     search_fields = ['name']
@@ -145,7 +146,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     save_as = True
     ordering = ['-time_add']
     readonly_fields = (
-        'slug', 'time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
+        'time_add', 'time_update', 'short_title_block_description_field', 'get_html_image_project')
     list_per_page = 10
     fieldsets = (
         ("Проект", {
