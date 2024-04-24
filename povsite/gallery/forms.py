@@ -6,13 +6,13 @@ from .models import Feedback
 from django.core.mail import mail_admins
 from django.utils.translation import gettext_lazy as _
 
-asend_mail = sync_to_async(mail_admins)
 
+asend_mail = sync_to_async(mail_admins)
 
 async def send_mail_admin(feedback):
     asyncio.create_task(
         asend_mail(
-            subject=f' С вами поделились идеей!',
+            subject=f' С вами поделились идеей на тему {feedback.theme}!',
             message=
             f'Отправитель: {feedback.name}\n'
             f'Время отправления: {feedback.time_add}\n'
@@ -23,6 +23,7 @@ async def send_mail_admin(feedback):
 
 
 class FeedbackMultipleChoiceForm(forms.ModelForm):
+
     class Meta:
         model = Feedback
         fields = [
@@ -56,3 +57,4 @@ class FeedbackMultipleChoiceForm(forms.ModelForm):
         #     f'Контакты: {feedback.email}\n'
         # )
         return feedback
+

@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 
+{% load i18n %}
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
-    <div>
-        {{ unit.title }}
-        <p>
-        <img src='{{ unit.content_picture.url }}' width="100">
-        <p>
-        {{ unit.content_text }}
-    </div>
+<h1>{{ project.name }}</h1>
+{{ project.description }}
+<br>
+<img src='{{ project.image_project.url }}'>
+<h2>{% trans 'О ПРОЕКТЕ:' %}</h2>
+<br>
+{{ project.title_block_description }}
+<br>
+<img src='{{ project.image_block_one.url }}'>
+<br>
+{{ project.block_description_two }}
+<br>
+<img src='{{ project.image_block_two.url }}'>
+<h2>{% trans 'РЕАЛИЗАЦИЯ' %}</h2>
+{{ project.implementation }}
+<!--    <div>-->
+<!--        {% for gallery in galleries %}-->
+<!--            <p> {% trans 'Заголовок:' %} {{ gallery.title }} </p>-->
+<!--            <p> {% trans 'Текст статьи:' %}  {{ gallery.content_text }} </p>-->
+<!--            <p> {% trans 'Публикуется:' %} {{ gallery.is_published }} </p>-->
+<!--            <p> {% trans 'Картинка:' %} <img src='{{ gallery.content_picture.url }}' width="100"></p>-->
+<!--            <p> {% trans 'Контент:' %} {{ gallery.content }} </p>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
 
 </body>
 </html>

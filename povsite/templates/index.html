@@ -51,17 +51,29 @@
 
 
 
-
-    <div class="test">
-        {% for unit in units %}
-            <p> {% trans 'Автор:' %} {{ unit.user }} </p>
-            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>
-            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>
-            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>
-            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>
-            <p> {% trans 'Контент:' %} {{ unit.content }} </p>
+    <h2>Проекты</h2>
+    <div class="projects">
+        {% for project in projects %}
+            <a href="{{ project.id }}">{{ project.name }}</a>
+            <p>{{ project.block_description_one }}</p>
+            <img src='{{ project.image_project.url }}' width="100">
+<!--            <p> {% trans 'Автор:' %} {{ unit.user }} </p>-->
+<!--            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>-->
+<!--            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>-->
+<!--            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>-->
+<!--            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>-->
+<!--            <p> {% trans 'Контент:' %} {{ unit.content }} </p>-->
             <p>
         {% endfor %}
+    </div>
+    <h2>Команда</h2>
+    <div class="authors">
+        {% for author in authors %}
+<!--            <p>{{ author.name }} {{ author.surname }}</p>-->
+            <p>{{ author.biography }}</p>
+            <img src='{{ author.photo.url }}' width="100">
+        {% endfor %}
+
     </div>
 
     <br>
@@ -73,10 +85,6 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-<!--                {{ form.name.label_tag }} {{ form.name }}-->
-<!--        {{ form.email.label_tag }} {{ form.email }}-->
-<!--        {{ form.message.label_tag }} {{ form.message }}-->
-<!--        {{ form.theme.label_tag }} {{ form.theme }}-->
         <input type="submit" value="{% trans 'Сохранить' %}" />
     </form>
 

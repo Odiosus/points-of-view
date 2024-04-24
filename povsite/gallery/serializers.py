@@ -1,7 +1,6 @@
 from .models import *
 from rest_framework import serializers
 
-
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
@@ -50,7 +49,7 @@ class FeedbackSerializer(serializers.HyperlinkedModelSerializer):
         ]
 
 
-class CategoryProjectSerializer(serializers.HyperlinkedModelSerializer):
+class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Project
         fields = [
@@ -65,3 +64,4 @@ class ThemesSerializer(serializers.HyperlinkedModelSerializer):
         fields = [
             'name',
         ]
+

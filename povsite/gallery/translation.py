@@ -4,17 +4,33 @@ from modeltranslation.translator import register, TranslationOptions
 
 @register(Gallery)
 class GalleryTranslationOptions(TranslationOptions):
-    fields = ('title', 'content_text', 'content',)
+    fields = (
+        'title',
+        'content_text',
+        'content',
+    )
 
 
 @register(Author)
 class AuthorTranslationOptions(TranslationOptions):
-    fields = ('name', 'surname', 'brand_name', 'biography',)
+    fields = (
+        'name',
+        'surname',
+        'brand_name',
+        'patronymic',
+        'biography',
+    )
 
 
 @register(Project)
-class CategoryProjectTranslationOptions(TranslationOptions):
-    fields = ("name", 'description', 'title_block_description', 'block_description_one', 'block_description_two',)
+class ProjectTranslationOptions(TranslationOptions):
+    fields = (
+        'name',
+        'description',
+        'title_block_description',
+        'block_description_one',
+        'block_description_two',
+    )
 
 
 @register(Themes)

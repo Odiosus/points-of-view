@@ -22,6 +22,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'modeltranslation',
+    # 'django_tests',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -111,6 +112,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -145,159 +147,6 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = "capitas.kolesnikov@yandex.ru"
 
-ADMINS = [('Andrey Gunyavin', 'artyomkolesnikov1990@gmail.com'), ]  # TODO change email
+ADMINS = [('Andrey Gunyavin', 'artyomkolesnikov1990@gmail.com'),] # TODO change email
 
-# логирование
-LOGGING = {
-    # первый ключ version всегда определяется как 1
-    'version': 1,
-    # контролирует работу существующей (стандартной) схемы логирования
-    'disable_existing_loggers': False,
-    'style': '{',
-    # ключ — формат записи сообщений
-    'formatters': {
-        # (выводим в консоль) формат сообщения уровня DEBUG+ — время, уровень сообщения, сообщение
-        'console_simple': {'format': '%(asctime)s %(levelname)s %(message)s'},
-        # (выводим в консоль) формат сообщения уровня WARNING+ — время, уровень сообщения, сообщение, путь к источнику события
-        'console_warning': {'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s'},
-        # (выводим в консоль) формат сообщения уровня ERROR и CRITICAL — время, уровень сообщения, сообщение, путь к источнику события, стэк ошибки
-        'console_error': {'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(exc_info)s'},
-        # (выводим в файл general.log) формат сообщения уровня INFO+ — время, уровень сообщения, модуль, сообщение
-        'general': {'format': '%(asctime)s %(levelname)s %(module)s %(message)s'},
-        # (выводим в файл errors.log) формат сообщения уровня ERROR и CRITICAL — время, уровень сообщения, сообщение, путь к источнику события, стэк ошибки
-        'error': {'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(exc_info)s'},
-        # (выводим в файл security.log) формат сообщения "уровня" SECURITY — время, уровень сообщения, модуль, сообщение
-        'security': {'format': '%(asctime)s %(levelname)s %(module)s %(message)s'},
-        # (отправляем на почту) формат сообщения уровня ERROR+ — время, уровень сообщения, сообщение, путь к источнику события
-        'email': {'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s'
-                  },
-    },
-    # ключ — фильтры
-    'filters': {
-        # в консоль сообщения отправляются только при DEBUG = True
-        'require_debug_true': {'()': 'django.utils.log.RequireDebugTrue'},
-        # на почту и в файл general.log — только при DEBUG = False
-        'require_debug_false': {'()': 'django.utils.log.RequireDebugFalse'},
-    },
-    # ключ — обработчики
-    'handlers': {
-        # обработчик вывода сообщений уровня DEBUG+ в консоль
-        'console_simple': {
-            # уровень применения
-            'level': 'DEBUG',
-            # применяемый фильтр
-            'filters': ['require_debug_true'],
-            # обработчик, отправляющий сообщения в консоль
-            'class': 'logging.StreamHandler',
-            # применяемый формат вывода
-            'formatter': 'console_simple'},
-        # обработчик вывода сообщений уровня WARNING+ в консоль
-        'console_warning': {
-            # уровень применения
-            'level': 'WARNING',
-            # применяемый фильтр
-            'filters': ['require_debug_true'],
-            # обработчик, отправляющий сообщения в консоль
-            'class': 'logging.StreamHandler',
-            # применяемый формат вывода
-            'formatter': 'console_warning'},
-        # обработчик вывода сообщений уровня ERROR и CRITICAL в консоль
-        'console_error': {
-            # уровень применения
-            'level': 'ERROR',
-            # применяемый фильтр
-            'filters': ['require_debug_true'],
-            # обработчик, отправляющий сообщения в консоль
-            'class': 'logging.StreamHandler',
-            # применяемый формат вывода
-            'formatter': 'console_error'},
-        # обработчик вывода сообщений уровня INFO+ в файл general.log
-        'general': {
-            # уровень применения
-            'level': 'INFO',
-            # применяемый фильтр
-            'filters': ['require_debug_false'],
-            # обработчик, отправляющий сообщения в файл
-            'class': 'logging.FileHandler',
-            # имя файла, в который отправляем сообщение
-            'filename': 'general.log',
-            # применяемый формат вывода
-            'formatter': 'general'},
-        # обработчик вывода сообщений уровня ERROR+ в файл errors.log
-        'error': {
-            # уровень применения
-            'level': 'ERROR',
-            # обработчик, отправляющий сообщения в файл
-            'class': 'logging.FileHandler',
-            # имя файла, в который отправляем сообщение
-            'filename': 'errors.log',
-            # применяемый формат вывода
-            'formatter': 'error'},
-        # обработчик вывода сообщений, связанных с безопасностью (security), в файл security.log
-        'security': {
-            # уровень применения
-            'level': 'DEBUG',
-            # обработчик, отправляющий сообщения в файл
-            'class': 'logging.FileHandler',
-            # имя файла, в который отправляем сообщение
-            'filename': 'security.log',
-            # применяемый формат вывода
-            'formatter': 'security'},
-        # обработчик вывода сообщений уровня ERROR+, отправляемых по почте
-        'mail_admins': {
-            # уровень применения
-            'level': 'ERROR',
-            # применяемый фильтр
-            'filters': ['require_debug_false'],
-            # обработчик, отправляющий сообщения по почте
-            'class': 'django.utils.log.AdminEmailHandler',
-            # применяемый формат вывода
-            'formatter': 'email'
-        },
-    },
-    # ключ — логгеры
-    'loggers': {
-        #  регистратор
-        'django': {
-            # отправляет на консоль и в файл
-            'handlers': ['console_simple', 'console_warning', 'console_error', 'general'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        },
-        # регистратор
-        'django.request': {
-            # отправляет в файл и на почту
-            'handlers': ['error', 'mail_admins'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        },
-        # регистратор
-        'django.server': {
-            # отправляет в файл и на почту
-            'handlers': ['error', 'mail_admins'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        },
-        # регистратор
-        'django.template': {
-            # отправляет в файл
-            'handlers': ['error'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        },
-        # регистратор
-        'django.db.backends': {
-            # отправляет в файл
-            'handlers': ['error'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        },
-        # регистратор
-        'django.security': {
-            # отправляет в файл
-            'handlers': ['security'],
-            # сообщения логгера по иерархии (родительским логгерам)
-            'propagate': True,
-        }
-    }
-}
+
