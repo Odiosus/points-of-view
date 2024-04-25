@@ -16,6 +16,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
+    save_as = True
     list_per_page = 10
     fieldsets = (
         ("Информация о пользователе", {
@@ -232,7 +233,7 @@ class LandingPageAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(WhatBlock)
 class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_image', 'title', 'text', 'short_text_field')
+    list_display = ('get_html_image', 'title', 'short_text_field')
     list_display_links = ('title',)
     list_filter = ('title',)
     search_fields = ['title', ]

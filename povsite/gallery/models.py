@@ -75,7 +75,7 @@ class Project(models.Model):
     description = models.CharField(max_length=50, verbose_name='Слоган')
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
-    title_block_description = models.CharField(max_length=100, verbose_name='Заголовок блока описания')
+    title_block_description = models.CharField(max_length=150, verbose_name='Заголовок блока описания')
     block_description_one = models.TextField(max_length=500, verbose_name='Описание блока No1')
     image_block_one = models.ImageField(upload_to="photos_project/block1/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No1")
