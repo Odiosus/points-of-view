@@ -149,10 +149,14 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
             "classes": ("collapse",),
             "fields": ('block_description_two', 'image_block_two',),
         }),
-        ("Реализация", {
+        ("Реализация: выбираем галереи", {
+            "classes": ("collapse",),
+            "description": "Здесь нужно выбрать все галереи по этому проекту",
             "fields": ("implementation",)
         }),
-        ("Что умеем?", {
+        ("Что мы умеем", {
+            "classes": ("collapse",),
+            "description": "Здесь нужно выбрать наши отличительные особенности по этому проекту",
             "fields": ("what_block",)
         }),
         ("Публикуем?", {

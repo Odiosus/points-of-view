@@ -21,7 +21,6 @@ class Gallery(models.Model):
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
 
-
     def __str__(self):
         return self.title
 
@@ -84,9 +83,8 @@ class Project(models.Model):
     block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
-    implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                                       verbose_name='Проекты')
-    what_block = models.ForeignKey('WhatBlock', on_delete=models.CASCADE, null=True, default=None, blank=True, verbose_name='Что мы умеем?')
+    implementation = models.ManyToManyField(Gallery, verbose_name='Галереи')
+    what_block = models.ManyToManyField('WhatBlock', verbose_name='Наши скиллы', related_name='what_block')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
