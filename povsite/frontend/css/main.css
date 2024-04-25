@@ -2,7 +2,7 @@
     margin: 221px 400px;
 }
 
-.logo {
+.start .logo {
     width: 633px;
     height: 250px;
     left: 403px;
@@ -11,7 +11,7 @@
     bottom: 814px;
 }
 
-.logo svg {
+.start .logo svg {
     width: 633px;
     height: 250px;
     left: 403px;
@@ -20,7 +20,7 @@
     bottom: 814px;
 }
 
-.logo use {
+.start .logo use {
     width: 633px;
     height: 250px;
     left: 403px;
@@ -29,9 +29,9 @@
     bottom: 814px;
 }
 
-.art-lab {
+.start .art-lab {
     position: absolute;
-    margin: 280px 0px;
+    margin: 0px 0px;
     width: 670px;
     height: 30px;
     color: rgb(29, 29, 27);
@@ -43,7 +43,7 @@
     text-align: left;
 }
 
-#shape {
+.start #shape {
     /* Стилизация фигуры */
     position: absolute;
     width: 1077px;
@@ -55,7 +55,7 @@
     border-radius: 225px;
 }
    
-#video {
+.start #video {
     /* Стилизация видео */
     position: absolute;
     width: 1077px;
@@ -654,4 +654,3 @@
     align-items: center;
     padding: 0px 2px 0px 2px;
 }
-
