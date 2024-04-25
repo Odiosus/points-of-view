@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import *
 from .serializers import *
+from rest_framework.generics import get_object_or_404
+
+from .models import Gallery, Themes, Feedback, Project
+from .serializers import GallerySerializer
 from rest_framework import viewsets
 from django.views.generic import ListView, DetailView
 from .forms import FeedbackMultipleChoiceForm
@@ -25,8 +29,10 @@ class ProjectList(ListView):
                 form.save()
         return redirect('/')
 
+
 class ProjectDetail(DetailView):
     model = Project
+    slug_url_kwarg = 'project_slug'
     template_name = 'detail.html'
     context_object_name = 'project'
 
@@ -35,10 +41,9 @@ class ProjectDetail(DetailView):
         context['galleries'] = Gallery.objects.filter(project=context['object'])
         return context
 
+    def get_object(self, queryset=None):
+        return get_object_or_404(Project.published, slug=self.kwargs[self.slug_url_kwarg])
 
-
-#==========================================
-#Viewsets
 
 class GalleryViewSet(viewsets.ModelViewSet):
     queryset = Gallery.objects.all()

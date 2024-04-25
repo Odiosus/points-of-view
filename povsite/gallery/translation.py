@@ -17,7 +17,7 @@ class AuthorTranslationOptions(TranslationOptions):
         'name',
         'surname',
         'brand_name',
-        'patronymic',
+        # 'patronymic',
         'biography',
     )
 
