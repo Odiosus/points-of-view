@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
 from django.urls import reverse
-from django.template.defaultfilters import slugify
 
 
 class PublishedManager(models.Manager):
@@ -78,7 +77,7 @@ class Project(models.Model):
     description = models.CharField(max_length=50, verbose_name='Слоган')
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
-    title_block_description = models.CharField(max_length=100, verbose_name='Заголовок блока описания')
+    title_block_description = models.CharField(max_length=150, verbose_name='Заголовок блока описания')
     block_description_one = models.TextField(max_length=500, verbose_name='Описание блока No1')
     image_block_one = models.ImageField(upload_to="photos_project/block1/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No1")
@@ -107,9 +106,6 @@ class Project(models.Model):
     def get_absolute_url(self):
         return reverse('projects', kwargs={'project_slug': self.slug})
 
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(translit_to_eng(self.name))
-    #     super().save(*args, **kwargs)
 
 
 class Themes(models.Model):
