@@ -53,19 +53,13 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     short_description_field.short_description = 'Краткое описание'
 
-    # def short_description_field_title(self, obj):
-    #     if obj.title:
-    #         return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
-    #
-    # short_description_field_title.short_description = 'Заголовок'
-
 
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
-    list_display_links = ('name', 'surname', 'brand_name')
-    list_filter = ('surname', 'brand_name')
-    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
+    list_display = ('get_html_photo', 'brand_name', 'name', 'email', 'phone', 'short_description_field')
+    list_display_links = ('name', 'brand_name')
+    list_filter = ('brand_name',)
+    search_fields = ['name', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
     ordering = ['-time_add']
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
@@ -73,11 +67,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("brand_name", "email", "phone",)
-        }),
-        ("Персональная информация", {
-            "classes": ("collapse",),
-            "fields": (("name", "surname", ),)
+            "fields": ("name", "brand_name", "email", "phone",)
         }),
         ("Биография", {
             "classes": ("collapse",),
@@ -242,7 +232,7 @@ class LandingPageAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(WhatBlock)
 class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_image', 'title', 'short_text_field')
+    list_display = ('get_html_image', 'title', 'text', 'short_text_field')
     list_display_links = ('title',)
     list_filter = ('title',)
     search_fields = ['title', ]
@@ -252,11 +242,11 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Имя блока: Что мы умеем?", {
-            "fields": ("name",)
+            "fields": ("title",)
         }),
-        ("Скилл", {
+        ("Описание скилла", {
             "classes": ("collapse",),
-            "fields": ("title", 'text',)
+            "fields": ('text', )
         }),
         ("Изображение скилла", {
             "fields": ("image", 'get_html_image')

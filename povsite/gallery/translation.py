@@ -15,7 +15,7 @@ class GalleryTranslationOptions(TranslationOptions):
 class AuthorTranslationOptions(TranslationOptions):
     fields = (
         'name',
-        'surname',
+        # 'surname',
         'brand_name',
         # 'patronymic',
         'biography',
@@ -46,4 +46,4 @@ class LandingPageTranslationOptions(TranslationOptions):
 
 @register(WhatBlock)
 class WhatBlockTranslationOptions(TranslationOptions):
-    fields = ('name', 'title', 'text',)
+    fields = ('title', 'text',)
