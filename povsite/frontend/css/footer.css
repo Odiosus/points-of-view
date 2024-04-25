@@ -1,0 +1,218 @@
+.footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7300px;
+    width: 1442px;
+    height: 761px;
+    left: 0;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset -74.27px 45.27px 74.27px 74.27px rgba(255, 255, 255, 0.1),inset 74.27px -74.27px 74.27px 0px rgba(194, 194, 194, 0.1);
+    backdrop-filter: blur(400px);
+    background: rgba(255, 255, 255, 0.562);
+    background-color: rgb(43, 43, 43);
+}
+
+.footer .footer-logo {
+    position: absolute;
+    width: 476px;
+    height: 494px;
+    left: 70px;
+    right: 0%;
+    top: 130px;
+    bottom: 0%;
+}
+
+.footer .container-links {
+    position: absolute;
+    width: 390px;
+    height: 229px;
+    left: 890px;
+    right: 292px;
+    top: 113px;
+    bottom: 519px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.container-links .about {
+    position: static;
+    width: 190px;
+    height: 37px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 55px 0px;
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.container-links .projects {
+    position: absolute;
+    width: 130px;
+    height: 37px;
+    left: 0px;
+    right: 292px;
+    top: 113px;
+    bottom: 519px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 55px 0px;
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.container-links .team {
+    position: absolute;
+    width: 130px;
+    height: 37px;
+    left: 250px;
+    right: 292px;
+    top: 0px;
+    bottom: 519px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 53px 0px;
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.container-links .contacts {
+    position: absolute;
+    width: 130px;
+    height: 37px;
+    left: 250px;
+    right: 292px;
+    top: 113px;
+    bottom: 519px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 53px 0px;
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.footer .btn-phone {
+    position: absolute;
+    width: 412px;
+    height: 111px;
+    left: 880px;
+    top: 380px;
+    box-sizing: border-box;
+    border: 5px solid rgb(193, 81, 145);
+    border-radius: 54px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 23px 32px 23px;
+}
+
+.footer .btn-phone .phone {
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.footer .btn-email {
+    position: absolute;
+    width: 729px;
+    height: 54px;
+    left: 570px;
+    right: 70px;
+    top: 666px;
+    bottom: 41px;
+}
+
+.footer .btn-email .email {
+    color: rgb(255, 255, 255);
+    font-family: Geologica;
+    font-size: 43px;
+    font-weight: 900;
+    line-height: 54px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.footer .rights {
+    position: absolute;
+    width: 252px;
+    height: 23px;
+    left: 70px;
+    right: 1118px;
+    top: 690px;
+    bottom: 48px;
+}
+
+.footer .rights p {
+    color: rgb(233, 233, 232);
+    font-family: Geologica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
