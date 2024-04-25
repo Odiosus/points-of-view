@@ -139,7 +139,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ('user', "name", 'slug', 'description', 'image_project',)
+            "fields": ("name", 'slug', 'description', 'image_project',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
@@ -151,6 +151,9 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
         }),
         ("Реализация", {
             "fields": ("implementation",)
+        }),
+        ("Что умеем?", {
+            "fields": ("what_block",)
         }),
         ("Публикуем?", {
             "fields": ("is_published", 'time_add', 'time_update',)
