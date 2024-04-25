@@ -77,7 +77,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
         }),
         ("Персональная информация", {
             "classes": ("collapse",),
-            "fields": (("name", "surname", "patronymic",),)
+            "fields": (("name", "surname", ),)
         }),
         ("Биография", {
             "classes": ("collapse",),
@@ -259,7 +259,7 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("title", 'text',)
         }),
         ("Изображение скилла", {
-            "fields": ("image",)
+            "fields": ("image", 'get_html_image')
         }),
     )
 
