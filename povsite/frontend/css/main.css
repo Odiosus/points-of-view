@@ -11,7 +11,7 @@
     bottom: 814px;
 }
 
-.start .logo svg {
+/*.start .logo svg {
     width: 633px;
     height: 250px;
     left: 403px;
@@ -27,7 +27,7 @@
     right: 404px;
     top: 190px;
     bottom: 814px;
-}
+}*/
 
 .start .art-lab {
     position: absolute;
@@ -43,28 +43,36 @@
     text-align: left;
 }
 
-.start #shape {
+.start .start-animation {
+    position: absolute;
+    width: 1077px;
+    height: 450px;
+    left: 182px;
+    right: 181px;
+    top: 700px;
+}
+
+.start .start-animation #shape {
     /* Стилизация фигуры */
     position: absolute;
     width: 1077px;
     height: 400px;
-    left: 182px;
-    right: 181px;
-    top: 730px;
+    top: 0px;
     bottom: 132px;
     border-radius: 225px;
+    background: rgba(193, 81, 145, 0.5);
 }
    
-.start #video {
+.start .start-animation #video {
     /* Стилизация видео */
     position: absolute;
+    object-fit: fill;
     width: 1077px;
     height: 400px;
-    left: 182px;
-    right: 181px;
-    top: 730px;
+    top: 0px;
     bottom: 132px;
     border-radius: 225px;
+    
     }
 
 .about {
