@@ -1,0 +1,128 @@
+@import 'fonts.css';
+@import 'normalize.css';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: Geologica;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+header {
+    margin: 40px;
+}
+
+
+.container-language {
+    position: absolute;
+    width: 149px;
+    height: 25px;
+    left: 1126px;
+    right: 165px;
+    top: 48px;
+    bottom: 1189px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.ru {
+    position: static;
+    width: 28px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
+
+.en {
+    position: static;
+    width: 27px;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
+
+.fr {
+    position: static;
+    width: 25px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.block-1-2 {
+    max-width: 867px;
+    margin: 0 auto;
+}
+
+
+.title {
+    color: rgb(29, 29, 27);
+    font-size: 67px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 89px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.description {
+    padding-top: 5px;
+    padding-left: 10px;
+    color: rgb(193, 81, 145);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+}
+.image_project img{
+    width: 867px;
+    height: 360px;
+    left: 0;
+    top: 0;
+}
