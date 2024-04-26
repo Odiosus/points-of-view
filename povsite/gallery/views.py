@@ -38,7 +38,7 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['galleries'] = Gallery.objects.filter(project=context['object'])
+        # context['galleries'] = Project.objects.filter(implementation=context['object'])
         return context
 
     def get_object(self, queryset=None):
