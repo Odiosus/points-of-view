@@ -82,7 +82,7 @@ class Project(models.Model):
     block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
-    implementation = models.ManyToManyField(Gallery, verbose_name='Галереи')
+    implementation = models.ManyToManyField(Gallery, verbose_name='Галереи', related_name='implementation')
     what_block = models.ManyToManyField('WhatBlock', verbose_name='Наши скиллы', related_name='what_block')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
@@ -119,13 +119,11 @@ class LandingPage(models.Model):
     logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
     logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")
-    about_us = models.CharField(max_length=10, verbose_name="О нас")
-    about_us_title = models.CharField(max_length=50, verbose_name="Заголовок раздела")
+    about_us = models.CharField(max_length=50, verbose_name="О нас")
+    about_us_title = models.CharField(max_length=100, verbose_name="Заголовок раздела")
     about_us_text = models.TextField(max_length=500, verbose_name="Текст раздела")
-    projects = models.ForeignKey(Project, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                                 verbose_name="Проекты")
-    team = models.ForeignKey(Author, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                             verbose_name="Команда")
+    projects = models.ManyToManyField(Project, verbose_name="Проекты", related_name="projects")
+    team = models.ManyToManyField(Author, verbose_name="Команда", related_name="team")
     logo_footer = models.ImageField(upload_to="logo_footer/", default=None, blank=True, null=True,
                                     verbose_name="Логотип футера")
 
