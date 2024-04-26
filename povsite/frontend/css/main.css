@@ -146,12 +146,11 @@
 
 .projects h1 {
     position: absolute;
-    width: 956px;
-    height: 50px;
-    left: 242px;
-    right: 242px;
-    top: 106px;
-    bottom: 943px;
+    width: 269px;
+    height: 63px;
+    left: 586px;
+    right: 585px;
+    top: 100px;
     color: rgb(17, 17, 17);
     font-family: Geologica;
     font-size: 40px;
@@ -175,11 +174,11 @@
 
 .projects .container-diving p {
     position: absolute;
-    width: 229px;
+    left: 50px;
+    top: 55px;
+    width: 300px;
     height: 34px;
     /* Автолейаут */
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -205,11 +204,10 @@
 
 .projects .container-questions p {
     position: absolute;
-    width: 326px;
-    height: 68px;
+    top: 55px;
+    width: 400px;
+    height: 34px;
     /* Автолейаут */
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -235,11 +233,11 @@
 
 .projects .container-cartel p {
     position: absolute;
-    width: 219px;
+    left: 50px;
+    top: 55px;
+    width: 300px;
     height: 34px;
     /* Автолейаут */
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -580,10 +578,10 @@
 
 .contacts .email-phone {
     position: absolute;
-    width: 1300px;
+    width: 1350px;
     height: 55px;
     left: 70px;
-    right: 70px;
+    right: 0px;
     top: 921px;
     bottom: 127px;
     /* Автолейаут */
@@ -591,7 +589,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px;
 }
 
 .contacts .email-phone .send_mail {
@@ -604,18 +601,32 @@
     justify-content: left;
     align-items: center;
     padding: 10px 980px 10px 0px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .contacts .email-phone a {
     position: static;
-    width: 249px;
+    width: 600px;
     height: 35px;
     /* Автолейаут */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 80px 10px 0px;
+    padding: 10px 150px 10px -1px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .contacts .social {
@@ -643,7 +654,26 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 2px 0px 70px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 250;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contacts .social .inst img {
+    position: absolute;
+    left: 1308px;
+    width: 60px;
+    height: 60px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .contacts .social .fb {
@@ -661,7 +691,26 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 2px 0px 70px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 250;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contacts .social .fb img {
+    position: absolute;
+    left: 1308px;
+    width: 60px;
+    height: 60px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .contacts .social .tg {
@@ -679,11 +728,29 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 2px 0px 70px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 250;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contacts .social .tg img {
+    position: absolute;
+    left: 1308px;
+    width: 60px;
+    height: 60px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .contacts .social .yt {
-
     position: absolute;
     width: 1440px;
     height: 130px;
@@ -698,7 +765,26 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 2px 0px 70px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 250;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contacts .social .yt img {
+    position: absolute;
+    left: 1308px;
+    width: 60px;
+    height: 60px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .contacts .social .wa {
@@ -716,5 +802,24 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 2px 0px 70px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 30px;
+    font-weight: 250;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contacts .social .wa img {
+    position: absolute;
+    left: 1308px;
+    width: 60px;
+    height: 60px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
