@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 20:15+0300\n"
+"POT-Creation-Date: 2024-04-27 15:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\gallery\forms.py:18
+#: .\gallery\forms.py:36
 msgid "Имя"
 msgstr "Name"
 
-#: .\gallery\forms.py:19
+#: .\gallery\forms.py:37
 msgid "Сообщение"
 msgstr "Message"
 
-#: .\gallery\forms.py:20
+#: .\gallery\forms.py:38
 msgid "Тема"
 msgstr "Theme"
 
@@ -38,34 +38,64 @@ msgstr ""
 msgid "Django administration"
 msgstr ""
 
+#: .\templates\detail.html:71
+msgid "О ПРОЕКТЕ"
+msgstr "ABOUT THE PROJECT"
+
+#: .\templates\detail.html:97
+msgid "ЧТО МЫ УМЕЕМ?"
+msgstr "WHAT CAN WE DO?"
+
+#: .\templates\detail.html:111
+msgid "РЕАЛИЗАЦИЯ"
+msgstr "REALIZATION"
+
+#: .\templates\detail.html:156
+msgid "О нас"
+msgstr "About us"
+
+#: .\templates\detail.html:157
+msgid "Проекты"
+msgstr "Projects"
+
+#: .\templates\detail.html:158
+msgid "Команда"
+msgstr "Team"
+
+#: .\templates\detail.html:159
+msgid "Контакты"
+msgstr "Contacts"
+
 #: .\templates\index.html:9
-msgid "Точки зрения:"
+#, fuzzy
+#| msgid "Точки зрения:"
+msgid "Точки зрения"
 msgstr "Points of view"
 
-#: .\templates\index.html:56
+#: .\templates\index.html:60
 msgid "Автор:"
 msgstr "Author:"
 
-#: .\templates\index.html:57
+#: .\templates\index.html:61
 msgid "Заголовок:"
 msgstr "Title:"
 
-#: .\templates\index.html:58
+#: .\templates\index.html:62
 msgid "Текст статьи:"
 msgstr "The text of the article:"
 
-#: .\templates\index.html:59
+#: .\templates\index.html:63
 msgid "Публикуется:"
 msgstr "Is published:"
 
-#: .\templates\index.html:60
+#: .\templates\index.html:64
 msgid "Картинка:"
 msgstr "Picture:"
 
-#: .\templates\index.html:61
+#: .\templates\index.html:65
 msgid "Контент:"
 msgstr "Content:"
 
-#: .\templates\index.html:68
+#: .\templates\index.html:88
 msgid "Сохранить"
 msgstr "Save"
