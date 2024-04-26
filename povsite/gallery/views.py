@@ -39,6 +39,7 @@ class ProjectDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['galleries'] = Gallery.objects.filter(project=context['object'])
+        # context['mini-logo'] = LandingPage.object.logo_header
         return context
 
     def get_object(self, queryset=None):
