@@ -2,6 +2,7 @@ html {
     --container: 300px;
     --padding-container: 10px;
     box-sizing: border-box;
+    
     /*position: relative;
     overflow-x: hidden;*/
 }
@@ -10,10 +11,11 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.body {
     font-family: Geologica, sans-serif;
     min-width: 320px;
     min-height: 100vh;
+    margin: 0 auto;
     background-color: rgb(255, 255, 255);
     color: black;
 }

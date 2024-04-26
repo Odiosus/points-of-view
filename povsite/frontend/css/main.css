@@ -1,8 +1,20 @@
 .start {
-    margin: 221px 400px;
+    position: absolute;
+    width: 1440px;
+    height: 1254px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.start img {
+    position: absolute;
+    z-index: -1;
 }
 
 .start .logo {
+    position: absolute;
     width: 633px;
     height: 250px;
     left: 403px;
@@ -31,7 +43,7 @@
 
 .start .art-lab {
     position: absolute;
-    margin: 0px 0px;
+    margin: 450px 400px;
     width: 670px;
     height: 30px;
     color: rgb(29, 29, 27);
@@ -60,12 +72,13 @@
     top: 0px;
     bottom: 132px;
     border-radius: 225px;
-    background: rgba(193, 81, 145, 0.5);
+    background: transparent;
 }
    
 .start .start-animation #video {
     /* Стилизация видео */
     position: absolute;
+    z-index: -1;
     object-fit: fill;
     width: 1077px;
     height: 400px;
@@ -160,13 +173,23 @@
     border-radius: 30px;
 }
 
-.projects .container-diving h1 {
-    width: 265px;
-    height: 56px;
-    left: 45px;
-    right: 102px;
-    top: 552px;
-    bottom: 42px;
+.projects .container-diving p {
+    position: absolute;
+    width: 229px;
+    height: 34px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(233, 233, 232);
+    font-family: Geologica;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
 }
 
 .projects .container-questions {
@@ -180,14 +203,23 @@
     border-radius: 30px;
 }
 
-.projects .container-questions h1 {
+.projects .container-questions p {
     position: absolute;
-    width: 356px;
-    height: 92px;
-    left: 45px;
-    right: 11px;
-    top: 552px;
-    bottom: 6px;
+    width: 326px;
+    height: 68px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(233, 233, 232);
+    font-family: Geologica;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
 }
 
 .projects .container-cartel {
@@ -201,14 +233,23 @@
     border-radius: 30px;
 }
 
-.projects .container-cartel h1 {
+.projects .container-cartel p {
     position: absolute;
-    width: 237px;
-    height: 56px;
-    left: 45px;
-    right: 130px;
-    top: 552px;
-    bottom: 42px;
+    width: 219px;
+    height: 34px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(233, 233, 232);
+    font-family: Geologica;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
 }
 
 .author {
@@ -219,6 +260,11 @@
     right: 0;
     top: 3186px;
     bottom: 3141px;
+}
+
+.author img {
+    position: absolute;
+    z-index: -1;
 }
 
 .author h1 {
@@ -300,12 +346,17 @@
     right: 38px;
     top: 270px;
     bottom: 128px;
+    overflow-x: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: 0px;
 }
+
+.team .container-scroll::-webkit-scrollbar {
+    display: none;
+  }
 
 .team .container-scroll .page_1 {
     position: static;
@@ -432,6 +483,11 @@
     right: 0;
     top: 5279px;
     bottom: 1160px;
+}
+
+.idea img {
+    position: absolute;
+    z-index: -1;
 }
 
 .idea .animation_3 {
