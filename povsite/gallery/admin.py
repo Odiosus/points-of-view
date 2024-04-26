@@ -247,7 +247,7 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
         }),
         ("Описание скилла", {
             "classes": ("collapse",),
-            "fields": ('text', )
+            "fields": ('text',)
         }),
         ("Изображение скилла", {
             "fields": ("image", 'get_html_image')
@@ -269,4 +269,3 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
 admin.site.site_title = 'Лаборатория "Точки Зрения"'
-# admin.site.index_title = 'Администрирование лаборатории "Точки Зрения"'
