@@ -14,6 +14,6 @@ router.register(r'themes', ThemesViewSet)
 urlpatterns = [
                   path('I18n/', include('django.conf.urls.i18n')),
                   path('', ProjectList.as_view(), name='main'),
-                  path('projects/<slug:project_slug>/', ProjectDetail.as_view(), name='projects'),
+                  path('<slug:project_slug>/', ProjectDetail.as_view(), name='projects'),
                   path('api/', include(router.urls), name='api'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
