@@ -16,9 +16,7 @@ class AuthorTranslationOptions(TranslationOptions):
     fields = (
         'name',
         'photo',
-        # 'surname',
         'brand_name',
-        # 'patronymic',
         'biography',
     )
 
@@ -27,6 +25,7 @@ class AuthorTranslationOptions(TranslationOptions):
 class ProjectTranslationOptions(TranslationOptions):
     fields = (
         'name',
+        'logo_header',
         'description',
         'title_block_description',
         'block_description_one',
@@ -37,15 +36,24 @@ class ProjectTranslationOptions(TranslationOptions):
 
 @register(Themes)
 class GalleryTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = (
+        'name',
+    )
 
 
 @register(LandingPage)
 class LandingPageTranslationOptions(TranslationOptions):
     fields = (
-        'logo_text', 'logo_header', 'about_us', 'about_us_title', 'about_us_text', 'logo_footer',)  # 'projects', 'team',
+        'logo_text',
+        'logo_header',
+        'about_us',
+        'about_us_title',
+        'about_us_text',
+        'logo_footer',)
 
 
 @register(WhatBlock)
 class WhatBlockTranslationOptions(TranslationOptions):
-    fields = ('title', 'text',)
+    fields = (
+        'title',
+        'text',)

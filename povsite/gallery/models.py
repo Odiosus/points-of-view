@@ -67,7 +67,7 @@ class Project(models.Model):
         DRAFT = 0, 'Черновик'
         PUBLISHED = 1, 'Опубликовано'
 
-    name = models.TextField(max_length=50, verbose_name='Название проекта')
+    name = models.CharField(max_length=50, verbose_name='Название проекта')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
         MaxLengthValidator(100, message="Максимум 100 символов"),
@@ -89,7 +89,7 @@ class Project(models.Model):
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
-    logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
+    logo_header = models.ImageField(upload_to="logo_project/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")
 
     objects = models.Manager()
