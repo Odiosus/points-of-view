@@ -30,6 +30,7 @@ class ProjectTranslationOptions(TranslationOptions):
         'title_block_description',
         'block_description_one',
         'block_description_two',
+        'logo_header',
     )
 
 

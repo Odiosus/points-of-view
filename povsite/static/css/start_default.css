@@ -1,0 +1,74 @@
+html {
+    --container: 300px;
+    --padding-container: 10px;
+    box-sizing: border-box;
+    
+    /*position: relative;
+    overflow-x: hidden;*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: Geologica, sans-serif;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+img, svg {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+iframe {
+    border: 0;
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.container{
+    max-width: calc(var(--container) + var(--padding-container) * 2);
+    padding: 0 var(--padding-container);
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    
+}

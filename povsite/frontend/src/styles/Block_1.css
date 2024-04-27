@@ -1,0 +1,81 @@
+.block_1 {
+    position: absolute;
+    width: 1300px;
+    height: 582px;
+    left: 70px;
+    right: 70px;
+    top: 178px;
+    bottom: 3335px;
+    background-color: rgb(233, 233, 232);
+}
+.frame_3 {
+    position: absolute;
+    width: 722px;
+    height: 399px;
+    left: 0;
+    right: 578px;
+    top: 52px;
+    bottom: 131px;
+    background-color: rgb(233, 233, 232);
+}
+/*Новая точка зрения на искусство*/
+.text_1 {
+    position: absolute;
+    width: 745px;
+    height: 167px;
+    left: 0;
+    right: -23px;
+    top: 60px;
+    bottom: 172px;
+    font-family: Geologica;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+/*Арт-лаборатория, открывающая искусство по-новому.*/
+.text_2 {
+    position: absolute;
+    width: 745px;
+    height: 42px;
+    left: 0;
+    right: -23px;
+    top: 257px;
+    bottom: 100px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* Подробнее */
+.btn_1 {
+    position: absolute;
+    width: 179px;
+    height: 46px;
+    left: 0;
+    right: 543px;
+    top: 329px;
+    bottom: 24px;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 32px 11px 32px;
+    border-radius: 30px;
+    background: rgb(25, 143, 118);
+}
+.frame_29 {
+    position: absolute;
+    width: 878px;
+    height: 582px;
+    left: 422px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
