@@ -38,8 +38,8 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['galleries'] = Gallery.objects.filter(project=context['object'])
-        # context['mini-logo'] = LandingPage.object.logo_header
+        context['galleries'] = Gallery.objects.filter(implementation=context['object'])
+        context['what_block'] = WhatBlock.objects.filter(what_block=context['object'])
         return context
 
     def get_object(self, queryset=None):

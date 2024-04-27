@@ -1,4 +1,8 @@
 @import 'normalize.css';
+@import 'fonts.css';
+@import 'default.css';
+@import 'header.css';
+@import 'main.css';
 
 html {
     box-sizing: border-box;
@@ -15,12 +19,35 @@ body {
     color: black;
 }
 
+.ellipse-212 {
+    position: absolute;
+    border-radius: 120px;
+    width: 175.8px;
+    height: 175.8px;
+    left: 881.82px;
+    top: 195.8px;
+    box-shadow: inset -12.2px 12.2px 12.2px 0px rgba(255, 255, 255, 0.14),inset 12.2px -12.2px 12.2px 0px rgba(39, 106, 186, 0.14);
+    backdrop-filter: blur(3.71px);
+    background: rgba(52, 140, 245, 0.09);
+}
+
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     max-width: 1151px;
     margin: 0 auto;
+}
+
+.mini-logo {
+    padding-top: 9px;
+    margin-left: 55px;
+    width: 120px;
+    height: 50px;
+}
+
+.mini-logo img {
+    margin-top: 12px;
 }
 
 .container-header-container{
@@ -32,7 +59,7 @@ header {
 .languages-container {
     display: inline-flex;
     margin-top: 30px;
-    margin-right: 18px;
+    margin-right: 25px;
 }
 
 .languages {
@@ -75,7 +102,7 @@ header {
 
 .title {
     color: rgb(29, 29, 27);
-    font-size: 67px;
+    font-size: 65px;
     text-align: left;
     text-transform: uppercase;
     line-height: 89px;
@@ -95,9 +122,277 @@ header {
     text-transform: uppercase;
     margin: 0 0 30px;
 }
+
 .image_project img{
     width: 867px;
     height: 360px;
     left: 0;
     top: 0;
+}
+
+.block-2-2{
+    max-width: 1151px;
+    padding-top: 88px;
+    height: 750px;
+    margin: 0 auto;
+    background: rgb(228, 236, 247);
+}
+
+.about-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.description-top {
+    display: flex;
+}
+
+.image-top {
+    min-width: 234px;
+    margin-top: 70px;
+    margin-left: 56px;
+}
+
+.image-top img{
+    width: 417px;
+    height: 460px;
+}
+
+.text-top {
+    max-width: 551px;
+    margin-left: 58px;
+}
+
+.text-top-top {
+    line-height: 29px;
+    margin-top: 86px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.text-top-bottom {
+    line-height: 28px;
+    margin-top: 65px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.block-2-3 {
+    max-width: 1151px;
+    max-height: 750px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.text-bottom {
+    padding-right: 10px;
+    margin-top: 87px;
+    margin-left: 56px;
+    width: 503px;
+    height: 420px;
+    left: 70px;
+    top: 140px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
+.image-bottom {
+    margin-top: 36px;
+    margin-left: 41px;
+}
+
+.image-bottom img {
+    width: 434px;
+    height: 440px;
+}
+
+.block-2-4 {
+    max-width: 1151px;
+    max-height: 750px;
+    margin: 0 auto;
+}
+
+.quastion {
+    padding-top: 158px;
+    padding-bottom: 93px;
+    text-align: center;
+    color: rgb(193, 81, 145);
+    font-size: 80px;
+    font-weight: 250;
+    line-height: 125px;
+    text-transform: uppercase;
+}
+
+.what-block {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.what {
+    width: 245px;
+}
+
+.what img{
+    width: 68px;
+    margin-bottom: 24px;
+}
+
+.what p {
+    width: 204px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.block-2-5 {
+    max-width: 1151px;
+    height: 750px;
+    margin: 0 auto;
+}
+
+.implementation {
+    margin-top: 123px;
+    color: rgb(29, 29, 27);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 63px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gallery {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery p{
+    width: 204px;
+}
+
+.footer {
+    max-width: 1151px;
+    height: 750px;
+    margin: 0 auto;
+    box-shadow: inset -74.27px 45.27px 74.27px 74.27px rgba(255, 255, 255, 0.1),inset 74.27px -74.27px 74.27px 0px rgba(194, 194, 194, 0.1);
+    backdrop-filter: blur(400px);
+    background: rgba(255, 255, 255, 0.562);
+    background-color: rgb(43, 43, 43);
+}
+
+.container-footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer .footer-logo {
+    margin-top: 105px;
+    margin-left: 54px;
+    width: 396px;
+    height: 494px;
+
+}
+
+.footer .container-links {
+    width: 390px;
+    height: 229px;
+    left: 890px;
+    right: 292px;
+    top: 113px;
+    bottom: 519px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container-links div{
+    width: 190px;
+    height: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 55px 0px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.footer .btn-phone {
+    width: 412px;
+    height: 111px;
+    left: 880px;
+    top: 380px;
+    box-sizing: border-box;
+    border: 5px solid rgb(193, 81, 145);
+    border-radius: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 23px 32px 23px;
+}
+
+.footer .btn-phone .phone {
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.footer .btn-email {
+    width: 729px;
+    height: 54px;
+    left: 570px;
+    right: 70px;
+    top: 666px;
+    bottom: 41px;
+}
+
+.footer .btn-email .email {
+    color: rgb(255, 255, 255);
+    font-size: 43px;
+    font-weight: 900;
+    line-height: 54px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.footer .rights {
+    width: 252px;
+    height: 23px;
+    left: 70px;
+    right: 1118px;
+    top: 690px;
+    bottom: 48px;
+}
+
+.footer .rights p {
+    color: rgb(233, 233, 232);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
 }
