@@ -1,0 +1,67 @@
+header {
+    margin: 40px;
+}
+
+.container-language {
+    position: absolute;
+    width: 149px;
+    height: 25px;
+    left: 1126px;
+    right: 165px;
+    top: 48px;
+    bottom: 1189px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.ru {
+    position: static;
+    width: 28px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
+
+.en {
+    position: static;
+    width: 27px;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
+
+.fr {
+    position: static;
+    width: 25px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 27px;
+}
