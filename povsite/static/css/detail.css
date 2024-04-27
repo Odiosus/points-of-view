@@ -19,7 +19,7 @@ body {
     color: black;
 }
 
-.ellipse-212 {
+.artem-maks {
     position: absolute;
     border-radius: 120px;
     width: 175.8px;
@@ -29,6 +29,138 @@ body {
     box-shadow: inset -12.2px 12.2px 12.2px 0px rgba(255, 255, 255, 0.14),inset 12.2px -12.2px 12.2px 0px rgba(39, 106, 186, 0.14);
     backdrop-filter: blur(3.71px);
     background: rgba(52, 140, 245, 0.09);
+}
+
+.kate {
+    position: absolute;
+    width: 116px;
+    height: 116px;
+    left: 555px;
+    top: 69px;
+    border-radius: 101.5px;
+    box-shadow: inset -2.48px 2.48px 2.48px 0px rgba(154, 65, 116, 0.3),inset -1.24px 1.24px 1.24px 0px rgba(255, 255, 255, 0.3),inset 2.48px -2.48px 2.48px 0px rgba(255, 255, 255, 0.3),inset 1.24px -1.24px 1.24px 0px rgba(154, 65, 116, 0.3);
+    backdrop-filter: blur(3.02px);
+    background: rgba(193, 81, 145, 0.05);
+}
+
+.ellipse-212 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 1195px;
+    top: 179px;
+    border-radius: 101.5px;
+    box-shadow: inset -12.31px 12.31px 12.31px 0px rgba(255, 255, 255, 0.15),inset 12.31px -12.31px 12.31px 0px rgba(19, 109, 90, 0.15);
+    backdrop-filter: blur(63.5px);
+    background: rgba(25, 143, 118, 0.15);
+}
+
+.anna {
+    position: absolute;
+    width: 131px;
+    height: 131px;
+    left: 1098px;
+    top: 396px;
+    border-radius: 101.5px;
+    box-shadow: inset -2.48px 2.48px 2.48px 0px rgba(154, 65, 116, 0.3),inset -1.24px 1.24px 1.24px 0px rgba(255, 255, 255, 0.3),inset 2.48px -2.48px 2.48px 0px rgba(255, 255, 255, 0.3),inset 1.24px -1.24px 1.24px 0px rgba(154, 65, 116, 0.3);
+    backdrop-filter: blur(3.02px);
+    background: rgba(193, 81, 145, 0.05);
+}
+
+.olga {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 536px;
+    top: 2330px;
+    border-radius: 101.5px;
+    box-shadow: inset -8.58px 8.58px 8.58px 0px rgba(255, 255, 255, 0.14),inset 8.58px -8.58px 8.58px 0px rgba(194, 194, 194, 0.14);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ksyu {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 297px;
+    top: 2146px;
+    border-radius: 101.5px;
+    box-shadow: inset -12.2px 12.2px 12.2px 0px rgba(255, 255, 255, 0.14),inset 12.2px -12.2px 12.2px 0px rgba(92, 121, 155, 0.14);
+    backdrop-filter: blur(14.64px);
+    background: rgba(121, 159, 204, 0.14);
+}
+
+.maksII {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 1078px;
+    top: 2339px;
+    border-radius: 101.5px;
+    box-shadow: inset -8.58px 8.58px 8.58px 0px rgba(255, 255, 255, 0.14),inset 8.58px -8.58px 8.58px 0px rgba(115, 115, 115, 0.14);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(169.99deg, rgba(202, 202, 202, 0.14) 32.639%,rgba(100, 100, 100, 0.14) 92.708%);
+}
+
+.ellipse-213 {
+    position: absolute;
+    width: 178px;
+    height: 178px;
+    left: 911px;
+    top: 2062px;
+    border-radius: 101.5px;
+    box-shadow: inset -2.48px 2.48px 2.48px 0px rgba(154, 65, 116, 0.3),inset -1.24px 1.24px 1.24px 0px rgba(255, 255, 255, 0.3),inset 2.48px -2.48px 2.48px 0px rgba(255, 255, 255, 0.3),inset 1.24px -1.24px 1.24px 0px rgba(154, 65, 116, 0.3);
+    backdrop-filter: blur(14.02px);
+    background: rgba(193, 81, 145, 0.05);
+}
+
+.roma {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 700px;
+    top: 2100px;
+    border-radius: 101.5px;
+    box-shadow: inset -12.31px 12.31px 12.31px 0px rgba(255, 255, 255, 0.15),inset 12.31px -12.31px 12.31px 0px rgba(19, 109, 90, 0.15);
+    backdrop-filter: blur(63.5px);
+    background: rgba(25, 143, 118, 0.1);
+}
+
+.ellipse-214 {
+    position: absolute;
+    width: 109px;
+    height: 109px;
+    left: 712px;
+    top: 2502px;
+    border-radius: 101.5px;
+    box-shadow: inset -8.58px 8.58px 8.58px 0px rgba(255, 255, 255, 0.14),inset 8.58px -8.58px 8.58px 0px rgba(194, 194, 194, 0.14);
+    backdrop-filter: blur(5.41px);
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.ellipse-215 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1085px;
+    top: 2851px;
+    border-radius: 101.5px;
+    box-shadow: inset -12.31px 12.31px 12.31px 0px rgba(255, 255, 255, 0.15),inset 12.31px -12.31px 12.31px 0px rgba(19, 109, 90, 0.15);
+    backdrop-filter: blur(63.5px);
+    background: rgba(25, 143, 118, 0.15);
+}
+
+.ellipse-216 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1200px;
+    top: 700px;
+    border-radius: 31.5px;
+    box-shadow: inset -4px 4px 4px 0px rgba(255, 255, 255, 0.1),inset 4px -4px 4px 0px rgba(19, 109, 90, 0.1);
+    backdrop-filter: blur(9.76px);
+    background: rgba(25, 143, 118, 0.1);
 }
 
 header {
@@ -289,58 +421,52 @@ header {
 }
 
 .container-footer {
-    display:flex;
-    flex-direction: column;
+    display: flex;
     justify-content: space-between;
+}
+.right-side-footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer .footer-logo {
     margin-top: 105px;
     margin-left: 54px;
     width: 396px;
-    height: 494px;
+    height: 434px;
 
 }
 
 .footer .container-links {
+    margin-top: 26px;
     width: 390px;
-    height: 229px;
-    left: 890px;
-    right: 292px;
-    top: 113px;
-    bottom: 519px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 210px;
+    display: grid;
+    grid-template-columns: 192px 144px;
+    grid-template-rows: 102px 95px;
 }
 
-.container-links div{
+.container-links button{
     width: 190px;
     height: 37px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0px;
     flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: 55px 0px;
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 300;
     line-height: 36px;
-    letter-spacing: 0%;
     text-align: left;
 }
 
 
 .footer .btn-phone {
-    width: 412px;
-    height: 111px;
-    left: 880px;
-    top: 380px;
+    margin-top: 69px;
+    width: 340px;
+    height: 102px;
     box-sizing: border-box;
     border: 5px solid rgb(193, 81, 145);
     border-radius: 54px;
@@ -353,28 +479,32 @@ header {
 
 .footer .btn-phone .phone {
     color: rgb(255, 255, 255);
-    font-size: 38px;
+    font-size: 31px;
     font-weight: 300;
     line-height: 52px;
-    letter-spacing: 0%;
     text-align: left;
 }
 
+.footer-bottom {
+    padding-left: 35px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .footer .btn-email {
+    padding-left: 96px;
     width: 729px;
     height: 54px;
-    left: 570px;
-    right: 70px;
-    top: 666px;
-    bottom: 41px;
 }
 
 .footer .btn-email .email {
     color: rgb(255, 255, 255);
-    font-size: 43px;
+    font-size: 34px;
     font-weight: 900;
     line-height: 54px;
-    letter-spacing: 0%;
     text-align: left;
     text-transform: uppercase;
 }
@@ -382,17 +512,13 @@ header {
 .footer .rights {
     width: 252px;
     height: 23px;
-    left: 70px;
-    right: 1118px;
-    top: 690px;
-    bottom: 48px;
 }
 
 .footer .rights p {
     color: rgb(233, 233, 232);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 23px;
-    letter-spacing: 0%;
     text-align: left;
 }
+
