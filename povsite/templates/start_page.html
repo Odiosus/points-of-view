@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Точки зрения</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../static/css/start_index.css">
+</head>
+<body class="body">
+    <header class="header">
+        <div class="mini-logo">
+            <img src='{{ project.logo_header.url }}'>
+        </div>
+        <div class="container-header-container">
+
+
+            <div class="languages-container">
+                {%get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <form method="post" action="{% url 'set_language' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="{{ language.code }}">
+                        <button class="languages" href="ru">{{ language.code.upper }}</button>
+                    </form>
+                {% endfor %}
+            </div>
+            <div class="menu-box">
+                <button class="menu" href="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="18" fill="none"><path fill="#1D1D1B" d="M36 16.2c0 .47-.16.93-.44 1.27-.29.34-.67.53-1.06.53h-33c-.4 0-.78-.19-1.07-.53-.28-.34-.43-.8-.43-1.27 0-.48.15-.94.43-1.28.29-.34.67-.52 1.07-.52h33c.39 0 .77.18 1.06.52.28.34.44.8.44 1.28ZM1.5 3.59h33c.39 0 .77-.18 1.06-.52.28-.34.44-.8.44-1.27 0-.48-.16-.94-.44-1.28C35.27.18 34.89 0 34.5 0h-33C1.1 0 .72.18.43.52.15.86 0 1.32 0 1.8c0 .47.15.93.43 1.27.29.34.67.52 1.07.52Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="start">
+            <img src="../static/img copy/start.svg">
+            <!--<svg class="background_1">
+                <use href="img/sprite.svg#background_1" />
+            </svg>
+            <svg class="logo" viewBox="0 0 633 250" role="img" aria-label="Логотип">
+                <use href="img/sprite.svg#logo" />
+            </svg>-->
+            <svg class="logo" width="633.000000" height="251.000000" viewBox="0 0 633 251" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>
+                        Created with Pixso.
+                </desc>
+                <defs/>
+                <path id="Vector" d="M208.6 52.84C208.6 82.02 183.78 105.68 153.16 105.68C122.54 105.68 97.72 82.02 97.72 52.84C97.72 23.65 122.54 0 153.16 0C183.78 0 208.6 23.65 208.6 52.84Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M30.86 31.03L0 31.03L0 6.38L91.78 6.38L91.78 31.03L60.87 31.03L60.87 98.86L30.66 98.86L30.86 31.03Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M317.7 98.86L287.49 98.86L287.49 76.28C281.17 79.01 274.29 80.36 267.35 80.22C238.15 80.22 221.23 67.92 221.23 40.06L221.23 6.43L251.44 6.43L251.44 41.26C251.44 51.88 257.49 56.59 268.21 56.59C274.91 56.62 281.53 55.23 287.6 52.5L287.6 6.38L317.81 6.38L317.7 98.86Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M332.31 6.38L362.52 6.38L362.52 40.54L373.74 40.54L397.01 6.38L430.64 6.38L398.41 50.53L433.01 98.86L397.76 98.86L373.19 63.7L362.11 63.7L362.11 98.86L332.31 98.86L332.31 6.38Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M540.65 98.86L510.69 98.86L510.69 50.39L472.43 98.86L442.22 98.86L442.22 6.38L472.43 6.38L472.43 55.58L510.69 6.38L540.65 6.38L540.65 98.86Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M33.88 191.63L49.74 191.63C57.39 191.63 62.28 187.45 62.28 182.02C62.28 176.59 57.24 173.52 47.68 173.52C38.11 173.52 30.76 177.84 30.76 184.52L2.81 182.55C5.28 163.33 19.78 151.13 50.55 151.13C75.72 151.13 89.97 161.84 89.97 177.12C90.15 181.87 88.8 186.56 86.1 190.56C83.4 194.55 79.48 197.66 74.87 199.46C86.5 202.92 94 209.83 94 222.28C94 238.32 79.9 250.04 51.6 250.04C19.38 249.8 5.28 237.65 2.81 218.53L30.76 216.18C30.76 222.47 38.51 227.13 48.83 227.13C59.16 227.13 64.9 223.96 64.9 218C64.9 212.81 58.4 209.26 49.14 209.26L34.03 209.26L33.88 191.63Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M107.34 154.25L163.18 154.25C185.94 154.25 203.11 166.26 203.11 190.91C203.11 215.55 185.94 227.42 163.18 227.42L137.35 227.42L137.35 246.63L107.14 246.63L107.34 154.25ZM137.55 178.94L137.55 202.96L160.26 202.96C167.16 202.96 173.2 200.27 173.2 191.29C173.36 189.64 173.13 187.98 172.54 186.42C171.94 184.87 170.99 183.46 169.75 182.3C168.51 181.14 167.01 180.26 165.37 179.72C163.73 179.18 161.98 179 160.26 179.18L137.55 178.94Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M214.94 154.25L297.56 154.25L297.56 178.94L244.95 178.94L244.95 190.43L293.13 190.43L293.13 210.65L244.95 210.65L244.95 222.08L297.56 222.08L297.56 246.78L214.94 246.78L214.94 154.25Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M381.25 212.86L341.97 212.86L341.97 246.78L312.17 246.78L312.17 154.25L342.38 154.25L342.38 188.22L381.65 188.22L381.65 154.25L411.86 154.25L411.86 246.78L381.65 246.78L381.25 212.86Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M523.89 246.78L493.68 246.78L493.68 198.3L455.41 246.78L425.65 246.78L425.65 154.25L455.61 154.25L455.61 203.49L493.88 154.25L524.09 154.25L523.89 246.78Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M633 246.78L602.78 246.78L602.78 224.1L585.97 224.1L569.56 246.78L534.31 246.78L557.17 217.95C550.77 215.65 545.29 211.47 541.53 206.02C537.77 200.56 535.91 194.11 536.22 187.59C536.22 163.57 553.04 153.96 575.14 153.96L632.89 153.96L633 246.78ZM577.96 178.94C576.41 178.77 574.84 178.93 573.37 179.42C571.89 179.9 570.55 180.69 569.44 181.73C568.32 182.77 567.46 184.03 566.93 185.43C566.39 186.83 566.19 188.32 566.33 189.8C566.33 196.96 570.71 200.13 577.96 200.13L603.14 200.13L603.14 178.94L577.96 178.94Z" fill="#1D1D1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M173.65 190.28C173.65 201.74 163.89 211.04 151.85 211.04C139.81 211.04 130.05 201.74 130.05 190.28C130.05 178.82 139.81 169.53 151.85 169.53C163.89 169.53 173.65 178.82 173.65 190.28Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M607.42 188.22C607.42 199.68 597.66 208.97 585.62 208.97C573.58 208.97 563.81 199.68 563.81 188.22C563.81 176.76 573.58 167.46 585.62 167.46C597.66 167.46 607.42 176.76 607.42 188.22Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+            <div class="art-lab">
+                <h2>Арт-лаборатория, открывающая искусство по-новому</h2>
+            </div>
+            <div class="start-animation">
+                <div id="shape" style="position: relative;">
+                    <!-- Здесь будет код для создания фигуры -->
+                    <script href="video.js"></script>
+                </div>
+                <video id="video" src="../static/video/gallery.mp4" autoplay muted loop controls>
+                    <!-- Здесь будет код для видео -->
+                    <script href="video.js"></script>
+                </video>
+            </div>
+        </div>    
+        <div class="about">
+            <h1>О НАС</h1>
+            <p>Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников.</p>
+            <div class="animation_1">
+                <img src="../static/animation/Soft_point_05.gif" alt="gif">
+            </div>
+        </div>
+        <div class="projects">
+            <h1>ПРОЕКТЫ</h1>
+            <div class="container-diving">
+                <p>Арт-дайвинг</p>
+                <img src="../static/img copy/png/diving.png">
+            </div>
+            <div class="container-questions">
+                <p>Наивные вопросы художнику</p>
+                <img src="../static/img copy/png/questions.png">
+            </div>
+            <div class="container-cartel">
+                <p>Арт-картель</p>
+                <img src="../static/img copy/png/cartel.png">
+            </div>
+        </div>
+        <div class="author">
+            <img src="../static/img copy/author.svg">
+            <h1>В лаборатории ТОЧКИ ЗРЕНИЯ каждый участник проекта - АВТОР</h1>
+            <div class="animation_2">
+                <use href="animation/text_animation" />
+                <p>В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих вложений. Творчество «для другого».</p>
+            </div>
+        </div>
+        <div class="team">
+            <h1>КОМАНДА</h1>
+            <div class="container-scroll">
+                <div class="page_1"><img src="../static/img copy/png/authors_ru/Gunyavin.png"></div>
+                <div class="page_2"><img src="../static/img copy/png/authors_ru/Manukyan.png"></div>
+                <div class="page_3"><img src="../static/img copy/png/authors_ru/Gunina.png"></div>
+                <div class="page_4"><img src="../static/img copy/png/authors_ru/Stepov.png"></div>
+                <div class="page_5"><img src="../static/img copy/png/authors_ru/Smirov.png"></div>
+                <div class="page_6"><img src="../static/img copy/png/authors_ru/Henry.png"></div>
+                <div class="page_7"><img src="../static/img copy/png/authors_ru/Volodina.png"></div>
+                <div class="page_8"><img src="../static/img copy/png/authors_ru/Lucille.png"></div>
+                <div class="page_9"><img src="../static/img copy/png/authors_ru/Saifullina.png"></div>
+            </div>
+        </div>
+        <div class="idea">
+            <img src="../static/img copy/idea.svg">
+            <div class="animation_3">
+                <img src="../static/animation/Comp_1.gif" alt="gif">
+                <h1>ЕСТЬ ИДЕИ?</h1>
+                <button class="connect" href="connect">Расскажите нам</button>
+            </div>
+            <div class="container-web">
+                <button class="web" href="http://www.pointsofview.ru">pointsofview.ru</button>
+            </div>
+            <!--<div class="container-social">
+                <button class="inst" href="inst">icon</button>
+                <button class="fb" href="fb">icon</button>
+                <button class="tg" href="tg">icon</button>
+                <button class="yt" href="yt">icon</button>
+                <button class="wa" href="wa">icon</button>
+            </div>-->
+        </div>
+        <div class="contacts">
+            <svg class="contact" width="291.000000" height="36.000000" viewBox="0 0 291 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>
+                        Created with Pixso.
+                </desc>
+                <defs/>
+                <path id="h2" d="M44.37 34.36Q47.83 35.74 51.92 35.74Q56.02 35.74 59.45 34.36Q62.27 33.22 64.48 31.36Q64.97 30.95 65.43 30.5Q66.44 29.52 67.27 28.4Q68.53 26.7 69.37 24.7Q69.46 24.5 69.54 24.29Q70.77 21.13 70.77 17.49Q70.77 14.14 69.7 11.18Q69.54 10.77 69.37 10.36Q68.55 8.41 67.33 6.75Q66.48 5.58 65.43 4.55Q64.86 3.99 64.24 3.48Q62.11 1.73 59.45 0.64Q56.02 -0.76 51.92 -0.76Q47.83 -0.76 44.37 0.62Q41.59 1.73 39.4 3.55Q38.87 4 38.38 4.48Q37.47 5.36 36.71 6.36Q35.35 8.14 34.46 10.28Q34.44 10.32 34.42 10.37Q33.07 13.65 33.07 17.49Q33.07 21.19 34.33 24.39Q34.39 24.55 34.46 24.7Q35.31 26.73 36.57 28.44Q37.39 29.53 38.38 30.5Q38.79 30.9 39.23 31.28Q41.48 33.2 44.37 34.36ZM-0.18 0L-0.18 35L9.92 35L9.92 21.54L10.8 21.54L21.28 35L34.22 35L19.66 17.15L32.73 0L20.07 0L10.92 12.35L9.92 12.35L9.92 0L-0.18 0ZM76.27 0L76.27 35L86.37 35L86.37 21.54L98.07 21.54L98.07 35L108.18 35L108.18 0L98.07 0L98.07 12.35L86.37 12.35L86.37 0L76.27 0ZM121.68 9.19L121.68 35L131.82 35L131.82 9.19L140.82 9.19L140.82 0L112.67 0L112.67 9.19L121.68 9.19ZM151.92 0L139.17 35L150.27 35L152.22 28.75L163.27 28.75L165.22 35L176.62 35L163.92 0L151.92 0ZM180.37 0L180.37 35L190.47 35L190.47 21.54L191.35 21.54L201.83 35L214.77 35L200.21 17.15L213.28 0L200.62 0L191.47 12.35L190.47 12.35L190.47 0L180.37 0ZM223.63 9.19L223.63 35L233.77 35L233.77 9.19L242.77 9.19L242.77 0L214.62 0L214.62 9.19L223.63 9.19ZM247.27 0L247.27 35L261.72 35Q265.1 35 267.74 34.2Q270.37 33.4 272.19 31.83Q273.01 31.14 273.65 30.3Q274.44 29.27 274.96 28.02Q275.92 25.77 275.92 22.9Q275.92 19.32 274.32 16.72Q274.21 16.54 274.09 16.35Q273.51 15.5 272.81 14.77Q271.27 13.2 269.12 12.23Q265.97 10.8 261.98 10.8L257.37 10.8L257.37 0L247.27 0ZM280.32 0L280.32 35L290.42 35L290.42 0L280.32 0ZM55.26 25.68Q53.75 26.29 51.92 26.29Q49.71 26.29 47.96 25.4Q47.79 25.31 47.63 25.22Q46.94 24.82 46.36 24.29Q45.38 23.41 44.73 22.18Q43.68 20.2 43.68 17.49Q43.68 15.48 44.27 13.85Q44.87 12.22 45.97 11.07Q46.35 10.67 46.79 10.34Q47.6 9.71 48.58 9.31Q50.1 8.69 51.92 8.69Q54.16 8.69 55.91 9.62Q56.06 9.69 56.2 9.78Q56.9 10.18 57.49 10.71Q58.46 11.59 59.12 12.83Q60.17 14.79 60.17 17.49Q60.17 19.52 59.57 21.15Q58.98 22.76 57.89 23.91Q57.88 23.91 57.87 23.92Q57.49 24.32 57.06 24.66Q56.25 25.28 55.26 25.68ZM161.07 20.4L154.37 20.4L157.78 10.4L161.07 20.4ZM261.32 26.65L257.37 26.65L257.37 19.39L261.37 19.39Q263.32 19.39 264.56 20.18Q264.77 20.3 264.95 20.47Q265.82 21.29 265.82 23.04Q265.82 24.74 264.97 25.58Q264.81 25.74 264.61 25.86Q263.42 26.65 261.32 26.65Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+            
+            <div class="social">
+                <button class="inst" href="inst">INSTAGRAM<img src="../static/img copy/png/arrow.png"></button>
+                <button class="fb" href="fb">FACEBOOK<img src="../static/img copy/png/arrow.png"></button>
+                <button class="tg" href="tg">TELEGRAM<img src="../static/img copy/png/arrow.png"></button>
+                <button class="yt" href="yt">YOUTUBE<img src="../static/img copy/png/arrow.png"></button>
+                <button class="wa" href="wa">WHATSAPP<img src="../static/img copy/png/arrow.png"></button>
+            </div>
+            <div class="email-phone">
+                <a class="send_mail" href="mailto:andrey.gunyavin@gmail.com">andrey.gunyavin@gmail.com</a>
+                <a href="tel:+7 (916) 955 29 26">+7(916) 955-29-26</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-logo">
+            <svg width="490.000000" height="494.000000" viewBox="0 0 490 494" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>
+                        Created with Pixso.
+                </desc>
+                <defs/>
+                <path id="Vector" d="M110.59 55.38C110.59 85.87 85.84 110.59 55.3 110.59C24.77 110.59 0.02 85.87 0.02 55.38C0.02 24.89 24.77 0.17 55.3 0.17C85.84 0.17 110.59 24.89 110.59 55.38Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M238.55 55.21C238.55 85.7 213.8 110.42 183.27 110.42C152.74 110.42 127.99 85.7 127.99 55.21C127.99 24.71 152.74 0 183.27 0C213.8 0 238.55 24.71 238.55 55.21Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M238.72 183.01C238.72 213.5 213.97 238.22 183.44 238.22C152.91 238.22 128.16 213.5 128.16 183.01C128.16 152.52 152.91 127.8 183.44 127.8C213.97 127.8 238.72 152.52 238.72 183.01Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M110.56 183.15C110.56 213.64 85.81 238.36 55.28 238.36C24.75 238.36 0 213.64 0 183.15C0 152.66 24.75 127.94 55.28 127.94C85.81 127.94 110.56 152.66 110.56 183.15Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M110.59 310.9C110.59 341.39 85.84 366.11 55.3 366.11C24.77 366.11 0.02 341.39 0.02 310.9C0.02 280.4 24.77 255.68 55.3 255.68C85.84 255.68 110.59 280.4 110.59 310.9Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M194.49 290.59C194.49 300.01 186.84 307.65 177.4 307.65C167.96 307.65 160.31 300.01 160.31 290.59C160.31 281.16 167.96 273.52 177.4 273.52C186.84 273.52 194.49 281.16 194.49 290.59Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M110.61 438.3C110.61 468.79 85.86 493.51 55.33 493.51C24.8 493.51 0.05 468.79 0.05 438.3C0.05 407.81 24.8 383.09 55.33 383.09C85.86 383.09 110.61 407.81 110.61 438.3Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M238.41 438.78C238.41 469.28 213.66 494 183.13 494C152.6 494 127.85 469.28 127.85 438.78C127.85 408.29 152.6 383.57 183.13 383.57C213.66 383.57 238.41 408.29 238.41 438.78Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M476 310.7C476 341.19 451.25 365.91 420.71 365.91C390.18 365.91 365.43 341.19 365.43 310.7C365.43 280.2 390.18 255.49 420.71 255.49C451.25 255.49 476 280.2 476 310.7Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M327.07 353.75L317.51 353.75L317.51 346.05L312.15 346.05L306.92 353.75L295.66 353.75L302.96 343.99C300.92 343.21 299.17 341.79 297.97 339.93C296.77 338.08 296.19 335.89 296.29 333.68C296.29 325.57 301.65 322.35 308.69 322.35L327.11 322.35L327.07 353.75ZM309.51 330.72C309.02 330.66 308.52 330.72 308.05 330.88C307.58 331.05 307.15 331.32 306.8 331.67C306.44 332.03 306.17 332.45 306 332.93C305.82 333.4 305.76 333.91 305.8 334.41C305.8 336.78 307.2 337.92 309.51 337.92L317.51 337.92L317.51 330.81L309.51 330.72Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M291.47 353.75L282.5 353.75L282.5 337.3L271.07 353.75L262.11 353.75L262.11 322.35L271.07 322.35L271.07 339.06L282.5 322.35L291.47 322.35L291.47 353.75Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M318.73 333.86C318.73 337.91 315.44 341.19 311.39 341.19C307.33 341.19 304.05 337.91 304.05 333.86C304.05 329.82 307.33 326.54 311.39 326.54C315.44 326.54 318.73 329.82 318.73 333.86Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M246.95 342.23L235.33 342.23L235.33 353.75L226.46 353.75L226.46 322.35L235.33 322.35L235.33 333.87L246.95 333.87L246.95 322.35L255.82 322.35L255.82 353.75L246.95 353.75L246.95 342.23Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M195.01 322.35L220.17 322.35L220.17 330.72L204.15 330.72L204.15 334.6L218.83 334.6L218.83 341.47L204.15 341.47L204.15 345.38L220.17 345.38L220.17 353.75L195.01 353.75L195.01 322.35Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M161.46 322.35L178.58 322.35C185.55 322.35 190.82 326.41 190.82 334.79C190.82 343.17 185.55 347.18 178.58 347.18L170.65 347.18L170.65 353.75L161.46 353.75L161.46 322.35ZM170.65 330.73L170.65 338.82L177.62 338.82C178.14 338.9 178.67 338.86 179.17 338.69C179.67 338.52 180.13 338.24 180.52 337.85C180.9 337.47 181.19 337 181.38 336.47C181.56 335.95 181.63 335.39 181.58 334.83C181.63 334.27 181.56 333.71 181.38 333.18C181.2 332.65 180.91 332.17 180.53 331.78C180.15 331.38 179.69 331.09 179.18 330.9C178.68 330.72 178.14 330.66 177.62 330.73L170.65 330.73Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M137.94 335.21L143.04 335.21C145.4 335.21 147.07 333.88 147.07 332.24C147.07 330.6 145.37 329.54 142.36 329.54C139.35 329.54 136.9 330.91 136.9 333.02L127.91 332.31C128.71 326.29 133.37 322.35 143.25 322.35C151.33 322.35 155.97 325.74 155.97 330.6C156.03 332.11 155.59 333.59 154.73 334.85C153.86 336.11 152.6 337.1 151.12 337.66C152.89 337.99 154.47 338.9 155.6 340.22C156.72 341.55 157.31 343.2 157.26 344.9C157.26 349.99 152.74 353.75 143.63 353.75C133.27 353.75 128.73 349.83 127.93 343.77L136.92 343.08C136.92 345.08 139.42 346.56 142.76 346.56C146.1 346.56 147.92 345.54 147.92 343.66C147.92 341.78 145.82 340.89 142.83 340.89L137.94 340.89L137.94 335.21Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M182.43 334.91C182.43 338.38 179.14 341.19 175.09 341.19C171.03 341.19 167.75 338.38 167.75 334.91C167.75 331.44 171.03 328.63 175.09 328.63C179.14 328.63 182.43 331.44 182.43 334.91Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M297.76 303.51L288.16 303.51L288.16 288.15L275.91 303.51L266.3 303.51L266.3 274.21L275.91 274.21L275.91 289.68L288.16 274.21L297.76 274.21L297.76 303.51Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M232.75 274.21L242.1 274.21L242.1 285.04L245.68 285.04L252.95 274.21L263.41 274.21L253.38 288.2L264.21 303.51L253.34 303.51L245.68 292.46L242.19 292.46L242.19 303.51L232.84 303.51L232.75 274.21Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M226.46 303.51L217.3 303.51L217.3 296.35C215.38 297.22 213.28 297.66 211.17 297.61C202.25 297.61 197.11 293.7 197.11 284.88L197.11 274.21L206.29 274.21L206.29 285.26C206.29 288.62 208.14 290.1 211.39 290.1C213.43 290.11 215.45 289.67 217.3 288.81L217.3 274.21L226.46 274.21L226.46 303.51Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M137.79 282.03L127.91 282.03L127.91 274.21L157.26 274.21L157.26 282.03L147.38 282.03L147.38 303.51L137.79 303.51L137.79 282.03Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                <path id="Vector" d="M192.91 289.91C192.91 299.73 185.4 307.7 176.14 307.7C166.87 307.7 159.36 299.73 159.36 289.91C159.36 280.08 166.87 272.11 176.14 272.11C185.4 272.11 192.91 280.08 192.91 289.91Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg> 
+        </div>
+        <div class="container-links">
+            <button class="about">О нас</button>
+            <button class="projects">Проекты</button>
+            <button class="team">Команда</button>
+            <button class="contacts">Контакты</button>
+        </div>
+        <div class="btn-phone">
+            <button class="phone" href="tel:+7 (916) 955 29 26">+7(916) 955-29-26</button>
+        </div>
+        <div class="btn-email">
+            <button class="email" href="andrey.gunyavin@gmail.com">andrey.gunyavin@gmail.com</button>
+        </div>
+        <div class="rights">
+            <p>© 2024 All Rights Reserved.</p>
+        </div>
+
+
+    </footer>
+    
+</body>
+</html>

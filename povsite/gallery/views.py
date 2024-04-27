@@ -12,7 +12,7 @@ from .forms import FeedbackMultipleChoiceForm
 
 class ProjectList(ListView):
     model = Project
-    template_name = 'index.html'
+    template_name = 'start_page.html'
     context_object_name = 'projects'
     form = FeedbackMultipleChoiceForm
 
