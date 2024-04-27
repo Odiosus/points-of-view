@@ -24,7 +24,7 @@ header {
     text-align: left;
 }
 
-.ru {
+.container-language .ru {
     position: static;
     width: 28px;
     height: 23px;
@@ -38,7 +38,7 @@ header {
     margin: 2px 27px;
 }
 
-.en {
+.container-language .en {
     position: static;
     width: 27px;
     height: 23px;
@@ -52,7 +52,7 @@ header {
     margin: 2px 27px;
 }
 
-.fr {
+.container-language .fr {
     position: static;
     width: 25px;
     height: 23px;

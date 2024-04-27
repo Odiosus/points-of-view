@@ -1,0 +1,59 @@
+<svg width="1440.000000" height="1254.000000" viewBox="0 0 1440 1254" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_17_23830_dd" x="-481.000000" y="-955.982422" width="2722.249023" height="2151.634766" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="233.333" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_17_23832_dd" x="460.000000" y="-309.837891" width="1431.742188" height="2009.437500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="133.333" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_17_23834_dd" x="-457.000977" y="-429.017578" width="1575.217773" height="2106.857422" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="133.333" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_17_23836_dd" x="100.000000" y="-177.708984" width="1230.000000" height="1124.400391" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="100" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_17_23838_dd" x="-39.000000" y="346.691406" width="1493.000000" height="1049.779297" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="100" result="effect_layerBlur_1"/>
+		</filter>
+		<clipPath id="clip17_23824">
+			<rect id="Background main screen 1" width="1440.000000" height="1254.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Background main screen 1" width="1440.000000" height="1254.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip17_23824)">
+		<mask id="mask17_23826" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="1440.000000" height="1254.000000">
+			<path id="Vector" d="M0 0L1440 0L1440 1254L0 1254L0 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<g mask="url(#mask17_23826)">
+			<path id="Vector" d="M0 0L1440 0L1440 1254L0 1254L0 0Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+			<g filter="url(#filter_17_23830_dd)">
+				<path id="Vector" d="M970.49 193.28C1437 549.79 1446.5 622.33 1446.5 240.95C1446.5 114.17 1698 -255.99 1381.5 -255.99C1097.9 -255.99 219 -24.87 219 24.35C219 319.19 742.24 18.84 970.49 193.28Z" fill="#C15191" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+			<g filter="url(#filter_17_23832_dd)">
+				<path id="Vector" d="M1126.6 1299.6C1572.57 1299.6 1454.71 1198.68 1468.74 714.83C1468.74 111.92 1635.5 90.16 1071 90.16C880.68 90.16 993.8 419.68 993.8 714.83C993.8 1009.99 617.7 1299.6 1126.6 1299.6Z" fill="#E4ECF7" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+			<g filter="url(#filter_17_23834_dd)">
+				<path id="Vector" d="M283.31 1277.84C-136.03 1277.84 -25.21 1176.9 -38.4 692.96C-66.06 -14.88 -135.02 -65.04 408.18 -14.88C587.13 -14.88 364.49 397.75 364.49 692.96C364.49 988.16 1212 1277.84 283.31 1277.84Z" fill="#E4ECF7" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+			<g filter="url(#filter_17_23836_dd)">
+				<path id="Vector" d="M715 646.69C888.97 646.69 1030 529.3 1030 384.49C1030 239.68 888.97 122.29 715 122.29C541.03 122.29 400 239.68 400 384.49C400 529.3 541.03 646.69 715 646.69Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+			<g filter="url(#filter_17_23838_dd)">
+				<path id="Vector" d="M707.5 1096.47C954.09 1096.47 1154 995.78 1154 871.58C1154 747.37 954.09 646.69 707.5 646.69C460.9 646.69 261 747.37 261 871.58C261 995.78 460.9 1096.47 707.5 1096.47Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</g>
+		</g>
+	</g>
+</svg>
