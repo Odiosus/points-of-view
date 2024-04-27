@@ -1,0 +1,116 @@
+.block_2 {
+    position: absolute;
+    width: 1410px;
+    height: 600px;
+    left: 15px;
+    right: 15px;
+    top: 830px;
+    bottom: 2665px;
+    border-radius: 30px;
+    background: rgb(25, 143, 118);
+}
+/*О бренде*/
+.h1 {
+    position: absolute;
+    width: 267px;
+    height: 63px;
+    left: 55px;
+    right: 1088px;
+    top: 60px;
+    bottom: 477px;
+    color: rgb(233, 233, 232);
+    font-family: Geologica;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 63px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    }
+/* card 1/1 */
+.card_1 {
+    position: absolute;
+    width: 412px;
+    height: 200px;
+    left: 55px;
+    right: 943px;
+    top: 205px;
+    bottom: 195px;
+    border-radius: 30px;
+    /* Primary/Grey */
+    background: rgb(233, 233, 232);
+}
+/* Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. */
+.card_1:text {position: absolute;
+    width: 352px;
+    height: 105px;
+    left: 30px;
+    right: 30px;
+    top: 41px;
+    bottom: 54px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* card 1/2 */
+.card_2 {
+    position: absolute;
+    width: 412px;
+    height: 200px;
+    left: 499px;
+    right: 499px;
+    top: 205px;
+    bottom: 195px;
+    border-radius: 30px;
+    /* Primary/Grey */
+    background: rgb(233, 233, 232);
+}
+.card_2:text {
+    position: absolute;
+    width: 352px;
+    height: 105px;
+    left: 30px;
+    right: 30px;
+    top: 41px;
+    bottom: 54px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* card 1/3 */
+.card_3 {
+    position: absolute;
+    width: 412px;
+    height: 200px;
+    left: 943px;
+    right: 55px;
+    top: 205px;
+    bottom: 195px;
+    border-radius: 30px;
+    /* Primary/Grey */
+    background: rgb(233, 233, 232);
+}
+.card_3:text {
+    position: absolute;
+    width: 352px;
+    height: 105px;
+    left: 30px;
+    right: 30px;
+    top: 41px;
+    bottom: 54px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}

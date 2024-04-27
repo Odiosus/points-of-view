@@ -1,0 +1,120 @@
+.header {
+    position: absolute;
+    width: 1440px;
+    height: 130px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 3965px;
+    background-color: rgb(233, 233, 232);
+}
+.logo {
+    position: absolute;
+    width: 125.72px;
+    height: 52.05px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+ /* О бренде */
+.a {
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    left: 0;
+    right: 593px;
+    top: 0;
+    bottom: 0;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* Проекты */
+.b {
+    position: absolute;
+    width: 91px;
+    height: 35px;
+    left: 193px;
+    right: 407px;
+    top: 0;
+    bottom: 0;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* Портфолио */
+.c {
+    position: absolute;
+    width: 117px;
+    height: 35px;
+    left: 379px;
+    right: 195px;
+    top: 0;
+    bottom: 0;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* Контакты */
+.d {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    left: 591px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+/* Кнопка телефон */
+.e {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    right: 136px;
+    top: 0;
+    bottom: 0;
+    background: rgb(25, 143, 118);
+}
+/* Кнопка ТГ */
+.f {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 68px;
+    right: 68px;
+    top: 0;
+    bottom: 0;
+    background: rgb(25, 143, 118);
+}
+/* Кнопка WA */
+.g {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 136px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgb(25, 143, 118);
+}
