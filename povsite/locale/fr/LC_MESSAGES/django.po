@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-27 15:26+0300\n"
+"POT-Creation-Date: 2024-04-27 16:12+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,23 +50,23 @@ msgstr "QU'EST-CE QU'ON SAIT FAIRE?"
 msgid "РЕАЛИЗАЦИЯ"
 msgstr "IMPLÉMENTATION"
 
-#: .\templates\detail.html:156
+#: .\templates\detail.html:156 .\templates\start_page.html:201
 msgid "О нас"
 msgstr "À propos de nous"
 
-#: .\templates\detail.html:157
+#: .\templates\detail.html:157 .\templates\start_page.html:202
 msgid "Проекты"
 msgstr "Projets"
 
-#: .\templates\detail.html:158
+#: .\templates\detail.html:158 .\templates\start_page.html:203
 msgid "Команда"
 msgstr "Équipe"
 
-#: .\templates\detail.html:159
+#: .\templates\detail.html:159 .\templates\start_page.html:204
 msgid "Контакты"
 msgstr "Relations"
 
-#: .\templates\index.html:9
+#: .\templates\index.html:9 .\templates\start_page.html:6
 #, fuzzy
 #| msgid "Точки зрения:"
 msgid "Точки зрения"
@@ -99,3 +99,47 @@ msgstr "Contenu:"
 #: .\templates\index.html:88
 msgid "Сохранить"
 msgstr "Enregistrer"
+
+#: .\templates\start_page.html:73
+msgid "Арт-лаборатория, открывающая искусство по-новому"
+msgstr "Un laboratoire d'art découvrant l'art d'une nouvelle manière"
+
+#: .\templates\start_page.html:86
+msgid "О НАС"
+msgstr "À PROPOS DE NOUS"
+
+#: .\templates\start_page.html:88
+msgid "Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников."
+msgstr "Le laboratoire d'art du «Point de vue» rassemble des personnes créatives dans la réalisation conjointe de leurs talents. Nous créons des choses étonnantes avec de la musique, des mots et des graphiques pour rapprocher les spectateurs et les œuvres d'artistes."
+
+#: .\templates\start_page.html:94
+msgid "ПРОЕКТЫ"
+msgstr "PROJETS"
+
+#: .\templates\start_page.html:96
+msgid "Арт-дайвинг"
+msgstr "Plongée artistique"
+
+#: .\templates\start_page.html:100
+msgid "Наивные вопросы художнику"
+msgstr "Questions naïves à l'artiste"
+
+#: .\templates\start_page.html:104
+msgid "Арт-картель"
+msgstr "Cartel d'art"
+
+#: .\templates\start_page.html:110
+msgid "В лаборатории ТОЧКИ ЗРЕНИЯ каждый участник проекта - АВТОР"
+msgstr "Dans le laboratoire DE point de vue de chaque participant au projet-AUTEUR"
+
+#: .\templates\start_page.html:113
+msgid "В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих вложений. Творчество «для другого»."
+msgstr "Dans le même temps, la paternité est perdue et diminuée au profit du plus grand - nouveau, né de la synthèse d'investissements communs. Créativité «pour l'autre»."
+
+#: .\templates\start_page.html:117
+msgid "КОМАНДА"
+msgstr "ÉQUIPE"
+
+#: .\templates\start_page.html:134
+msgid "Расскажите нам"
+msgstr "Dites-nous"

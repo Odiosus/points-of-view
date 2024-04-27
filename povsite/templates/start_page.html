@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+
+{% load i18n %}
+{% load static %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Точки зрения</title>
+    <title>{% trans 'Точки зрения' %}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
@@ -70,7 +75,7 @@
                 <path id="Vector" d="M607.42 188.22C607.42 199.68 597.66 208.97 585.62 208.97C573.58 208.97 563.81 199.68 563.81 188.22C563.81 176.76 573.58 167.46 585.62 167.46C597.66 167.46 607.42 176.76 607.42 188.22Z" fill="#C15191" fill-opacity="1.000000" fill-rule="evenodd"/>
             </svg>
             <div class="art-lab">
-                <h2>Арт-лаборатория, открывающая искусство по-новому</h2>
+                <h2>{% trans 'Арт-лаборатория, открывающая искусство по-новому' %}</h2>
             </div>
             <div class="start-animation">
                 <div id="shape" style="position: relative;">
@@ -83,38 +88,38 @@
                 </video>
             </div>
         </div>    
+            {% trans 'О НАС' %}
         <div class="about">
-            <h1>О НАС</h1>
-            <p>Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников.</p>
+            <p>{% trans 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их талантов. Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения художников.' %}</p>
             <div class="animation_1">
                 <img src="../static/animation/Soft_point_05.gif" alt="gif">
             </div>
         </div>
         <div class="projects">
-            <h1>ПРОЕКТЫ</h1>
+            <h1>{% trans 'ПРОЕКТЫ' %}</h1>
             <div class="container-diving">
-                <p>Арт-дайвинг</p>
+                <p>{% trans 'Арт-дайвинг' %}</p>
                 <img src="../static/img copy/png/diving.png">
             </div>
             <div class="container-questions">
-                <p>Наивные вопросы художнику</p>
+                <p>{% trans 'Наивные вопросы художнику' %}</p>
                 <img src="../static/img copy/png/questions.png">
             </div>
             <div class="container-cartel">
-                <p>Арт-картель</p>
+                <p>{% trans 'Арт-картель' %}</p>
                 <img src="../static/img copy/png/cartel.png">
             </div>
         </div>
         <div class="author">
             <img src="../static/img copy/author.svg">
-            <h1>В лаборатории ТОЧКИ ЗРЕНИЯ каждый участник проекта - АВТОР</h1>
+            <h1>{% trans 'В лаборатории ТОЧКИ ЗРЕНИЯ каждый участник проекта - АВТОР' %}</h1>
             <div class="animation_2">
                 <use href="animation/text_animation" />
-                <p>В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих вложений. Творчество «для другого».</p>
+                <p>{% trans 'В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих вложений. Творчество «для другого».' %}</p>
             </div>
         </div>
         <div class="team">
-            <h1>КОМАНДА</h1>
+            <h1>{% trans 'КОМАНДА' %}</h1>
             <div class="container-scroll">
                 <div class="page_1"><img src="../static/img copy/png/authors_ru/Gunyavin.png"></div>
                 <div class="page_2"><img src="../static/img copy/png/authors_ru/Manukyan.png"></div>
@@ -131,8 +136,7 @@
             <img src="../static/img copy/idea.svg">
             <div class="animation_3">
                 <img src="../static/animation/Comp_1.gif" alt="gif">
-                <h1>ЕСТЬ ИДЕИ?</h1>
-                <button class="connect" href="connect">Расскажите нам</button>
+                <button class="connect" href="connect">{% trans 'Расскажите нам' %}</button>
             </div>
             <div class="container-web">
                 <button class="web" href="http://www.pointsofview.ru">pointsofview.ru</button>
@@ -199,10 +203,10 @@
             </svg> 
         </div>
         <div class="container-links">
-            <button class="about">О нас</button>
-            <button class="projects">Проекты</button>
-            <button class="team">Команда</button>
-            <button class="contacts">Контакты</button>
+            <button class="about">{% trans 'О нас' %}</button>
+            <button class="projects">{% trans 'Проекты' %}</button>
+            <button class="team">{% trans 'Команда' %}</button>
+            <button class="contacts">{% trans 'Контакты' %}</button>
         </div>
         <div class="btn-phone">
             <button class="phone" href="tel:+7 (916) 955 29 26">+7(916) 955-29-26</button>
