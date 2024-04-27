@@ -25,6 +25,7 @@ class AuthorTranslationOptions(TranslationOptions):
 class ProjectTranslationOptions(TranslationOptions):
     fields = (
         'name',
+        'logo_header',
         'description',
         'title_block_description',
         'block_description_one',

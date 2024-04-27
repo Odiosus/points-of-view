@@ -89,6 +89,8 @@ class Project(models.Model):
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
+    logo_header = models.ImageField(upload_to="logo_project/", default=None, blank=True, null=True,
+                                    verbose_name="Логотип хедера")
 
     objects = models.Manager()
     published = PublishedManager()
