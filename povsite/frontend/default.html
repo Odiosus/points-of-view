@@ -12,18 +12,32 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/start_index.css">
 </head>
 <body class="body">
     <header class="header">
-        <div class="container header-container">
-            <div class="container-language">
-                <button class="ru" href="ru">RU</button>
-                <button class="en" href="fr">FR</button>
-                <button class="fr" href="en">EN</button>
+        <div class="mini-logo">
+            <img src='{{ project.logo_header.url }}'>
+        </div>
+        <div class="container-header-container">
+
+
+            <div class="languages-container">
+                {%get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <form method="post" action="{% url 'set_language' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="{{ language.code }}">
+                        <button class="languages" href="ru">{{ language.code.upper }}</button>
+                    </form>
+                {% endfor %}
             </div>
-            <div>
-                <button class="menu" href="menu">=</button>
+            <div class="menu-box">
+                <button class="menu" href="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="18" fill="none"><path fill="#1D1D1B" d="M36 16.2c0 .47-.16.93-.44 1.27-.29.34-.67.53-1.06.53h-33c-.4 0-.78-.19-1.07-.53-.28-.34-.43-.8-.43-1.27 0-.48.15-.94.43-1.28.29-.34.67-.52 1.07-.52h33c.39 0 .77.18 1.06.52.28.34.44.8.44 1.28ZM1.5 3.59h33c.39 0 .77-.18 1.06-.52.28-.34.44-.8.44-1.27 0-.48-.16-.94-.44-1.28C35.27.18 34.89 0 34.5 0h-33C1.1 0 .72.18.43.52.15.86 0 1.32 0 1.8c0 .47.15.93.43 1.27.29.34.67.52 1.07.52Z"/></svg>
+                </button>
             </div>
         </div>
     </header>
