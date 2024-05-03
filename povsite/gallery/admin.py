@@ -16,6 +16,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
     ordering = ['-publication_date']
     readonly_fields = ('publication_date', 'publication_update', 'get_html_photo')
     save_on_top = True
+    save_as = True
     list_per_page = 10
     fieldsets = (
         ("Информация о пользователе", {
@@ -37,7 +38,7 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
             "fields": ("content_picture", "get_html_photo",)
         }),
         ("Публикуем?", {
-            "fields": ("is_published", 'publication_date', 'publication_update',)
+            "fields": ('publication_date', 'publication_update',)
         }),
     )
 
@@ -53,19 +54,13 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
     short_description_field.short_description = 'Краткое описание'
 
-    # def short_description_field_title(self, obj):
-    #     if obj.title:
-    #         return obj.title[:20] + '...' if len(obj.title) > 20 else obj.title
-    #
-    # short_description_field_title.short_description = 'Заголовок'
-
 
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_photo', 'brand_name', 'name', 'surname', 'email', 'phone', 'short_description_field')
-    list_display_links = ('name', 'surname', 'brand_name')
-    list_filter = ('surname', 'brand_name')
-    search_fields = ['name', 'surname', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
+    list_display = ('get_html_photo', 'brand_name', 'name', 'email', 'phone', 'short_description_field')
+    list_display_links = ('name', 'brand_name')
+    list_filter = ('brand_name',)
+    search_fields = ['name', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
     ordering = ['-time_add']
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
@@ -73,11 +68,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("brand_name", "email", "phone",)
-        }),
-        ("Персональная информация", {
-            "classes": ("collapse",),
-            "fields": (("name", "surname", "patronymic",),)
+            "fields": ("name", "brand_name", "email", "phone",)
         }),
         ("Биография", {
             "classes": ("collapse",),
@@ -125,7 +116,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('name', 'is_published', 'get_html_image_project', 'short_title_block_description_field')
+    list_display = ('name', 'is_published', 'get_html_image_project', 'short_title_block_description_field', 'logo_header',)
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     list_filter = ('name', 'is_published', 'time_add', 'time_update')
@@ -139,7 +130,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ('name', 'slug', 'description', 'image_project',)
+            "fields": ('user', "name", 'slug', 'description', 'image_project',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
@@ -149,8 +140,15 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
             "classes": ("collapse",),
             "fields": ('block_description_two', 'image_block_two',),
         }),
-        ("Реализация", {
+        ("Реализация: выбираем галереи", {
+            "classes": ("collapse",),
+            "description": "Здесь нужно выбрать все галереи по этому проекту",
             "fields": ("implementation",)
+        }),
+        ("Что мы умеем", {
+            "classes": ("collapse",),
+            "description": "Здесь нужно выбрать наши отличительные особенности по этому проекту",
+            "fields": ("what_block",)
         }),
         ("Публикуем?", {
             "fields": ("is_published", 'time_add', 'time_update',)
@@ -245,14 +243,14 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Имя блока: Что мы умеем?", {
-            "fields": ("name",)
+            "fields": ("title",)
         }),
-        ("Скилл", {
+        ("Описание скилла", {
             "classes": ("collapse",),
-            "fields": ("title", 'text',)
+            "fields": ('text',)
         }),
         ("Изображение скилла", {
-            "fields": ("image",)
+            "fields": ("image", 'get_html_image')
         }),
     )
 
@@ -271,4 +269,3 @@ class WhatBlockAdmin(TranslationAdmin, admin.ModelAdmin):
 
 admin.site.site_header = 'Арт-лаборатория "Точки Зрения", открывающая искусство по-новому'
 admin.site.site_title = 'Лаборатория "Точки Зрения"'
-# admin.site.index_title = 'Администрирование лаборатории "Точки Зрения"'

@@ -21,7 +21,6 @@ class Gallery(models.Model):
     publication_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     publication_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
 
-
     def __str__(self):
         return self.title
 
@@ -33,8 +32,7 @@ class Gallery(models.Model):
 class Author(models.Model):
     email = models.EmailField(verbose_name='Email')
     phone = models.CharField(max_length=20, verbose_name='Телефон')
-    name = models.CharField(max_length=100, verbose_name='Имя')
-    surname = models.CharField(max_length=100, verbose_name='Фамилия')
+    name = models.CharField(max_length=100, verbose_name='Имя и фамилия')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Фото")
     brand_name = models.CharField(max_length=100, verbose_name='Бренд')
     biography = models.TextField(default=None, blank=True, null=True, verbose_name='Биография')
@@ -42,7 +40,7 @@ class Author(models.Model):
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
 
     def __str__(self):
-        return f'{self.surname}: "{self.brand_name}"'
+        return f'{self.name}: "{self.brand_name}"'
 
     class Meta:
         verbose_name = 'Автор'
@@ -84,14 +82,15 @@ class Project(models.Model):
     block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
-    implementation = models.ForeignKey(Gallery, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                                       verbose_name='Проекты')
-    what_block = models.ForeignKey('WhatBlock', on_delete=models.CASCADE, null=True, default=None, blank=True, verbose_name='Что мы умеем?')
+    implementation = models.ManyToManyField(Gallery, verbose_name='Галереи', related_name='implementation')
+    what_block = models.ManyToManyField('WhatBlock', verbose_name='Наши скиллы', related_name='what_block')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
+    logo_header = models.ImageField(upload_to="logo_project/", default=None, blank=True, null=True,
+                                    verbose_name="Логотип хедера")
 
     objects = models.Manager()
     published = PublishedManager()
@@ -105,7 +104,6 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         return reverse('projects', kwargs={'project_slug': self.slug})
-
 
 
 class Themes(models.Model):
@@ -123,13 +121,11 @@ class LandingPage(models.Model):
     logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
     logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")
-    about_us = models.CharField(max_length=10, verbose_name="О нас")
-    about_us_title = models.CharField(max_length=50, verbose_name="Заголовок раздела")
+    about_us = models.CharField(max_length=50, verbose_name="О нас")
+    about_us_title = models.CharField(max_length=100, verbose_name="Заголовок раздела")
     about_us_text = models.TextField(max_length=500, verbose_name="Текст раздела")
-    projects = models.ForeignKey(Project, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                                 verbose_name="Проекты")
-    team = models.ForeignKey(Author, on_delete=models.CASCADE, default=None, blank=True, null=True,
-                             verbose_name="Команда")
+    projects = models.ManyToManyField(Project, verbose_name="Проекты", related_name="projects")
+    team = models.ManyToManyField(Author, verbose_name="Команда", related_name="team")
     logo_footer = models.ImageField(upload_to="logo_footer/", default=None, blank=True, null=True,
                                     verbose_name="Логотип футера")
 
@@ -142,14 +138,13 @@ class LandingPage(models.Model):
 
 
 class WhatBlock(models.Model):
-    name = models.CharField(max_length=50, verbose_name="Что мы умеем?")
     image = models.ImageField(upload_to="photos_what_block/", default=None, blank=True, null=True,
                               verbose_name="Изображение скилла")
     title = models.CharField(max_length=50, verbose_name="Название скилла")
     text = models.CharField(max_length=255, verbose_name="Описание скилла")
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = 'Что мы умеем?'

@@ -1,0 +1,12 @@
+.footer{
+    position: absolute;
+    width: 1410px;
+    height: 420px;
+    left: 15px;
+    right: 15px;
+    top: 3660px;
+    bottom: 15px;
+    border-radius: 30px;
+    /* Secondary/Green */
+    background: rgb(25, 143, 118);
+}

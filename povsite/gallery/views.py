@@ -12,7 +12,7 @@ from .forms import FeedbackMultipleChoiceForm
 
 class ProjectList(ListView):
     model = Project
-    template_name = 'index.html'
+    template_name = 'start_page.html'
     context_object_name = 'projects'
     form = FeedbackMultipleChoiceForm
 
@@ -38,7 +38,8 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['galleries'] = Gallery.objects.filter(project=context['object'])
+        context['galleries'] = Gallery.objects.filter(implementation=context['object'])
+        context['what_block'] = WhatBlock.objects.filter(what_block=context['object'])
         return context
 
     def get_object(self, queryset=None):

@@ -1,0 +1,60 @@
+.start {
+    margin: 220px;
+}
+.logo {
+    position: absolute;
+    margin: 221px 403px;
+}
+
+.h2 {
+    position: static;
+    width: 649px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 200px;
+    color: rgb(29, 29, 27);
+    font-family: Geologica;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.video {
+    position: absolute;
+    width: 1077px;
+    height: 400px;
+    left: 182px;
+    right: 181px;
+    top: 730px;
+    bottom: 132px;
+    border-radius: 225px;
+    background-color: rgb(193, 81, 145);
+    /*background: url(Арт-дайвинг_галерея Асламазян (1));*/
+}
+
+.h1 {
+    position: absolute;
+    width: 163px;
+    height: 63px;
+    left: 753px;
+    right: 524px;
+    top: 990px;
+    bottom: 652px;
+    color: rgb(0, 0, 0);
+    font-family: Geologica;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 63px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}

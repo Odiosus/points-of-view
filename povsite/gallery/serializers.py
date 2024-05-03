@@ -55,7 +55,19 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         model = Project
         fields = [
             'name',
+            'slug',
             'description',
+            'image_project',
+            'title_block_description',
+            'block_description_one',
+            'image_block_one',
+            'block_description_two',
+            'image_block_two',
+            'implementation',
+            'what_block',
+            'time_add',
+            'time_update',
+            'is_published',
         ]
 
 
@@ -64,4 +76,29 @@ class ThemesSerializer(serializers.HyperlinkedModelSerializer):
         model = Themes
         fields = [
             'name',
+        ]
+
+
+class LandingPageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = LandingPage
+        fields = [
+            'logo_text',
+            'logo_header',
+            'about_us',
+            'about_us_title',
+            'about_us_text',
+            'projects',
+            'team',
+            'logo_footer',
+        ]
+
+
+class WhatBlockSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = WhatBlock
+        fields = [
+            'image',
+            'title',
+            'text',
         ]
