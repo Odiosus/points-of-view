@@ -31,7 +31,7 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
             'surname',
             'patronymic',
             'photo',
-            'brand_name',
+            # 'brand_name',
             'biography',
             'time_add',
             'time_update',
@@ -79,9 +79,9 @@ class ThemesSerializer(serializers.HyperlinkedModelSerializer):
         ]
 
 
-class LandingPageSerializer(serializers.HyperlinkedModelSerializer):
+class StartPageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = LandingPage
+        model = StartPage
         fields = [
             'logo_text',
             'logo_header',

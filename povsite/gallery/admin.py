@@ -1,7 +1,7 @@
 from django.contrib import admin, messages
 from django.utils.safestring import mark_safe
 
-from .models import Gallery, Author, Feedback, Project, Themes, LandingPage, WhatBlock
+from .models import Gallery, Author, Feedback, Project, Themes, StartPage, WhatBlock
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -57,10 +57,10 @@ class GalleryAdmin(TranslationAdmin, admin.ModelAdmin):
 
 @admin.register(Author)
 class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
-    list_display = ('get_html_photo', 'brand_name', 'name', 'email', 'phone', 'short_description_field')
-    list_display_links = ('name', 'brand_name')
-    list_filter = ('brand_name',)
-    search_fields = ['name', 'brand_name', 'biography', 'email', 'phone', 'short_description_field']
+    list_display = ('get_html_photo', 'name', 'email', 'phone', 'short_description_field')  # 'brand_name'
+    list_display_links = ('name',)  # 'brand_name'
+    # list_filter = ('brand_name',)
+    search_fields = ['name', 'biography', 'email', 'phone', 'short_description_field']  # 'brand_name'
     ordering = ['-time_add']
     readonly_fields = ('time_add', 'time_update', 'get_html_photo')
     save_on_top = True
@@ -68,7 +68,7 @@ class AuthorAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Информация об авторе", {
-            "fields": ("name", "brand_name", "email", "phone",)
+            "fields": ("name", "email", "phone",)  # "brand_name"
         }),
         ("Биография", {
             "classes": ("collapse",),
@@ -130,7 +130,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ('user', "name", 'slug', 'description', 'image_project',)
+            "fields": ("name", 'slug', 'description', 'image_project',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
@@ -189,8 +189,8 @@ class ThemesAdmin(TranslationAdmin, admin.ModelAdmin):
     fields = ('name',)
 
 
-@admin.register(LandingPage)
-class LandingPageAdmin(TranslationAdmin, admin.ModelAdmin):
+@admin.register(StartPage)
+class StartPageAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('logo_text', 'get_html_logo_header',)
     list_display_links = ('logo_text',)
     list_filter = ('logo_text',)

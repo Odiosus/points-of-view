@@ -34,13 +34,13 @@ class Author(models.Model):
     phone = models.CharField(max_length=20, verbose_name='Телефон')
     name = models.CharField(max_length=100, verbose_name='Имя и фамилия')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Фото")
-    brand_name = models.CharField(max_length=100, verbose_name='Бренд')
+    # brand_name = models.CharField(max_length=100, verbose_name='Бренд')
     biography = models.TextField(default=None, blank=True, null=True, verbose_name='Биография')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
 
     def __str__(self):
-        return f'{self.name}: "{self.brand_name}"'
+        return f'{self.name}'  # "{self.brand_name}"
 
     class Meta:
         verbose_name = 'Автор'
@@ -117,7 +117,7 @@ class Themes(models.Model):
         verbose_name_plural = 'Темы обращений обратной связи'
 
 
-class LandingPage(models.Model):
+class StartPage(models.Model):
     logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
     logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")

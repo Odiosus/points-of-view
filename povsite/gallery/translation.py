@@ -15,8 +15,8 @@ class GalleryTranslationOptions(TranslationOptions):
 class AuthorTranslationOptions(TranslationOptions):
     fields = (
         'name',
-        'photo',
-        'brand_name',
+        # 'photo',
+        # 'brand_name',
         'biography',
     )
 
@@ -41,8 +41,8 @@ class GalleryTranslationOptions(TranslationOptions):
     )
 
 
-@register(LandingPage)
-class LandingPageTranslationOptions(TranslationOptions):
+@register(StartPage)
+class StartPageTranslationOptions(TranslationOptions):
     fields = (
         'logo_text',
         'logo_header',
