@@ -1,67 +1,87 @@
+
 header {
-    margin: 40px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    width: 100%;
+    max-width: 1140px;
+    transition: transform .2s linear;
 }
 
-.container-language {
-    position: absolute;
-    width: 149px;
-    height: 25px;
-    left: 1126px;
-    right: 165px;
-    top: 48px;
-    bottom: 1189px;
+.header.hide {
+    transform: translateY(-100px);
+}
+
+.mini-logo {
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+.mini-logo img {
+    width: 110px;
+    height: 40px;
+}
+
+.right-side-container {
+    margin-right: 55px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px;
-    color: rgb(0, 0, 0);
-    font-family: Geologica;
-    font-size: 20px;
+    align-items: flex-end;
+}
+
+.languages-container {
+    display: inline-flex;
+    margin-top: 30px;
+    margin-right: 62px;
+}
+
+.languages {
+    border: none;
+    background: none;
+    margin-left: 27px;
+    cursor: pointer;
+
     font-weight: 300;
-    line-height: 23px;
-    letter-spacing: 0%;
-    text-align: left;
+    font-size: 20px;
 }
 
-.ru {
-    position: static;
-    width: 28px;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 2px 27px;
+.languages:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
-.en {
-    position: static;
-    width: 27px;
-    height: 23px;
+.languages.active {
+    text-decoration: underline;
+}
+
+.burger {
+    position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 0px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 2px 27px;
+    width: 35px;
+    height: 25px;
 }
 
-.fr {
-    position: static;
-    width: 25px;
-    height: 23px;
+.burger span{
+    height: 3px;
+    width: 35px;
+    background: black;
+}
+
+.nav {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
+    width: 50%;
     flex-direction: column;
-    align-items: end;
-    padding: 0px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 2px 27px;
+    background: white;
+}
+
+.link {
+    display: flex;
 }

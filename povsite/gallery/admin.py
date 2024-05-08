@@ -130,15 +130,15 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ("name", 'slug', 'description', 'image_project',)
+            "fields": ("name", 'svg_logo', 'slug', 'description', 'image_project',)  # 'sub_name'
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),
-            "fields": ('title_block_description', 'block_description_one', 'image_block_one',),
+            "fields": ('title_block_description_one', 'block_description_one', 'image_block_one',),
         }),
         ("Описание проекта — Блок 2", {
             "classes": ("collapse",),
-            "fields": ('block_description_two', 'image_block_two',),
+            "fields": ('title_block_description_two', 'block_description_two', 'image_block_two',),
         }),
         ("Реализация: выбираем галереи", {
             "classes": ("collapse",),
@@ -156,9 +156,9 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     )
 
     def short_title_block_description_field(self, obj):
-        if obj.title_block_description:
-            return obj.title_block_description[:100] + '...' if len(
-                obj.title_block_description) > 100 else obj.title_block_description
+        if obj.title_block_description_one:
+            return obj.title_block_description_one[:100] + '...' if len(
+                obj.title_block_description_one) > 100 else obj.title_block_description_one
 
     short_title_block_description_field.short_description = 'Краткое описание'
 
@@ -200,7 +200,7 @@ class StartPageAdmin(TranslationAdmin, admin.ModelAdmin):
     fieldsets = (
         ("Хедер", {
             "classes": ("collapse",),
-            "fields": ("logo_text", 'logo_header',)
+            "fields": ("logo_text", 'logo_header', 'logo_main',)
         }),
         ("О нас", {
             "classes": ("collapse",),

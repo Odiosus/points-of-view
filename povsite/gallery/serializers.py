@@ -55,12 +55,15 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         model = Project
         fields = [
             'name',
+            'svg_logo',
+            # 'sub_name',
             'slug',
             'description',
             'image_project',
-            'title_block_description',
+            'title_block_description_one',
             'block_description_one',
             'image_block_one',
+            'title_block_description_two',
             'block_description_two',
             'image_block_two',
             'implementation',
@@ -84,6 +87,7 @@ class StartPageSerializer(serializers.HyperlinkedModelSerializer):
         model = StartPage
         fields = [
             'logo_text',
+            'logo_main',
             'logo_header',
             'about_us',
             'about_us_title',

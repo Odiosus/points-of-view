@@ -1,7 +1,17 @@
+import os
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
 from django.urls import reverse
+from django.core.exceptions import ValidationError
+
+
+def validate_svg(file):
+    _, file_extension = os.path.splitext(file)
+    if file_extension.lower() != '.svg':
+        raise ValidationError(
+            "Файл не является svg-файлом"
+        )
 
 
 class PublishedManager(models.Manager):
@@ -63,11 +73,15 @@ class Feedback(models.Model):
 
 
 class Project(models.Model):
+
     class Status(models.IntegerChoices):
         DRAFT = 0, 'Черновик'
         PUBLISHED = 1, 'Опубликовано'
 
     name = models.CharField(max_length=50, verbose_name='Название проекта')
+    # sub_name = models.CharField(max_length=50, default=None, blank=True,
+    #                             null=True, verbose_name='Расширенное название')
+    svg_logo = models.FileField(default=None, blank=True, null=True, verbose_name='Лого проекта в svg')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
         MaxLengthValidator(100, message="Максимум 100 символов"),
@@ -75,14 +89,19 @@ class Project(models.Model):
     description = models.CharField(max_length=50, verbose_name='Слоган')
     image_project = models.ImageField(upload_to="photos_project/%Y/%m/%d/", default=None, blank=True, null=True,
                                       verbose_name="Титульное изображение")
-    title_block_description = models.CharField(max_length=150, verbose_name='Заголовок блока описания')
+    title_block_description_one = models.CharField(max_length=150,
+                                                   default=None, blank=True, null=True,
+                                                   verbose_name='Заголовок блока описания No1')
     block_description_one = models.TextField(max_length=500, verbose_name='Описание блока No1')
     image_block_one = models.ImageField(upload_to="photos_project/block1/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No1")
+    title_block_description_two = models.CharField(max_length=150, default=None, blank=True, null=True,
+                                                   verbose_name='Заголовок блока описания No2')
     block_description_two = models.TextField(max_length=500, verbose_name='Описание блока No2')
     image_block_two = models.ImageField(upload_to="photos_project/block2/%Y/%m/%d/", default=None, blank=True,
                                         null=True, verbose_name="Изображение блока No2")
-    implementation = models.ManyToManyField(Gallery, verbose_name='Галереи', related_name='implementation')
+    implementation = models.ManyToManyField(Gallery, default=None, blank=True,
+                                            null=True, verbose_name='Галереи', related_name='implementation')
     what_block = models.ManyToManyField('WhatBlock', verbose_name='Наши скиллы', related_name='what_block')
     time_add = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления записи')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время изменения записи')
@@ -121,6 +140,8 @@ class StartPage(models.Model):
     logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
     logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")
+    logo_main = models.ImageField(upload_to="logo_main/", default=None, blank=True, null=True,
+                                  verbose_name="Главный логотип")
     about_us = models.CharField(max_length=50, verbose_name="О нас")
     about_us_title = models.CharField(max_length=100, verbose_name="Заголовок раздела")
     about_us_text = models.TextField(max_length=500, verbose_name="Текст раздела")

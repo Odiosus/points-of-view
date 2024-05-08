@@ -12,7 +12,6 @@ from .forms import FeedbackMultipleChoiceForm
 
 class StartPageView(TemplateView):
     template_name = 'index.html'
-    context_object_name = 'projects'
     form = FeedbackMultipleChoiceForm
 
     def get_context_data(self, **kwargs):
@@ -20,6 +19,7 @@ class StartPageView(TemplateView):
         context['form'] = self.form
         context['authors'] = Author.objects.all()
         context['projects'] = Project.objects.all()
+        context['start_page'] = StartPage.objects.first()
         return context
 
     def post(self, request):

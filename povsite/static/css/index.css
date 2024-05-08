@@ -1,6 +1,21 @@
-@import 'normalize.css';
 @import 'fonts.css';
-@import 'default.css';
 @import 'header.css';
-@import 'main.css';
+@import 'footer.css';
+@import 'default.css';
 @import 'detail.css';
+
+
+.block-1-1 {
+    background-image: url("../Background main screen.svg");
+    text-align: center;
+    flex-direction: column;
+}
+
+.block-1-1 img {
+    margin-top: 150px;
+}
+
+.block-1-1 p {
+    margin-top: 50px;
+    font-size: 19px;
+}

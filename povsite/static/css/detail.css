@@ -1,23 +1,4 @@
-@import 'normalize.css';
-@import 'fonts.css';
-@import 'default.css';
-@import 'header.css';
-@import 'main.css';
 
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-
-body {
-    font-family: Geologica;
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
 
 .artem-maks {
     position: absolute;
@@ -163,72 +144,9 @@ body {
     background: rgba(25, 143, 118, 0.1);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1151px;
-    margin: 0 auto;
-}
-
-.mini-logo {
-    padding-top: 9px;
-    margin-left: 55px;
-    width: 120px;
-    height: 50px;
-}
-
-.mini-logo img {
-    margin-top: 12px;
-}
-
-.container-header-container{
-    display: flex;
-    align-items: flex-end
-}
-
-
-.languages-container {
-    display: inline-flex;
-    margin-top: 30px;
-    margin-right: 25px;
-}
-
-.languages {
-    border: none;
-    width: 25px;
-    height: 23px;
-    margin-left: 27px;
-
-    font-family: 'Geologica';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    color: #000000;
-    background: none;
-}
-
-.languages:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
-
-.languages.active {
-    text-decoration: underline;
-}
-
-.menu-box {
-    margin: 0px 47px;
-}
-
-.menu {
-    border: none;
-    background: none;
-}
-
 .block-1-2 {
     max-width: 867px;
-    margin: 85px auto;
+    margin: 0px auto;
 }
 
 

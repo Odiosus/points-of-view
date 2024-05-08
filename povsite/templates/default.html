@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans 'Точки зрения' %}</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+
+    <script defer src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    {% block header %}
+    <header class="header">
+        <div class="mini-logo">
+            <img src='{{ logo_header.url }}'>
+        </div>
+        <div class="right-side-container">
+            <div class="languages-container">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <form method="post" action="{% url 'set_language' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="language" value="{{ language.code }}">
+                        <button class="languages">{{ language.code.upper }}</button>
+                    </form>
+                {% endfor %}
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+            </div>
+
+
+        </div>
+        <div class="nav">
+            <div class="link">
+                <div class="social">
+                    <p>Social</p>
+                    <ul>
+                        <li><a>Facebook</a></li>
+                        <li><a>Instagram</a></li>
+                        <li><a>YouTube</a></li>
+                        <li><a>WhatsApp</a></li>
+                        <li><a>Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p>Menu</p>
+                    <ul>
+                        <li><a>О НАС</a></li>
+                        <li><a>Проекты</a></li>
+                        <li><a>Лаборатория</a></li>
+                        <li><a>Команда</a></li>
+                        <li><a>Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="email">
+                <p>Свяжитесь с нами</p>
+                <a>andrey.gunyavin@gmail.com</a>
+            </div>
+        </div>
+    </header>
+    {% endblock header %}
+
+    {% block content %}
+    {% endblock content %}
+</body>
