@@ -10,6 +10,10 @@ header {
     transition: transform .2s linear;
 }
 
+.open {
+    display: flex !important;
+}
+
 .header.hide {
     transform: translateY(-100px);
 }
@@ -20,8 +24,7 @@ header {
 }
 
 .mini-logo img {
-    width: 110px;
-    height: 40px;
+    width: 100px;
 }
 
 .right-side-container {
@@ -56,18 +59,29 @@ header {
 }
 
 .burger {
-    position: absolute;
     display: flex;
+    z-index: 50;
     flex-wrap: wrap;
     align-items: center;
     width: 35px;
     height: 25px;
+    cursor: pointer;
 }
 
-.burger span{
+.first-line, .second-line {
+    position: relative;
     height: 3px;
     width: 35px;
     background: black;
+    transition: all 0.4s ease 0s;
+}
+
+.first-line.active {
+    transform: rotate(-45deg) translateX(-25%);
+}
+
+.second-line.active {
+    transform: rotate(45deg) translateX(-25%);
 }
 
 .nav {
@@ -76,12 +90,18 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
+    display: none;
     width: 50%;
     flex-direction: column;
     background: white;
+    animation: burgerAnimation 0.4s;
 }
 
 .link {
     display: flex;
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
 }

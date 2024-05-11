@@ -8,7 +8,51 @@
     <div class="block-1-1">
         <img src='{{ start_page.logo_main.url }}'>
         <p>{{ start_page.logo_text }}</p>
+        <div class="main-animation">
+            <svg width="900" height="375" viewBox="0 0 900 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="900" height="375" rx="225" fill="#C15191" fill-opacity="0.5"/>
+            </svg>
+        </div>
     </div>
+
+    <div class="block-1-2">
+        <h3>{{ start_page.about_us.upper }}</h3>
+        <div class="wrap-1-2">
+            <div class="animation-1-2">
+<!--                <img src="{% static 'animation/Soft_point_05.gif' %}">-->
+                <svg width="400" viewbox="-10,-10,320,320">
+                    <defs>
+                        <filter id="blur5"><feGaussianBlur in="SourceGraphic" stdDeviation="15"/></filter>
+                        <filter id="blur4"><feGaussianBlur in="SourceGraphic" stdDeviation="8"/></filter>
+                        <filter id="blur3"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter>
+                        <filter id="blur2"><feGaussianBlur in="SourceGraphic" stdDeviation="2"/></filter>
+                        <filter id="blur1"><feGaussianBlur in="SourceGraphic" stdDeviation="1"/></filter>
+                        <mask id="mask10"><rect x="5" y="5" width="285" height="285" fill="#F4F4F7"/></mask>
+                        <mask id="mask20"><rect x="10" y="10" width="280" height="280" fill="#F4F4F7"/></mask>
+                        <mask id="mask30"><rect x="15" y="15" width="275" height="275" fill="#F4F4F7"/></mask>
+                        <mask id="mask40"><rect x="20" y="20" width="270" height="270" fill="#F4F4F7"/></mask>
+                        <mask id="mask50"><rect x="25" y="25" width="265" height="265" fill="#F4F4F7"/></mask>
+                        <image id="img" width="300"
+                        xlink:href="{% static 'animation/Soft_point_05.gif' %}"/>
+                    </defs>
+                        <use xlink:href="#img"                     filter="url(#blur5)"/>
+                        <use xlink:href="#img" mask="url(#mask10)" filter="url(#blur4)"/>
+                        <use xlink:href="#img" mask="url(#mask20)" filter="url(#blur3)"/>
+                        <use xlink:href="#img" mask="url(#mask30)" filter="url(#blur2)"/>
+                        <use xlink:href="#img" mask="url(#mask40)" filter="url(#blur1)"/>
+                        <use xlink:href="#img" mask="url(#mask50)"/>
+                </svg>
+<!--               <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>-->
+
+<!--    <dotlottie-player src="{% static 'Soft_point_08.json' %}" speed="1" style="width: 500px;" loop autoplay></dotlottie-player>-->
+            </div>
+            <div class="text-1-2">
+                <h4>{{ start_page.about_us_title }}</h4>
+                <p>{{ start_page.about_us_text|linebreaksbr }}</p>
+            </div>
+        </div>
+    </div>
+
     <h2>{% trans 'Проекты' %}</h2>
     <div class="projects">
         {% for project in projects %}

@@ -138,9 +138,9 @@ class Themes(models.Model):
 
 class StartPage(models.Model):
     logo_text = models.CharField(max_length=50, verbose_name="Название логотипа")
-    logo_header = models.ImageField(upload_to="logo_landing/", default=None, blank=True, null=True,
+    logo_header = models.FileField(upload_to="logo_landing/", default=None, blank=True, null=True,
                                     verbose_name="Логотип хедера")
-    logo_main = models.ImageField(upload_to="logo_main/", default=None, blank=True, null=True,
+    logo_main = models.FileField(upload_to="logo_main/", default=None, blank=True, null=True,
                                   verbose_name="Главный логотип")
     about_us = models.CharField(max_length=50, verbose_name="О нас")
     about_us_title = models.CharField(max_length=100, verbose_name="Заголовок раздела")
