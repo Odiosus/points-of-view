@@ -26,14 +26,11 @@ class ProjectTranslationOptions(TranslationOptions):
     fields = (
         'name',
         'svg_logo',
-        # 'sub_name',
-        'logo_header',
         'description',
         'title_block_description_one',
         'block_description_one',
         'title_block_description_two',
         'block_description_two',
-        'logo_header',
     )
 
 

@@ -56,7 +56,6 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         fields = [
             'name',
             'svg_logo',
-            # 'sub_name',
             'slug',
             'description',
             'image_project',
@@ -71,6 +70,7 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
             'time_add',
             'time_update',
             'is_published',
+            'image_for_start_page',
         ]
 
 

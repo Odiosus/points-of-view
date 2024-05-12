@@ -79,8 +79,6 @@ class Project(models.Model):
         PUBLISHED = 1, 'Опубликовано'
 
     name = models.CharField(max_length=50, verbose_name='Название проекта')
-    # sub_name = models.CharField(max_length=50, default=None, blank=True,
-    #                             null=True, verbose_name='Расширенное название')
     svg_logo = models.FileField(default=None, blank=True, null=True, verbose_name='Лого проекта в svg')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", validators=[
         MinLengthValidator(5, message="Минимум 5 символов"),
@@ -108,8 +106,8 @@ class Project(models.Model):
     is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
                                        default=Status.DRAFT,
                                        verbose_name='Статус публикации')
-    logo_header = models.ImageField(upload_to="logo_project/", default=None, blank=True, null=True,
-                                    verbose_name="Логотип хедера")
+    image_for_start_page = models.ImageField(upload_to="photos_project/for_start_page/", default=None, blank=True,
+                                        null=True, verbose_name="Изображение для стартовой страницы")
 
     objects = models.Manager()
     published = PublishedManager()
