@@ -5,11 +5,16 @@
 @import 'detail.css';
 
 
+h3 {
+    font-size: 43px;
+    font-weight: 900;
+}
+
 .block-1-1 {
     background-image: url("../Background main screen.svg");
     text-align: center;
     flex-direction: column;
-    padding-bottom: 80px;
+    padding-bottom: 45px;
 }
 
 .block-1-1 img {
@@ -34,11 +39,6 @@
     flex-direction: column;
     max-width: 100%;
     background-color: rgb(244,244,247);
-}
-
-.block-1-2 h3 {
-    font-size: 43px;
-    font-weight: 900;
 }
 
 .wrap-1-2 {
@@ -73,4 +73,142 @@
 .block-1-2 p {
     font-size: 21px;
     font-weight: 300;
+}
+
+.block-1-3 {
+    padding-top: 110px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: rgb(244,244,247);
+}
+
+.projects {
+    padding-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project {
+    margin: 0;
+    flex: 0;
+}
+
+.project img {
+    max-width: 325px;
+}
+
+
+
+
+
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+    margin: 0;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+	cursor: pointer;
+    border-radius: 23px;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+}
+
+.hover-text-one figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 500;
+	font-size: 25px;
+	padding-left: 23px;
+}
+
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 60.5%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-two figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0,0) 0%, rgba(0, 0, 0,0.8) 75%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0,0) 0%, rgba(0, 0, 0,0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+figure.effect-text-two h3 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #fff !important;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,150px,0);
+	transform: translate3d(0,150px,0);
+}
+figure.effect-text-two figcaption::before,
+figure.effect-text-two p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.45s, transform 0.45s;
+}
+figure.effect-text-two p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+figure.effect-text-two:hover h3 {
+	color: #fff;
+	-webkit-transform: translate3d(0,-10%,0) translate3d(0,0,0);
+	transform: translate3d(0,-10%,0) translate3d(0,0,0);
+}
+figure.effect-text-two:hover figcaption::before ,
+figure.effect-text-two:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 }

@@ -108,6 +108,8 @@ class Project(models.Model):
                                        verbose_name='Статус публикации')
     image_for_start_page = models.ImageField(upload_to="photos_project/for_start_page/", default=None, blank=True,
                                         null=True, verbose_name="Изображение для стартовой страницы")
+    short_text_for_card = models.TextField(max_length=500, default=None, blank=True, null=True,
+                                           verbose_name='Текст для карточек на главной странице')
 
     objects = models.Manager()
     published = PublishedManager()

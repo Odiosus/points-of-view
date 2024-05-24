@@ -53,21 +53,34 @@
         </div>
     </div>
 
-    <h2>{% trans 'Проекты' %}</h2>
-    <div class="projects">
-        {% for project in projects %}
-            <a href="{{ project.slug }}">{{ project.name }}</a>
-            <p>{{ project.block_description_one }}</p>
-            <img src='{{ project.image_project.url }}' width="100">
-<!--            <p> {% trans 'Автор:' %} {{ unit.user }} </p>-->
-<!--            <p> {% trans 'Заголовок:' %} {{ unit.title }} </p>-->
-<!--            <p> {% trans 'Текст статьи:' %}  {{ unit.content_text }} </p>-->
-<!--            <p> {% trans 'Публикуется:' %} {{ unit.is_published }} </p>-->
-<!--            <p> {% trans 'Картинка:' %} <img src='{{ unit.content_picture.url }}' width="100"></p>-->
-<!--            <p> {% trans 'Контент:' %} {{ unit.content }} </p>-->
-            <p>
-        {% endfor %}
+    <div class="block-1-3">
+        <h3>{% trans 'Проекты' %}</h3>
+        <div class="projects">
+            {% for project in projects %}
+
+                <div class="project">
+                    <div class="hover-text-one">
+                        <figure class="effect-text-two">
+                            <a href="{{ project.slug }}"><img class="card" alt="" src='{{ project.image_for_start_page.url }}'>
+                                <figcaption>
+                                    <h3>{{ project.name }}</h3>
+                                    <p>{{ project.short_text_for_card|linebreaksbr }}</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+<!--                    <a href="{{ project.slug }}"><img class="card" alt="" src='{{ project.image_for_start_page.url }}' alt=""></a>-->
+<!--                        <div class="effect-to-top">-->
+<!--                            <h4>{{ project.name }}</h4>-->
+<!--                            <p>{{ project.short_text_for_card|linebreaksbr }}</p>-->
+<!--                        </div>-->
+                </div>
+            {% endfor %}
+        </div>
     </div>
+
+
+
     <h2>Команда</h2>
     <div class="authors">
         {% for author in authors %}

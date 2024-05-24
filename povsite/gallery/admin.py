@@ -130,7 +130,7 @@ class ProjectAdmin(TranslationAdmin, admin.ModelAdmin):
     list_per_page = 10
     fieldsets = (
         ("Проект", {
-            "fields": ("name", 'svg_logo', 'slug', 'description', 'image_project', 'image_for_start_page',)
+            "fields": ("name", 'svg_logo', 'slug', 'description', 'image_project', 'image_for_start_page', 'short_text_for_card',)
         }),
         ("Описание проекта — Блок 1", {
             "classes": ("collapse",),

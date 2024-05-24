@@ -71,6 +71,7 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
             'time_update',
             'is_published',
             'image_for_start_page',
+            'short_text_for_card',
         ]
 
 

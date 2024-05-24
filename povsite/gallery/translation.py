@@ -31,6 +31,7 @@ class ProjectTranslationOptions(TranslationOptions):
         'block_description_one',
         'title_block_description_two',
         'block_description_two',
+        'short_text_for_card',
     )
 
 
